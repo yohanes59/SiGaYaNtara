@@ -1,4 +1,5 @@
-import Routes from "../config/Routes";
+import React from "react";
+import { Routes } from "../config";
 
 function App() {
   return (

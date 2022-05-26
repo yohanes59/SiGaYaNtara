@@ -15,8 +15,8 @@ const Home = () => {
                     </div>
                     <Gap height={50}/>
                     <TimItem nama="yohanes cahyadi" section="back-end" src={Foto} />
-                    <TimItem nama="yohanes cahyadi" section="back-end" src={Foto} />
-                    <TimItem nama="yohanes cahyadi" section="back-end" src={Foto} />
+                    <TimItem nama="nilam setyoningrum" section="back-end" src={Foto} />
+                    <TimItem nama="shandra elvyra s.p." section="back-end" src={Foto} />
                     <TimItem nama="yohanes cahyadi" section="back-end" src={Foto} />
                 </div>
             </div>

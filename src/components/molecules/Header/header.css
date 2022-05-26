@@ -1,0 +1,11 @@
+#button{
+    min-width: 90px;
+    min-height: 44px;
+    background-color: transparent;
+    border: 1.5px solid #000;
+    border-radius: 20px;
+}
+.nav-link{
+    color: #000;
+    font-size: 18px;
+}

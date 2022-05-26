@@ -1,3 +1,4 @@
+import TimItem from "./TimItem";
 import Footer from "./Footer";
 
-export { Footer };
+export { TimItem, Footer };

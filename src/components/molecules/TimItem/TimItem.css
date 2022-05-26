@@ -1,0 +1,29 @@
+.heading-title h3 {
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+/* team-title */
+.team-title {
+    position: static;
+    padding: 20px 0;
+    display: inline-block;
+    letter-spacing: 2px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.team-title h5 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    display: block;
+    text-transform: uppercase;
+}
+.team-title h6 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #a5a5a5;
+    letter-spacing: 1px;
+}
+/* team-title end*/
+
+

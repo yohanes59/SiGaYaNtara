@@ -6,6 +6,8 @@ import BangunanMenu from "./images/bangunanMenu-images.png";
 import StrukturMenu from "./images/strukturMenu-images.png";
 import SitusMenu from "./images/situsMenu-images.png";
 import KawasanMenu from "./images/kawasanMenu-images.png";
+// dummy untuk foto TimItem
+import Foto from './images/foto.jpg';
 
 export {
     HomepageImage,
@@ -15,5 +17,6 @@ export {
     BangunanMenu,
     StrukturMenu,
     SitusMenu,
-    KawasanMenu
+    KawasanMenu, 
+    Foto
 }

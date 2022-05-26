@@ -1,0 +1,21 @@
+.login:hover {
+    color: #876546;
+}
+
+.btn-submit {
+    width: 25%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #876546;
+    color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #EEC374;
+    color: #000000;
+}

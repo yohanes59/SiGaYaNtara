@@ -2,6 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import { Switch } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
+
 import { Header, Footer } from '../../components'
 import Home from '../Home'
 

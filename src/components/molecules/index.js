@@ -1,5 +1,6 @@
-import About from "./Tentang";
+import Tentang from "./Tentang";
 import TimItem from "./TimItem";
+import Header from "./Header";
 import Footer from "./Footer";
 
-export { About, TimItem, Footer };
+export { Tentang, TimItem, Header, Footer };

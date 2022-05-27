@@ -1,6 +1,9 @@
 import HomepageImage from "./images/hero_1.jpg";
 import CagarBudayaImage from "./images/hero_2.jpg";
 import ProfilePageImage from "./images/hero_3.jpg";
+//logo sigayantara
+import LogoHomepage from "./images/logo-homepage.png";
+// icon untuk menu homepage
 import BendaMenu from "./images/bendaMenu-images.png";
 import BangunanMenu from "./images/bangunanMenu-images.png";
 import StrukturMenu from "./images/strukturMenu-images.png";
@@ -13,6 +16,7 @@ export {
     HomepageImage,
     CagarBudayaImage,
     ProfilePageImage,
+    LogoHomepage,
     BendaMenu,
     BangunanMenu,
     StrukturMenu,

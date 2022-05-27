@@ -1,5 +1,5 @@
-import React from 'react'
-import './index.css'
+import React from 'react';
+import './index.css';
 
 const Tentang = () => {
   return (
@@ -10,4 +10,4 @@ const Tentang = () => {
   )
 }
 
-export default Tentang
+export default Tentang;

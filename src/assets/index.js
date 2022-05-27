@@ -1,3 +1,5 @@
+import LoginBg from "./images/signin-image.svg";
+import RegisterBg from "./images/signup-image.svg";
 import HomepageImage from "./images/hero_1.jpg";
 import CagarBudayaImage from "./images/hero_2.jpg";
 import ProfilePageImage from "./images/hero_3.jpg";
@@ -22,5 +24,7 @@ export {
     StrukturMenu,
     SitusMenu,
     KawasanMenu, 
+    LoginBg, 
+    RegisterBg,
     Foto
 }

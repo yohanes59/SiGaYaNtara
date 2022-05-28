@@ -1,0 +1,45 @@
+.menu-card{
+    background-color: #EEC374;
+    border-radius: 20px;
+    align-items: center;
+    display: inline-block;
+    margin: 0 auto;
+}
+.menu-card img{
+    width: 35%;
+    align-items: center;
+    margin: 20px 50px 20px 50px;
+    cursor: pointer;
+}
+.menu-card h6{
+    color: #876546;
+    text-align: center;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+.nav-menu{
+    text-decoration: none;
+}
+@media (min-width: 375px) { 
+    .menu-card{
+        width: 50%;
+        height: 100%;
+        margin: 10px;
+    }
+
+}
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .menu-card{
+        width: 50%;
+
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .menu-card{
+        width: auto;
+    }
+ }

@@ -1,0 +1,10 @@
+.city-card{
+    background-color: #F4DFBA;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+.city-name{
+    text-align: center;
+    cursor: pointer;
+}

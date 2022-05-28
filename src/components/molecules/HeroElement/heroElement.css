@@ -1,0 +1,40 @@
+.jumbotron{
+    height: 80vh;
+    background-size: cover;
+    background-position: center; 
+ }
+ .jumbotron img{
+     height: 80%;
+     width: 100%;
+     border-bottom-left-radius: 60px;
+     border-bottom-right-radius: 60px;
+     position: absolute;
+     left: 0;
+     top: 0;
+     z-index: -1;
+ }
+
+ @media (min-width: 375px) { 
+    .jumbotron{
+        width: auto;
+        height: 100%;
+    }
+
+}
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .jumbotron{
+        width: auto;
+
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .jumbotron{
+        width: auto;
+    }
+ }
+
+ 

@@ -1,49 +1,42 @@
 import React from 'react'
-import { Col, Container, Form, FormGroup, Input, Label, Row } from 'reactstrap'
 import { LoginBg } from '../../assets'
+import { Gap, Input } from '../../components'
 import './login.css'
 
 const Login = () => {
   return (
-    <>
-      <Container>
-        <Row className="m-3">
-          <Col lg={6} md={6} sm={12} className="mt-3">
-            <img className="w-100 mt-5" src={ LoginBg } alt="img" />
-          </Col>
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-6 col-md-6 col-sm-12 mt-3 d-flex flex-column justify-content-center">
+          <img className="w-100 h-100" src={ LoginBg } alt="img" />
+        </div>
 
-          <Col lg={6} md={6} sm={12}>
-            <div className="login mt-5 mb-4 px-3">
-              <h1>Selamat Datang!</h1>
+        <div className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center">
+          <div className="login mt-5 mb-2">
+            <h1>Selamat Datang!</h1>
+          </div>
+
+          <div className="px-3">
+            <Input label="Email" for="email" id="email" name="email" type="email"/>
+            <Gap height={18} />
+            <Input label="Password" for="password" id="password" name="password" type="password"/>
+              
+            <div className="my-3 text-end">
+              <a className="py-3 text-decoration-none text-secondary" href="/#">Lupa Password?</a>
             </div>
-            <Form className='px-3'> 
-              <FormGroup>
-                  <Label for="email">Email</Label>
-                  <Input id="email" name="email" type="text" placeholder="Masukkan Email Anda" />
-                </FormGroup>
 
-                <FormGroup>
-                  <Label for="password">Password</Label>
-                  <Input id="password" name="password" type="password" placeholder="Masukkan Password Anda" />
-                </FormGroup>
+            <div>
+              <button className="btn-submit" type="submit">Masuk</button>
+            </div>
 
-                <div className="my-4 text-end">
-                  <a className="py-3 text-decoration-none text-secondary" href="/#">Lupa Password?</a>
-                </div>
-
-                <div>
-                  <button className="btn-submit" type="submit">Masuk</button>
-                </div>
-
-                <div className="text-center mt-5">
-                  <p>Belum punya akun? <a href="/register" className="py-3 fw-bold text-decoration-none text-danger">Daftar</a></p>
-                </div>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
-    </>
+            <div className="text-center mt-5">
+              <p>Belum punya akun? <a href="/register" className="py-3 fw-bold text-decoration-none text-danger">Daftar</a></p>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
   )
 }
 
-export default Login 
+export default Login

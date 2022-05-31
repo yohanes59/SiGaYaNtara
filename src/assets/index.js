@@ -5,6 +5,8 @@ import CagarBudayaImage from "./images/hero_2.jpg";
 import ProfilePageImage from "./images/hero_3.jpg";
 //logo sigayantara
 import LogoHomepage from "./images/logo-homepage.png";
+// asset lainnya
+import IconProfile from "./images/profile-icon.png";
 // icon untuk menu homepage
 import BendaMenu from "./images/bendaMenu-images.png";
 import BangunanMenu from "./images/bangunanMenu-images.png";
@@ -26,5 +28,6 @@ export {
     KawasanMenu, 
     LoginBg, 
     RegisterBg,
-    Foto
+    Foto,
+    IconProfile
 }

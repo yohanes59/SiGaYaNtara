@@ -5,14 +5,25 @@
 .navbar-nav{
     justify-content: center;
 }
-.button{
+.button-a{
     min-width: 90px;
     min-height: 44px;
     background-color: transparent;
     border: 1.5px solid #000;
     border-radius: 20px;
-}
-.nav-link{
     color: #000;
+    text-decoration: none;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.button-a:hover{
+    background-color: #EEC374;
+    color: #000;
+}
+.nav-link > .nav-item{
+    color: #EEC374;
     font-size: 18px;
+    justify-content: center;
+    text-align: center;
 }

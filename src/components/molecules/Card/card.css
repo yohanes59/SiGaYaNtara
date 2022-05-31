@@ -1,0 +1,26 @@
+.card{
+    border-top-left-radius: 10px;
+}
+.card-body{
+    background-color: #EEC374;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.card-img-top{
+    height: 50%;
+    width: 100%;
+}
+.card-anchor{
+    text-decoration: none;
+    color: #000;
+}
+.card-anchor:hover{
+    color: #000;
+}
+.card-category{
+    position: absolute;
+    background-color: #EEC374;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}

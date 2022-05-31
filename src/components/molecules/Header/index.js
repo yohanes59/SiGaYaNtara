@@ -26,7 +26,7 @@ const Header = () => {
                         </li>
                     </ul>
                     <div className="d-flex">
-                        <button className="button" type="submit">Masuk</button>
+                        <a href="/login" className="button-a" role="button">Masuk</a>
                     </div>
                 </div>
             </div>

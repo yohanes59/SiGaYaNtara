@@ -1,0 +1,13 @@
+.button{
+    border: 1px solid #EEC374;
+    background-color: transparent;
+    color: #EEC374;
+    border-radius: 30px;
+    padding: 10px;
+    min-width: 44px;
+    min-height: 44px;
+}
+.button:hover{
+    background-color: #EEC374;
+    color: #000;
+}

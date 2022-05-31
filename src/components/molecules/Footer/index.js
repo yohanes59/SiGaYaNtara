@@ -4,12 +4,12 @@ import './index.css'
 
 const Footer = () => {
   return (
-    <div class="footer text-center text-lg-start">
-      <div class="container d-flex justify-content-center py-5">
+    <div className="footer text-center text-lg-start">
+      <div className="container d-flex justify-content-center py-5">
         <img src={LogoHomepage} alt="Logo SiGayantara" />
-        <p class="text-center text-white">Sistem Informasi<br /><b>Cagar Budaya Indonesia</b></p>
+        <p className="text-center text-white">Sistem Informasi<br /><b>Cagar Budaya Indonesia</b></p>
       </div>
-      <div class="text-center text-white p-3">
+      <div className="text-center text-white p-3">
         <a> © 2022. SiGayantara, All rights reserved.</a>
       </div>
     </div>

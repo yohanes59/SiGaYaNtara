@@ -6,6 +6,7 @@
     padding: 10px;
     min-width: 44px;
     min-height: 44px;
+    text-decoration: none;
 }
 .button:hover{
     background-color: #EEC374;

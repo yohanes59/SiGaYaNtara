@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import { Login, MainApp, Register, CagarBudaya, Home } from "../../pages";
+import { Login, MainApp, Register } from "../../pages";
 
 const Routes = () => {
     return (
@@ -11,9 +11,6 @@ const Routes = () => {
                 </Route>
                 <Route path="/register">
                     <Register />
-                </Route>
-                <Route path="/cagar">
-                    <CagarBudaya />
                 </Route>
                 <Route path="/">
                     <MainApp />

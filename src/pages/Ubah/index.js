@@ -1,4 +1,5 @@
 import React from 'react'
+import { Gap } from '../../components'
 import './ubah.css'
 
 const Ubah = () => {
@@ -34,10 +35,12 @@ const Ubah = () => {
                     <label for="inputDeskripsi">Deskripsi</label>
                     <textarea className="form-control" id="inputDeskripsi" rows="3" placeholder="Deskripsi singkat cagar budaya..."></textarea>
                 </div>
+                <Gap height={20}/>
                 <div>
                     <button className="btn-submit" type="submit">Simpan</button>
                 </div>
             </form>
+            <Gap height={60}/>
         </div>
     )
 }

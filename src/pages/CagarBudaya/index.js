@@ -1,5 +1,5 @@
 import React from 'react';
-import { Gap, Footer, HeaderProfile, Card, Pagination, HeroElement, Button} from '../../components';
+import { Gap, Card, Pagination, HeroElement, Button} from '../../components';
 import { HomepageImage, CagarBudayaImage } from '../../assets';
 import "./cagarBudaya.css";
 
@@ -8,7 +8,6 @@ import "./cagarBudaya.css";
 const CagarBudaya = () => {
   return (
     <>
-    <HeaderProfile />
     <div className="container">
       <div className="heading-title text-left">
           <h2 className="text-capitalize">Daftar Cagar Budaya</h2>
@@ -34,7 +33,6 @@ const CagarBudaya = () => {
       <Gap height={60} />
       <Pagination />
       <Gap height={40} />
-      <Footer />
     </>
   )
 }

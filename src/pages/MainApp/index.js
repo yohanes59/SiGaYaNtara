@@ -1,9 +1,7 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
-import { Switch } from 'react-router-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Header, Footer } from '../../components'
+import DetailCagar from '../DetailCagar'
 import Home from '../Home'
 
 const MainApp = () => {
@@ -12,10 +10,11 @@ const MainApp = () => {
         <Header />
         <Router>
             <Switch>
-                <Route>
-                    <Route path="/">
-                        <Home />
-                    </Route> 
+                <Route path="/detail-cagar">
+                    <DetailCagar />
+                </Route>
+                <Route path="/">
+                    <Home />
                 </Route>
             </Switch>
         </Router>

@@ -9,7 +9,7 @@ const Card = ({src, alt, title, city, category}) => {
                 <img src={src} className="card-img-top" alt={alt}/>
                 <span className="card-category">{category}</span>
                   <div className="card-body">
-                      <h5 className="card-title"><a class="card-anchor" href="/#">{title}</a></h5>
+                      <h5 className="card-title"><a className="card-anchor" href="/#">{title}</a></h5>
                       <p className="card-city">{city}</p>
                   </div>
             </div>

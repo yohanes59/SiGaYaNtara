@@ -6,8 +6,8 @@ const Unggah = () => {
   return (
     <>
         <div className="container">
-            <div class="heading-title text-center">
-                <h2 class="text-uppercase">Unggah</h2>
+            <div className="heading-title text-center">
+                <h2 className="text-uppercase">Unggah</h2>
             </div>
 
             <Form>

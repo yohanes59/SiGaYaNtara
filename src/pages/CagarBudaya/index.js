@@ -18,7 +18,7 @@ const CagarBudaya = () => {
     </div>
       <Gap height={300}/>
           <div className="container">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div className="row row-cols-1 row-cols-md-3 g-4">
               <Card src={HomepageImage} alt="Candi Borobudur" title="Candi Borobudur" city="Yogyakarta" category="Bangunan" />
               <Card src={CagarBudayaImage} alt="Candi Borobudur" title="Candi Borobudur" city="Yogyakarta" category="Bangunan" /> 
               <Card src={HomepageImage} alt="Candi Borobudur" title="Candi Borobudur" city="Yogyakarta" category="Bangunan" /> 

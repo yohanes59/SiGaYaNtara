@@ -9,15 +9,14 @@ const Home = () => {
 
     useEffect(() => {
         // tes api sementara
-        fetch('http://sigayantara-api.herokuapp.com/v1/getListOfProvinsi')
+        fetch('http://sigayantara-api.herokuapp.com/v1/cultural-heritage/provinsi/getList')
             .then((data) => data.json())
             .then((data) => setProvince(data.data))
     }, [])
-    console.log(province);
 
     useEffect(() => {
         // tes api sementara
-        fetch('http://sigayantara-api.herokuapp.com/v1/getListOfJenis')
+        fetch('http://sigayantara-api.herokuapp.com/v1/cultural-heritage/jenis/getList')
             .then((data) => data.json())
             .then((data) => setJenis(data.data))
     }, [])
@@ -62,7 +61,7 @@ const Home = () => {
                         </div>
                         <Gap height={50} />
 
-                        { province.map(item => { return <EksplorItem key={item} provincename={item} />} )};
+                        { province.map(item => { return <EksplorItem key={item} provincename={item} />} )}
                     </div>
                     <Gap height={50} />
                     <Pagination />

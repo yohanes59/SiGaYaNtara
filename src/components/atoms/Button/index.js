@@ -3,7 +3,7 @@ import "./button.css";
 
 const Button = ({name}) => {
   return (
-    <div class="button-bar">
+    <div className="button-bar">
         <a className="button" href="/upload" type="button">{name}</a>
     </div>
   )

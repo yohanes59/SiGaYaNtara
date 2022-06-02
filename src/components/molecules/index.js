@@ -8,7 +8,7 @@ import Pagination from "./Pagination";
 import HeroElement from "./HeroElement";
 import Menu from "./Menu";
 import Card from "./Card";
-
+import CardUpload from "./CardUpload";
 
 export { 
     Tentang, 
@@ -20,5 +20,6 @@ export {
     Pagination,
     HeroElement,
     Menu,
-    Card
+    Card,
+    CardUpload
  };

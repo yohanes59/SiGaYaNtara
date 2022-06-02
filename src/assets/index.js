@@ -16,6 +16,9 @@ import KawasanMenu from "./images/kawasanMenu-images.png";
 // dummy untuk foto TimItem
 import Foto from './images/foto.jpg';
 
+import EditIcon from "./icons/edit-icon.png";
+import DeleteIcon from "./icons/delete-icon.png";
+
 export {
     HomepageImage,
     CagarBudayaImage,
@@ -29,5 +32,7 @@ export {
     LoginBg, 
     RegisterBg,
     Foto,
-    IconProfile
+    IconProfile,
+    EditIcon,
+    DeleteIcon
 }

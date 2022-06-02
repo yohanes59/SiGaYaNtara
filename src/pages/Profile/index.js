@@ -1,9 +1,9 @@
 import React from 'react'
 import { CagarBudayaImage, HomepageImage, ProfilePageImage } from '../../assets'
 import { Button, Gap, HeroElement, Pagination, CardUpload } from '../../components'
-import './listUpload.css'
+import './profile.css'
 
-const ListUpload = () => {
+const Profile = () => {
   return (
     <div className="container">
         <div className="head-container">
@@ -35,4 +35,4 @@ const ListUpload = () => {
   )
 }
 
-export default ListUpload;
+export default Profile;

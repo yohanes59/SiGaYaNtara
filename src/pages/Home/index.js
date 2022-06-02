@@ -8,14 +8,12 @@ const Home = () => {
     const [jenis, setJenis] = useState([]);
 
     useEffect(() => {
-        // tes api sementara
         fetch('http://sigayantara-api.herokuapp.com/v1/cultural-heritage/provinsi/getList')
             .then((data) => data.json())
             .then((data) => setProvince(data.data))
     }, [])
 
     useEffect(() => {
-        // tes api sementara
         fetch('http://sigayantara-api.herokuapp.com/v1/cultural-heritage/jenis/getList')
             .then((data) => data.json())
             .then((data) => setJenis(data.data))

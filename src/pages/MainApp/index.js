@@ -7,6 +7,7 @@ import Home from '../Home'
 import CagarBudaya from '../CagarBudaya'
 import Unggah from '../Unggah'
 import Ubah from '../Ubah'
+import ListUpload from '../ListUpload';
 
 const MainApp = () => {
   return (
@@ -14,6 +15,9 @@ const MainApp = () => {
         <Header />
         <Router>
             <Switch>
+                <Route path="/upload-list">
+                    <ListUpload />
+                </Route>
                 <Route path="/cagar">
                     <CagarBudaya />
                 </Route>

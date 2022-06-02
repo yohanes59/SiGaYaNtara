@@ -1,8 +1,27 @@
 import React from 'react';
-import { LogoHomepage } from '../../../assets';
+import { IconProfile, LogoHomepage } from '../../../assets';
 import "./header.css";
 
 const Header = (props) => {
+    let navStatus;
+    if (!props.user) {
+        navStatus = (
+            <>
+                <div className="d-flex">
+                    <a href="/login" className="button-a" role="button">Masuk</a>
+                </div>
+            </>
+        );
+    } else {
+        navStatus = (
+            <div className="d-flex">
+                <a className="navbar-brand" href="/">
+                    <img src={IconProfile} alt="Icon Profile" className="icon" />
+                </a>
+            </div>
+        );
+    }
+
     return (
         <section id="header">
             <nav className="navbar navbar-expand-lg navbar-light">
@@ -25,9 +44,7 @@ const Header = (props) => {
                                 <a className="nav-link" href="/about">Tentang</a>
                             </li>
                         </ul>
-                        <div className="d-flex">
-                            <a href="/login" className="button-a" role="button">Masuk</a>
-                        </div>
+                        {navStatus}
                     </div>
                 </div>
             </nav>

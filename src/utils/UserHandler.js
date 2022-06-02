@@ -38,7 +38,9 @@ const userLogin = (user) => {
   formData.append('email', email);
   formData.append('password', password);
 
-  axios.post('https://sigayantara-api.herokuapp.com/v1/auth/login', formData)
+  axios.post('https://sigayantara-api.herokuapp.com/v1/auth/login', formData, {
+    withCredentials: true,
+  })
     .then((response) => {
       console.log(response);
       return window.location.href = '/profile';
@@ -53,4 +55,29 @@ const userLogin = (user) => {
     });
 }
 
-export { userRegister, userLogin };
+const userLogout = () => {
+  swal({
+    title: "Keluar?",
+    text: "Apakah Anda ingin keluar?",
+    icon: "warning",
+    buttons: ["Batal", "Ok"],
+    dangerMode: true,
+  })
+    .then((willLogout) => {
+      if (willLogout) {
+        axios.post('https://sigayantara-api.herokuapp.com/v1/auth/logout', '', {
+          withCredentials: true,
+        })
+          .then((res) => {
+            swal("Berhasil keluar!", {
+              icon: "success",
+            }).then((res) => window.location.href = '/login');
+          })
+          .catch((err) => {
+            swal("Gagal Logout!");
+          });
+      }
+    });
+}
+
+export { userRegister, userLogin, userLogout };

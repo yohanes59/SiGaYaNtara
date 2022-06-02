@@ -9,14 +9,14 @@ import Unggah from '../Unggah'
 import Ubah from '../Ubah'
 import Profile from '../Profile';
 
-const MainApp = () => {
+const MainApp = (props) => {
   return (
     <div>
-        <Header />
+        <Header user={props.user} />
         <Router>
             <Switch>
                 <Route path="/profile">
-                    <Profile />
+                    <Profile user={props.user} />
                 </Route>
                 <Route path="/cagar">
                     <CagarBudaya />

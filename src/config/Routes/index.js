@@ -1,19 +1,33 @@
-import React from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { Login, MainApp, Register } from "../../pages";
 
 const Routes = () => {
+    const [authUser, setAuthUser] = useState();
+
+    useEffect(() => {
+        const getAuth = async () => {
+            const res = await axios.get('https://sigayantara-api.herokuapp.com/v1/auth/user', {
+                withCredentials: true,
+            });
+
+            const user = res.data;
+            setAuthUser(user);
+        };
+        getAuth();
+    })
     return (
         <Router>
             <Switch>
                 <Route path="/login">
-                    <Login />
+                    <Login user={authUser} />
                 </Route>
                 <Route path="/register">
-                    <Register />
+                    <Register user={authUser} />
                 </Route>
                 <Route path="/">
-                    <MainApp />
+                    <MainApp user={authUser} />
                 </Route>
             </Switch>
         </Router>

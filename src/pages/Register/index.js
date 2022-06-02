@@ -30,11 +30,11 @@ const Register = (props) => {
           </div>
 
           <div className="px-3">
-            <Input label="Nama Lengkap" for="name" id="name" name="name" type="text" onChange={(ev) => setFullName(ev.target.value)} />
+            <Input label="Nama Lengkap" id="name" name="name" type="text" onChange={(ev) => setFullName(ev.target.value)} />
             <Gap height={18} />
-            <Input label="Email" for="email" id="email" name="email" type="email" onChange={(ev) => setEmail(ev.target.value)} />
+            <Input label="Email" id="email" name="email" type="email" onChange={(ev) => setEmail(ev.target.value)} />
             <Gap height={18} />
-            <Input label="Password" for="password" id="password" name="password" type="password" onChange={(ev) => setPassword(ev.target.value)} />
+            <Input label="Password" id="password" name="password" type="password" onChange={(ev) => setPassword(ev.target.value)} />
 
             <div className="my-5">
               <button className="btn-submit" onClick={onSubmit}>Daftar</button>

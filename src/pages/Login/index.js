@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { LoginBg } from '../../assets'
 import { Gap, Input } from '../../components'
+import { userLogin } from '../../utils/UserHandler'
 import './login.css'
 
-const Login = () => {
+const Login = (props) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const onSubmit = () => {
+    const user = { email, password };
+    userLogin(user);
+  }
+
+  if (props.user) {
+    return window.location.href = '/';
+  }
   return (
     <div className="container">
       <div className="row">
@@ -15,24 +27,23 @@ const Login = () => {
           <div className="login mt-5 mb-2">
             <h1>Selamat Datang!</h1>
           </div>
+            <div className="px-3">
+              <Input label="Email" id="email" name="email" type="email" onChange={(ev) => setEmail(ev.target.value)} />
+              <Gap height={18} />
+              <Input label="Password" id="password" name="password" type="password" onChange={(e) => setPassword(e.target.value)} />
+                
+              <div className="my-3 text-end">
+                <a className="py-3 text-decoration-none text-secondary" href="/#">Lupa Password?</a>
+              </div>
 
-          <div className="px-3">
-            <Input label="Email" for="email" id="email" name="email" type="email"/>
-            <Gap height={18} />
-            <Input label="Password" for="password" id="password" name="password" type="password"/>
-              
-            <div className="my-3 text-end">
-              <a className="py-3 text-decoration-none text-secondary" href="/#">Lupa Password?</a>
-            </div>
+              <div>
+                <button className="btn-submit" onClick={onSubmit} >Masuk</button>
+              </div>
 
-            <div>
-              <button className="btn-submit" type="submit">Masuk</button>
+              <div className="text-center mt-5">
+                <p>Belum punya akun? <a href="/register" className="py-3 fw-bold text-decoration-none text-danger">Daftar</a></p>
+              </div>
             </div>
-
-            <div className="text-center mt-5">
-              <p>Belum punya akun? <a href="/register" className="py-3 fw-bold text-decoration-none text-danger">Daftar</a></p>
-            </div>
-          </div>
         </div>
       </div>  
     </div>

@@ -32,4 +32,26 @@ const userRegister = (user) => {
         });
 }
 
-export { userRegister };
+const userLogin = (user) => {
+    const { email, password } = user;
+    const formData = new FormData();
+    formData.append('email', email);
+    formData.append('password', password);
+  
+    axios.post('https://sigayantara-api.herokuapp.com/v1/auth/login', formData, {
+      withCredentials: true,
+    })
+      .then((response) => {
+        return window.location.href = '/';
+      })
+      .catch((error) => {
+        swal({
+          title: "Gagal Login!",
+          text: "Username atau Password Anda Salah.",
+          icon: "error",
+          button: "Ok",
+      });
+    });
+  }
+
+export { userRegister, userLogin };

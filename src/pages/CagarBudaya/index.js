@@ -3,8 +3,6 @@ import { Gap, Card, Pagination, HeroElement, Button} from '../../components';
 import { HomepageImage, CagarBudayaImage } from '../../assets';
 import "./cagarBudaya.css";
 
-
-
 const CagarBudaya = () => {
   return (
     <>

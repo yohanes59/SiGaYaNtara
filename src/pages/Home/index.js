@@ -32,7 +32,7 @@ const Home = () => {
                 <div className="row menus">
                     <Gap height={20} />
 
-                    { jenis.map( item => {
+                    {jenis.map(item => {
                         if (item === 'Bangunan') {
                             return <Menu key={item} title={item} alt={item} src={BangunanMenu} />
                         } else if (item === 'Benda') {
@@ -43,7 +43,7 @@ const Home = () => {
                             return <Menu key={item} title={item} alt={item} src={SitusMenu} />
                         } else {
                             return <Menu key={item} title={item} alt={item} src={StrukturMenu} />
-                        } 
+                        }
                     })}
 
                 </div>
@@ -59,7 +59,7 @@ const Home = () => {
                         </div>
                         <Gap height={50} />
 
-                        { province.map(item => { return <EksplorItem key={item} provincename={item} />} )}
+                        {province.map(item => { return <EksplorItem key={item} provincename={item} /> })}
                     </div>
                     <Gap height={50} />
                     <Pagination />

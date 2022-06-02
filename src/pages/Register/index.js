@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { RegisterBg } from '../../assets'
 import { Gap, Input } from '../../components'
+import { userRegister } from '../../utils/UserHandler'
 import './register.css'
 
-const Register = () => {
+const Register = (props) => {
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const onSubmit = () => {
+    const user = { fullName, email, password };
+    userRegister(user);
+  }
+
+  if (props.user) {
+    return window.location.href = '/';
+  }
   return (
     <div className="container">
       <div className="row">
@@ -17,14 +30,14 @@ const Register = () => {
           </div>
 
           <div className="px-3">
-            <Input label="Nama Lengkap" for="name" id="name" name="name" type="text"/>
+            <Input label="Nama Lengkap" for="name" id="name" name="name" type="text" onChange={(ev) => setFullName(ev.target.value)} />
             <Gap height={18} />
-            <Input label="Email" for="email" id="email" name="email" type="email"/>
+            <Input label="Email" for="email" id="email" name="email" type="email" onChange={(ev) => setEmail(ev.target.value)} />
             <Gap height={18} />
-            <Input label="Password" for="password" id="password" name="password" type="password"/>
+            <Input label="Password" for="password" id="password" name="password" type="password" onChange={(ev) => setPassword(ev.target.value)} />
 
             <div className="my-5">
-              <button className="btn-submit" type="submit">Daftar</button>
+              <button className="btn-submit" onClick={onSubmit}>Daftar</button>
             </div>
 
             <div className="text-center mt-5">

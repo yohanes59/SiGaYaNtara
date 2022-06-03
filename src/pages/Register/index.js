@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { RegisterBg } from '../../assets'
-import { Gap, Input } from '../../components'
+import { Gap, HomeButton, Input } from '../../components'
 import { userRegister } from '../../utils/UserHandler'
 import './register.css'
 
@@ -19,6 +19,7 @@ const Register = (props) => {
   }
   return (
     <div className="container">
+      <HomeButton />
       <div className="row">
         <div className="col-lg-6 col-md-6 col-sm-12 mt-3 d-flex flex-column justify-content-center">
           <img className="w-100 h-100" src={ RegisterBg } alt="img" />

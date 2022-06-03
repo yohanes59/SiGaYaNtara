@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { CloseIcon, IconProfile, LogoHomepage, MenuIcon } from '../../../assets';
 import "./header.css";
+import { userLogout } from '../../../utils/UserHandler';
 
 const Header = (props) => {
     let navStatus;
+    const [isOpen, setIsOpen] = useState(false);
+    const toggling = () => setIsOpen(!isOpen);
+
     if (!props.user) {
         navStatus = (
             <>
@@ -14,10 +18,24 @@ const Header = (props) => {
         );
     } else {
         navStatus = (
-            <div className="d-flex">
-                <a className="navbar-brand" href="/">
-                    <img src={IconProfile} alt="Icon Profile" className="icon" />
-                </a>
+            <div className="d-flex action">
+                <div className="profile">
+                    <a className="navbar-brand" onClick={toggling}>
+                        <img src={IconProfile} alt="Icon Profile" className="icon"/>
+                    </a>
+                </div> 
+                {isOpen && (
+                    <div className="profile-menu">
+                    <ul className="nav-profile">
+                    <li className="">
+                        <a className="nav-menu" href="/profile">Daftar Unggahan</a>
+                    </li>
+                    <li className="">
+                        <a className="nav-menu" onClick={userLogout}>Keluar</a>
+                    </li>
+                </ul>
+                </div>
+                )}
             </div>
         );
     }

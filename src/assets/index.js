@@ -18,6 +18,8 @@ import Foto from './images/foto.jpg';
 
 import EditIcon from "./icons/edit-icon.png";
 import DeleteIcon from "./icons/delete-icon.png";
+import MenuIcon from "./icons/menu-icon.png";
+import CloseIcon from "./icons/close-icon.png";
 
 export {
     HomepageImage,
@@ -34,5 +36,7 @@ export {
     Foto,
     IconProfile,
     EditIcon,
-    DeleteIcon
+    DeleteIcon,
+    MenuIcon,
+    CloseIcon
 }

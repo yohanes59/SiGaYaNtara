@@ -1,5 +1,5 @@
-import React from 'react';
-import { IconProfile, LogoHomepage } from '../../../assets';
+import React, { useState } from 'react';
+import { CloseIcon, IconProfile, LogoHomepage, MenuIcon } from '../../../assets';
 import "./header.css";
 
 const Header = (props) => {
@@ -22,33 +22,36 @@ const Header = (props) => {
         );
     }
 
+    const [isMobile, setIsMobile] = useState(false);
+    
     return (
-        <section id="header">
-            <nav className="navbar navbar-expand-lg navbar-light">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="/">
-                        <img src={LogoHomepage} alt="Logo SiGayantara" className="d-inline-block align-text-top" />
-                    </a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Beranda</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/cagar">Cagar Budaya</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/about">Tentang</a>
-                            </li>
-                        </ul>
-                        {navStatus}
-                    </div>
-                </div>
-            </nav>
-        </section>
+        <nav className="navbar">
+            <a className="justify-content-center mx-3" href="/">
+                <img src={LogoHomepage} alt="Logo SiGayantara" />
+            </a>
+
+            <ul className={isMobile ? "nav-menus-mobile": "nav-menus"}
+            onClick={() => setIsMobile(false)}>
+                <li className="nav-item">
+                    <a className="nav-link" href="/">Beranda</a>
+                    </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="/cagar">Cagar Budaya</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="/about">Tentang</a>
+                </li>
+                {navStatus}
+            </ul>
+            <button className="mobile-menu"
+            onClick={() => setIsMobile(!isMobile)}>
+                {isMobile ? ( 
+                    <img src={CloseIcon} alt="close icon" />
+                ) : (
+                    <img src={MenuIcon} alt="menu icon" />
+                )}
+            </button>
+        </nav>
     )
 }
 

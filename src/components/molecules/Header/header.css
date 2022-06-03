@@ -1,29 +1,118 @@
-.navbar{
-    top: 1;
-    position: absolute;
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 20px;
 }
-.navbar-nav{
-    justify-content: center;
+
+.nav-menus {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 75%;
+    margin: 10px 20px;
 }
-.button-a{
+
+.nav-menus-mobile {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+.nav-link {
+    padding: 10px 20px !important;
+    font-size: 18px;
+    color: #000000 !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #876546 !important;
+    font-weight: 500;
+}
+
+.button-a {
+    padding: 10px;
+    font-size: 18px;
     min-width: 90px;
     min-height: 44px;
     background-color: transparent;
-    border: 1.5px solid #000;
+    border: 1.5px solid #000000;
     border-radius: 20px;
-    color: #000;
+    color: #000000;
     text-decoration: none;
-    margin: 10px;
     text-align: center;
-    padding: 10px;
 }
-.button-a:hover{
+
+.button-a:hover {
+    border: none;
     background-color: #EEC374;
-    color: #000;
+    color: #876546;
+    font-weight: 500;
 }
-.nav-link > .nav-item{
-    color: #EEC374;
-    font-size: 18px;
-    justify-content: center;
-    text-align: center;
+
+.mobile-menu {
+    background: none;
+    border: none;
+    display: none;
+    top: 15px;
+    right: 25px;
+}
+
+.mobile-menu > img {
+    height: 35px;
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 720px) {
+    .navbar {
+        background: linear-gradient(#EEC374, #ffffff);
+    }
+
+    .nav-menus {
+        display: none;
+    }
+
+    .nav-menus-mobile {
+        position: absolute;
+        display: block;
+        top: 80px;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+        background-color: #ffffff;
+        transition: all 0.5s ease-out;
+        margin: 0;
+        z-index: 1;
+    }
+    
+    .nav-link,
+    .button-a {
+        width: 100%;
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+
+    .nav-link:hover,
+    .button-a:hover {
+        color: #876546;
+    }
+
+    .button-a {
+        border: none;
+    }
+
+    .button-a:hover {
+        background-color: #ffffff;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
 }

@@ -18,17 +18,17 @@ const MainApp = (props) => {
                 <Route path="/profile">
                     <Profile user={props.user} />
                 </Route>
-                <Route path="/cagar">
-                    <CagarBudaya />
-                </Route>
-                <Route path="/detail-cagar">
-                    <DetailCagar />
-                </Route>
                 <Route path="/upload">
-                    <Unggah />
+                    <Unggah user={props.user} />
                 </Route>
                 <Route path="/edit">
-                    <Ubah />
+                    <Ubah user={props.user} />
+                </Route>
+                <Route path="/detail-cagar">
+                    <DetailCagar user={props.user} />
+                </Route>
+                <Route path="/cagar">
+                    <CagarBudaya />
                 </Route>
                 <Route path="/">
                     <Home />

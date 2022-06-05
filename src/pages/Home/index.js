@@ -8,13 +8,17 @@ const Home = () => {
     const [jenis, setJenis] = useState([]);
 
     useEffect(() => {
-        fetch('http://sigayantara-api.herokuapp.com/v1/cultural-heritage/provinsi/getList')
+        fetch('https://sigayantara-api.herokuapp.com/v1/cultural-heritage/provinsi/getList', {
+            withCredentials: true,
+        })
             .then((data) => data.json())
             .then((data) => setProvince(data.data))
     }, [])
 
     useEffect(() => {
-        fetch('http://sigayantara-api.herokuapp.com/v1/cultural-heritage/jenis/getList')
+        fetch('https://sigayantara-api.herokuapp.com/v1/cultural-heritage/jenis/getList', {
+            withCredentials: true,
+        })
             .then((data) => data.json())
             .then((data) => setJenis(data.data))
     }, [])

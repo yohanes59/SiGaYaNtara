@@ -9,6 +9,7 @@ const Routes = () => {
     useEffect(() => {
         const getAuth = async () => {
             const res = await axios.get('https://sigayantara-api.herokuapp.com/v1/auth/user', {
+            // const res = await axios.get('http://localhost:5000/v1/auth/user', {
                 withCredentials: true,
             });
 

@@ -3,14 +3,27 @@ import { Gap, Card, Pagination, HeroElement, Button} from '../../components';
 import { HomepageImage, CagarBudayaImage } from '../../assets';
 import "./cagarBudaya.css";
 
-const CagarBudaya = () => {
+const CagarBudaya = (props) => {
+  // status button
+  let buttonStatus;
+  // status button ketika belum login
+  if (!props.user) {
+    buttonStatus = (
+      <p>tes</p>
+    );
+  } else {
+  // status button ketika sudah login
+    buttonStatus = (
+      <Button name="Unggah Cagar Budaya" />
+    );
+  }
   return (
     <>
     <div className="container">
       <div className="heading-title text-left">
           <h2 className="text-capitalize">Daftar Cagar Budaya</h2>
           <Gap height={20}/>
-          <Button name="Unggah Cagar Budaya"/>
+          {buttonStatus}
       </div>
         <HeroElement src={CagarBudayaImage} alt="Candi Prambanan"/>
     </div>

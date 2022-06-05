@@ -28,6 +28,12 @@ const Header = (props) => {
                     <div className="profile-menu">
                     <ul className="nav-profile">
                     <li className="">
+                        <p>Welcome back,</p>
+                    </li>
+                    <li className="">
+                        <p>{props.user.fullName}</p>
+                    </li>
+                    <li className="">
                         <a className="nav-menu" href="/profile">Daftar Unggahan</a>
                     </li>
                     <li className="">

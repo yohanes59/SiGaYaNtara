@@ -3,11 +3,16 @@ import { Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap';
 import { HomepageImage } from '../../assets'
 import './detailCagar.css'
 
-const DetailCagar = () => {
+const DetailCagar = (props) => {
+    
     const [currentActiveTab, setCurrentActiveTab] = useState('1');
 
     const toggleTab = tab => {
         if (currentActiveTab !== tab) setCurrentActiveTab(tab);
+    }
+
+    if (!props.user) {
+        return window.location.href = '/';
     }
 
     return (

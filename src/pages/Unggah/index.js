@@ -39,6 +39,10 @@ const Unggah = (props) => {
         }
         createCulturalHeritage(cultureHeritage);
     }
+
+    if (!props.user) {
+        return window.location.href = '/';
+    }
     return (
         <>
             <div className="container">

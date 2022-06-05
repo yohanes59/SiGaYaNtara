@@ -29,7 +29,7 @@ const createCulturalHeritage = (cultureHeritage) => {
     formData.append('user_fullName', user_fullName);
 
     axios.post(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage`, formData, {
-    // axios.post(`http://localhost:5000/v1/cultural-heritage`, formData, {
+        // axios.post(`http://localhost:5000/v1/cultural-heritage`, formData, {
         withCredentials: true,
         headers: {
             'content-type': 'multipart/form-data',
@@ -57,5 +57,6 @@ const createCulturalHeritage = (cultureHeritage) => {
             });
         })
 }
+
 
 export { createCulturalHeritage };

@@ -30,10 +30,10 @@ const MainApp = (props) => {
                 <Route path="/cagar">
                     <CagarBudaya />
                 </Route>
-                <Route path="/">
+                <Route path="/" exact>
                     <Home />
                 </Route>
-                <Route path="/about">
+                <Route path="/about" exact>
                     <Tentang />
                     <TimItem nama="shandra elvyra s.p." section="front-end" src={Foto} />
                     <TimItem nama="nilam setyo ningrum" section="front-end" src={Foto} />

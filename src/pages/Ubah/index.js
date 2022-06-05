@@ -2,7 +2,10 @@ import React from 'react'
 import { Gap } from '../../components'
 import './ubah.css'
 
-const Ubah = () => {
+const Ubah = (props) => {
+    if (!props.user) {
+        return window.location.href = '/';
+    }
     return (
         <div className="container">
             <h2>EDIT</h2>

@@ -14,9 +14,11 @@ const Register = (props) => {
     userRegister(user);
   }
 
+  // jika sedang login tidak bisa register
   if (props.user) {
     return window.location.href = '/';
   }
+
   return (
     <div className="container">
       <HomeButton />

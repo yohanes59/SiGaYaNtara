@@ -3,9 +3,11 @@ import { Gap } from '../../components'
 import './ubah.css'
 
 const Ubah = (props) => {
-    if (!props.user) {
-        return window.location.href = '/';
-    }
+    // jika belum login maka tidak bisa akses halaman ini
+    // bug
+    // if (!props.user) {
+    //     return window.location.href = '/';
+    // }
     return (
         <div className="container">
             <h2>EDIT</h2>
@@ -38,12 +40,12 @@ const Ubah = (props) => {
                     <label for="inputDeskripsi">Deskripsi</label>
                     <textarea className="form-control" id="inputDeskripsi" rows="3" placeholder="Deskripsi singkat cagar budaya..."></textarea>
                 </div>
-                <Gap height={20}/>
+                <Gap height={20} />
                 <div>
                     <button className="btn-submit" type="submit">Simpan</button>
                 </div>
             </form>
-            <Gap height={60}/>
+            <Gap height={60} />
         </div>
     )
 }

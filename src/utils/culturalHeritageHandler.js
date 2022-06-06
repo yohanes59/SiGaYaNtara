@@ -58,5 +58,24 @@ const createCulturalHeritage = (cultureHeritage) => {
         })
 }
 
+const getAllCultureHeritage = async (counter) => {
+    const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage?page=${counter}&perPage=9`);
+    return response.data;
+}
 
-export { createCulturalHeritage };
+// const getDetailCultureHeritage = async (id, setCultureHeritage) => {
+//     const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`);
+//     return response.data.data;
+// }
+
+// const getAllCultureHeritageByJenis = async (jenis, setDataJenis) => {
+//     const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/jenis/${jenis}`);
+//     return response.data.data;
+// }
+
+export {
+    createCulturalHeritage,
+    getAllCultureHeritage,
+    // getDetailCultureHeritage,
+    // getAllCultureHeritageByJenis
+};

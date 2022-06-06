@@ -40,9 +40,12 @@ const Unggah = (props) => {
         createCulturalHeritage(cultureHeritage);
     }
 
-    if (!props.user) {
-        return window.location.href = '/';
-    }
+    // jika belum login maka tidak bisa akses halaman ini
+    // bug
+    // if (!props.user) {
+    //     return window.location.href = '/';
+    // }
+
     return (
         <>
             <div className="container">

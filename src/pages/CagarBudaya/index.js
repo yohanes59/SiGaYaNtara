@@ -1,55 +1,60 @@
 import React, { useState, useEffect } from 'react';
-import { Gap, Card, Pagination, HeroElement, Button } from '../../components';
+import { Gap, HeroElement, Button } from '../../components';
 import { CagarBudayaImage } from '../../assets';
 import "./cagarBudaya.css";
+import { getAllCultureHeritage } from '../../utils/culturalHeritageHandler';
+// import { getAllCultureHeritageByJenis } from '../../utils/culturalHeritageHandler';
+import { createCultureHeritageList, createPagination } from '../../utils/templates/CultureHeritageListHelper';
 
 const CagarBudaya = (props) => {
   const [dataCagar, setDataCagar] = useState([]);
+  // const [dataJenis, setDataJenis] = useState([]);
+  const [pageInformation, setPageInformation] = useState({});
+  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    fetch('https://sigayantara-api.herokuapp.com/v1/cultural-heritage', {
-      withCredentials: true,
-    })
-      .then((data) => data.json())
-      .then((data) => setDataCagar(data.data))
-  }, []);
+    getAllCultureHeritage(counter)
+      .then(res => {
+        setDataCagar(res.data);
+        setPageInformation(res);
+      })
+  }, [counter])
 
-  // status button
-  let buttonStatus;
-  // status button ketika belum login
-  if (!props.user) {
-    buttonStatus = (
-      <p>tes</p>
-    );
-  } else {
-    // status button ketika sudah login
-    buttonStatus = (
-      <Button name="Unggah Cagar Budaya" />
-    );
-  }
-  return (
-    <>
-      <div className="container">
-        <div className="heading-title text-left">
-          <h2 className="text-capitalize">Daftar Cagar Budaya</h2>
-          <Gap height={20} />
-          {buttonStatus}
-        </div>
-        <HeroElement src={CagarBudayaImage} alt="Candi Prambanan" />
+//   useEffect(() => {
+//     const compareJenis = props.match.params.jenis;
+//     console.log(compareJenis);
+//     getAllCultureHeritageByJenis(compareJenis)
+//       .then((res) => {
+//         setDataJenis(res)
+//         setPageInformation(res);
+//       })
+// }, [props, dataJenis]);
+
+// const cultureHeritageListJenis = createCultureHeritageList(pageInformation, dataJenis)
+const cultureHeritageList = createCultureHeritageList(pageInformation, dataCagar)
+const pagination = createPagination(pageInformation, counter, setCounter);
+
+return (
+  <>
+    <div className="container">
+      <div className="heading-title text-left">
+        <h2 className="text-capitalize">Daftar Cagar Budaya</h2>
+        <Gap height={20} />
+        <Button name="Unggah Cagar Budaya" />
       </div>
-      <Gap height={300} />
-      <div className="container">
-        <div className="row row-cols-1 row-cols-md-3 g-4">
-          {dataCagar.map(item => {
-            return <Card key={item._id} src={`http://sigayantara-api.herokuapp.com/v1/${item.image}`} alt={item.nama} title={item.nama} city={item.kabupaten} category={item.jenis} />
-          })}
-        </div>
+      <HeroElement src={CagarBudayaImage} alt="Candi Prambanan" />
+    </div>
+    <Gap height={300} />
+    <div className="container">
+      <div className="row row-cols-1 row-cols-md-3 g-4">
+        {cultureHeritageList}
       </div>
-      <Gap height={60} />
-      <Pagination />
-      <Gap height={40} />
-    </>
-  )
+    </div>
+    <Gap height={60} />
+    {pagination}
+    <Gap height={40} />
+  </>
+)
 }
 
 export default CagarBudaya;

@@ -24,8 +24,11 @@ const MainApp = (props) => {
                 <Route path="/edit">
                     <Ubah user={props.user} />
                 </Route>
-                <Route path="/detail-cagar">
-                    <DetailCagar user={props.user} />
+                <Route path="/detail/:id" > 
+                    <DetailCagar />
+                </Route>
+                <Route path="/cagar">
+                    <CagarBudaya />
                 </Route>
                 <Route path="/cagar">
                     <CagarBudaya />

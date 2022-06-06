@@ -22,6 +22,8 @@ const Home = () => {
             .then((data) => data.json())
             .then((data) => setJenis(data.data))
     }, [])
+
+
     return (
         <div>
             {/* hero element */}
@@ -36,17 +38,17 @@ const Home = () => {
                 <div className="row menus">
                     <Gap height={20} />
 
-                    {jenis.map(item => {
-                        if (item === 'Bangunan') {
-                            return <Menu key={item} title={item} alt={item} src={BangunanMenu} />
-                        } else if (item === 'Benda') {
-                            return <Menu key={item} title={item} alt={item} src={BendaMenu} />
-                        } else if (item === 'Kawasan') {
-                            return <Menu key={item} title={item} alt={item} src={KawasanMenu} />
-                        } else if (item === 'Situs') {
-                            return <Menu key={item} title={item} alt={item} src={SitusMenu} />
+                    {jenis.map(jenis => {
+                        if (jenis === 'Bangunan') {
+                            return <Menu key={jenis} title={jenis} alt={jenis} src={BangunanMenu} href={`/cagar/${jenis}`} />
+                        } else if (jenis === 'Benda') {
+                            return <Menu key={jenis} title={jenis} alt={jenis} src={BendaMenu} href={`/cagar/${jenis}`} />
+                        } else if (jenis === 'Kawasan') {
+                            return <Menu key={jenis} title={jenis} alt={jenis} src={KawasanMenu} href={`/cagar/${jenis}`} />
+                        } else if (jenis === 'Situs') {
+                            return <Menu key={jenis} title={jenis} alt={jenis} src={SitusMenu} href={`/cagar/${jenis}`} />
                         } else {
-                            return <Menu key={item} title={item} alt={item} src={StrukturMenu} />
+                            return <Menu key={jenis} title={jenis} alt={jenis} src={StrukturMenu} href={`/cagar/${jenis}`} />
                         }
                     })}
 
@@ -63,7 +65,11 @@ const Home = () => {
                         </div>
                         <Gap height={50} />
 
-                        {province.map(item => { return <EksplorItem key={item} provincename={item} /> })}
+                        {province.map(item => {
+                            return (
+                                <EksplorItem key={item} provincename={item} />
+                            )
+                        })}
                     </div>
                     <Gap height={50} />
                     <Pagination />

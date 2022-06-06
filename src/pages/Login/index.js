@@ -12,10 +12,11 @@ const Login = (props) => {
     const user = { email, password };
     userLogin(user);
   }
-
+  // jika sudah login tidak bisa ke halaman login lagi
   if (props.user) {
     return window.location.href = '/';
   }
+
   return (
     <div className="container">
       <HomeButton />

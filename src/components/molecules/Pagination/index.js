@@ -1,20 +1,21 @@
 import React from 'react'
 
-const Pagination = () => {
+const Pagination = (props) => {
+    const {previous, next, current_page, total_page} = props;
   return (
     <div>
         <nav aria-label="Page navigation example">
             <ul className="pagination justify-content-center">
                 <li className="page-item">
-                <a className="page-link" href="#" aria-label="Previous">
+                <a className="page-link" href="#" aria-label="Previous" onClick={previous}>
                     <span aria-hidden="true">&laquo;</span>
                 </a>
                 </li>
-                <li className="page-item"><a className="page-link" href="#">1</a></li>
-                <li className="page-item"><a className="page-link" href="#">2</a></li>
-                <li className="page-item"><a className="page-link" href="#">3</a></li>
+                <li className="page-item"><p className="page-link">{current_page}   ||   {total_page}</p></li>
+                {/* <li className="page-item"><a className="page-link" href="#">2</a></li>
+                <li className="page-item"><a className="page-link" href="#">3</a></li> */}
                 <li className="page-item">
-                <a className="page-link" href="#" aria-label="Next">
+                <a className="page-link" href="#" aria-label="Next" onClick={next}>
                     <span aria-hidden="true">&raquo;</span>
                 </a>
                 </li>

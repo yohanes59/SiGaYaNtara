@@ -5,9 +5,6 @@ import { userLogout } from '../../../utils/UserHandler';
 
 const Header = (props) => {
     let navStatus;
-    const [isOpen, setIsOpen] = useState(false);
-    const toggling = () => setIsOpen(!isOpen);
-
     if (!props.user) {
         navStatus = (
             <>
@@ -18,30 +15,17 @@ const Header = (props) => {
         );
     } else {
         navStatus = (
-            <div className="d-flex action">
-                <div className="profile">
-                    <a className="navbar-brand" onClick={toggling}>
-                        <img src={IconProfile} alt="Icon Profile" className="icon"/>
-                    </a>
-                </div> 
-                {isOpen && (
-                    <div className="profile-menu">
-                    <ul className="nav-profile">
-                    <li className="">
-                        <p>Welcome back,</p>
-                    </li>
-                    <li className="">
-                        <p>{props.user.fullName}</p>
-                    </li>
-                    <li className="">
-                        <a className="nav-menu" href="/profile">Daftar Unggahan</a>
-                    </li>
-                    <li className="">
-                        <a className="nav-menu" onClick={userLogout}>Keluar</a>
-                    </li>
-                </ul>
-                </div>
-                )}
+            <div className="dropdown">
+                <li>
+                    <button className="dropdown-title" type="button" aria-expanded="false" aria-controls="profile-dropdown">
+                        <img src={IconProfile} alt="Icon Profile" className="profile-icon" />
+                    </button>
+                    <ul className="dropdown-menus" id="profile-dropdown">
+                        <li><a href="/profile"> Hai, {props.user.fullName}</a></li>
+                        <li><a href="/profile">Daftar Unggahan</a></li>
+                        <li><a className="nav-logout" role="button" href="#" onClick={userLogout}>Keluar</a></li>
+                    </ul>
+                </li>
             </div>
         );
     }
@@ -56,19 +40,14 @@ const Header = (props) => {
 
             <ul className={isMobile ? "nav-menus-mobile": "nav-menus"}
             onClick={() => setIsMobile(false)}>
-                <li className="nav-item">
-                    <a className="nav-link" href="/">Beranda</a>
-                    </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="/cagar">Cagar Budaya</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="/about">Tentang</a>
-                </li>
+                <li><a className="nav-link" href="/">Beranda</a></li>
+                <li><a className="nav-link" href="/cagar">Cagar Budaya</a></li>
+                <li><a className="nav-link" href="/about">Tentang</a></li>
+                <div className="dropdown-divider"></div>
                 {navStatus}
             </ul>
             <button className="mobile-menu"
-            onClick={() => setIsMobile(!isMobile)}>
+            onClick={() => setIsMobile(!isMobile)} tabIndex="1">
                 {isMobile ? ( 
                     <img src={CloseIcon} alt="close icon" />
                 ) : (

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Gap, Tentang, TimItem, EksplorItem, Pagination, HeroElement, Menu } from "../../components";
-import { Foto, HomepageImage, BendaMenu, BangunanMenu, StrukturMenu, SitusMenu, KawasanMenu } from "../../assets";
+import { Gap,  EksplorItem, Pagination, HeroElement, Menu, About, Teams } from "../../components";
+import { HomepageImage, BendaMenu, BangunanMenu, StrukturMenu, SitusMenu, KawasanMenu } from "../../assets";
 import "./home.css";
 
 const Home = () => {
@@ -78,20 +78,9 @@ const Home = () => {
             </section>
 
             {/* TENTANG */}
-            <Tentang />
+            <About />
             {/* tim */}
-            <div className="container">
-                <div className="row">
-                    <div className="heading-title text-center">
-                        <h3 className="text-uppercase">Our Team</h3>
-                    </div>
-                    <Gap height={50} />
-                    <TimItem nama="shandra elvyra s.p." section="front-end" src={Foto} />
-                    <TimItem nama="nilam setyo ningrum" section="front-end" src={Foto} />
-                    <TimItem nama="yohanes cahyadi" section="back-end" src={Foto} />
-                    <TimItem nama="darian gunawan" section="back-end" src={Foto} />
-                </div>
-            </div>
+            <Teams />
         </div>
     )
 }

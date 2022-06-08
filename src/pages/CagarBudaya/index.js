@@ -39,7 +39,7 @@ return (
     <div className="container">
       <div className="heading-title text-left">
         <h2 className="text-capitalize">Daftar Cagar Budaya</h2>
-        <Gap height={20} />
+        <Gap height={100} />
         <Button name="Unggah Cagar Budaya" />
       </div>
       <HeroElement src={CagarBudayaImage} alt="Candi Prambanan" />

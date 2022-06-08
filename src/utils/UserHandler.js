@@ -45,7 +45,7 @@ const userLogin = (user) => {
   })
     .then((response) => {
       console.log(response);
-      return window.location.href = '/profile';
+      return window.location.href = '/';
     })
     .catch((error) => {
       swal({

@@ -1,5 +1,3 @@
-import Tentang from "./Tentang";
-import TimItem from "./TimItem";
 import Header from "./Header";
 import HeaderProfile from "./HeaderProfile";
 import Footer from "./Footer";
@@ -9,10 +7,14 @@ import HeroElement from "./HeroElement";
 import Menu from "./Menu";
 import Card from "./Card";
 import CardUpload from "./CardUpload";
+import Teams from "./Teams";
+import TeamItem from "./TeamItem";
+import About from "./About";
 
-export { 
-    Tentang, 
-    TimItem, 
+export {
+    About,
+    Teams,
+    TeamItem, 
     Header,
     HeaderProfile, 
     Footer,
@@ -22,4 +24,4 @@ export {
     Menu,
     Card,
     CardUpload
- };
+};

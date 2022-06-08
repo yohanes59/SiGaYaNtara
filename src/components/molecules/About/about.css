@@ -1,0 +1,19 @@
+.about {
+    background-color: #EEC374;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.about p {
+    margin: 0;
+}
+
+.about-title:hover {
+    color: #876546;
+}
+
+.sigayantara {
+    font-weight: 500;
+    text-decoration: none;
+    color: #000000 !important;
+}

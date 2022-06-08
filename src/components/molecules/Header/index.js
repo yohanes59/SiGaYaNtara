@@ -16,16 +16,13 @@ const Header = (props) => {
     } else {
         navStatus = (
             <div className="dropdown">
-                <li>
-                    <button className="dropdown-title" type="button" aria-expanded="false" aria-controls="profile-dropdown">
-                        <img src={IconProfile} alt="Icon Profile" className="profile-icon" />
-                    </button>
-                    <ul className="dropdown-menus" id="profile-dropdown">
-                        <li><a href="/profile"> Hai, {props.user.fullName}</a></li>
-                        <li><a href="/profile">Daftar Unggahan</a></li>
-                        <li><a className="nav-logout" role="button" href="#" onClick={userLogout}>Keluar</a></li>
-                    </ul>
-                </li>
+                <button className="dropdown-title" type="button" aria-expanded="false" aria-controls="profile-dropdown">
+                    <img src={IconProfile} alt="Icon Profile" className="profile-icon" />
+                </button>
+                <div className="dropdown-menus" id="profile-dropdown">
+                    <p tabIndex="0">Hai, {props.user.fullName}</p>
+                    <button className="nav-logout" type="button" onClick={userLogout}>Keluar</button>
+                </div>
             </div>
         );
     }

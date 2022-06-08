@@ -7,13 +7,10 @@
 }
 
 .nav-menus {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
     width: 75%;
-    margin: 10px 20px;
 }
 
+.nav-menus,
 .nav-menus-mobile {
     display: flex;
     justify-content: flex-end;
@@ -23,40 +20,102 @@
 
 .nav-link {
     padding: 10px 20px !important;
-    font-size: 18px;
     color: #000000 !important;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .nav-link:hover {
     color: #876546 !important;
+}
+
+.nav-link:focus,
+.button-a,
+.dropdown .dropdown-menus {
+    border-radius: 30px;
+}
+
+.nav-link,
+.button-a,
+.dropdown p,
+.dropdown p .dropdown-title,
+.nav-logout {
+    font-size: 18px;
+}
+
+.nav-link:hover,
+.button-a:hover,
+.dropdown .dropdown-menus p:hover,
+.nav-logout:hover {
     font-weight: 500;
 }
 
+.nav-link:focus,
+.dropdown-title:focus,
+.dropdown .dropdown-menus p:focus,
+.nav-logout:focus,
+.button-a:focus {
+    outline: none;
+}
+
+.nav-link:focus,
+.button-a:hover,
+.dropdown .dropdown-menus p:focus {
+    background-color: #EEC374;
+}
+
+.nav-link,
+.nav-logout:hover {
+    cursor: pointer;
+}
+
+.nav-logout {
+    width: 100%;
+    background: none;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.nav-logout:hover {
+    color: #e94a4a;
+}
+
+.nav-logout:focus {
+    background-color: #e94a4a !important;
+    color: #000000 !important;
+    border-radius: 0 0 10px 10px;
+}
+
+.button-a:hover,
+.dropdown .dropdown-menus p:hover {
+    color: #876546;
+}
+
+.button-a:hover,
+.mobile-menu,
+.dropdown-title,
+.nav-logout,
+.button-a:focus {
+    border: none;
+}
+
 .button-a {
+    margin-left: 20px;
     padding: 10px;
-    font-size: 18px;
     min-width: 90px;
     min-height: 44px;
     background-color: transparent;
     border: 1.5px solid #000000;
-    border-radius: 20px;
     color: #000000;
     text-decoration: none;
     text-align: center;
 }
 
-.button-a:hover {
-    border: none;
-    background-color: #EEC374;
-    color: #876546;
-    font-weight: 500;
+.button-a:focus {
+    background-color: #4c84ee;
 }
 
 .mobile-menu {
     background: none;
-    border: none;
     display: none;
     top: 15px;
     right: 25px;
@@ -75,25 +134,18 @@
 
 .dropdown-title {
     background-color: transparent;
-    border: none;
+    padding: 0 0 0 20px;
 }
 
-.dropdown ul {
+.dropdown p {
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
-.dropdown ul li a,
-.dropdown ul li .dropdown-title {
+.dropdown p,
+.dropdown p .dropdown-title {
     padding: 10px 20px;
-    text-decoration: none;
     color: #000000;
-    font-size: 18px;
-}
-
-.dropdown-title:focus {
-    outline: none;
 }
 
 .dropdown .dropdown-title::after {
@@ -101,27 +153,21 @@
 }
 
 .dropdown .dropdown-menus {
-    margin-top: 5px;
+    margin-top: 10px;
     position: absolute;
-    min-width: 200px;
-    right: 10px;
-    background-color: #ffffff;
+    min-width: 250px;
+    right: 5px;
     border-radius: 10px;
+    background-color: #ffffff;
     visibility: hidden;
 }
 
-.dropdown .dropdown-menus a {
+.dropdown .dropdown-menus p {
     display: block;
 }
 
-.dropdown .dropdown-menus a:hover {
-    color: #876546;
-    font-weight: 500;
-}
-
-.dropdown .dropdown-menus a:focus {
-    outline: none;
-    background-color: #EEC374;
+.dropdown .dropdown-menus p:focus {
+    border-radius: 10px 10px 0 0 ;
 }
 
 .dropdown::after {
@@ -137,29 +183,24 @@
     visibility: visible;
 }
 
-.nav-logout:hover {
-    color: #e94a4a !important;
-    cursor: pointer;
-}
-
-.nav-logout:focus {
-    outline: none;
-    background-color: #e94a4a !important;
-    color: #000000 !important;
-}
-
 @media screen and (max-width: 720px) {
     .navbar {
         background: linear-gradient(#EEC374, #ffffff);
     }
 
-    .nav-menus {
+    .nav-menus,
+    .dropdown-title {
         display: none;
+    }
+
+    .nav-menus-mobile,
+    .mobile-menu,
+    .dropdown .dropdown-menus {
+        display: block;
     }
 
     .nav-menus-mobile {
         position: absolute;
-        display: block;
         top: 80px;
         padding: 0;
         width: 100%;
@@ -172,7 +213,8 @@
     
     .nav-link,
     .button-a,
-    .dropdown-menus a {
+    .dropdown-menus p,
+    .nav-logout {
         width: 100%;
         text-align: center;
         transition: all 0.5s ease;
@@ -180,53 +222,55 @@
 
     .nav-link:focus,
     .nav-link:hover,
-    .dropdown-menus a:hover {
-        outline: none;
+    .dropdown-menus p:hover {
+        border-radius: 0;
         color: #876546;
         background-color: #EEC374;
     }
 
     .button-a {
+        margin-left: 0;
         border: none;
         border-radius: 0;
-        margin-bottom: 10px;
     }
 
     .button-a:focus,
     .button-a:hover {
-        outline: none;
-        color: #000000;
-        font-weight: normal;
         background-color: #4c84ee;
     }
 
+    .button-a:focus,
+    .button-a:hover,
+    .nav-logout:hover {
+        color: #000000;
+        font-weight: normal;
+    }
+
+    .nav-link:focus,
+    .nav-link:hover,
+    .dropdown-menus p:hover,
+    .button-a:focus,
+    .button-a:hover {
+        outline: none;
+    }
+
     .mobile-menu {
-        display: block;
         position: absolute;
         top: 15px;
         right: 25px;
     }
 
-    .dropdown .dropdown-menus {
-        display: block;
-    }
-
-    .dropdown-title {
-        display: none;
-    }
-
-    ul #profile-dropdown  {
+    div #profile-dropdown  {
         position: inherit;
         visibility: visible;
     }
 
+    .button-a,
     .nav-logout {
         margin-bottom: 10px;
     }
     
     .nav-logout:hover {
         background-color: #e94a4a !important;
-        color: #000000 !important;
-        font-weight: normal;
     }
 }

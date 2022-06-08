@@ -1,5 +1,6 @@
 .text-capitalize{
-    color: #F4DFBA;
-    margin-top: 100px;
+    color: #000000;
+    margin-top: 80px;
     font-size: 48px;
+    text-shadow: 0px 5px 5px #876546;
 }

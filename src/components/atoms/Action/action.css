@@ -1,0 +1,67 @@
+.card-action{
+    align-items: right!important;
+    justify-content: right!important;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+}
+.action-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.card-action ul li{
+    list-style: none;
+    padding: 5px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.card-action ul li img{
+    min-width: 44px;
+    min-height: 44px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.card-action ul li:hover img{
+    opacity: 1;
+}
+.card-action ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.5s;
+    margin: 5px;
+    text-align: left;
+    padding-left: -10px;
+}
+.card-action ul li:hover a{
+    color: #876546 !important;
+}
+.icon-card{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+.action-menu .edit-card{
+    border: 1px solid #876546;
+    border-radius: 5px;
+    height: 50px;
+    cursor: pointer;
+}
+.action-menu .delete-card{
+    border: 1px solid #876546;
+    border-radius: 5px;
+    height: 50px;
+    cursor: pointer;
+}
+.edit-card:hover{
+    background-color: #EEC374;
+}
+.delete-card:hover{
+    background-color: #EEC374;
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap';
+import { Gap, Action } from '../../components/atoms';
 import './detailCagar.css'
 import { withRouter } from 'react-router-dom'
 import axios from 'axios';
@@ -45,6 +46,9 @@ const DetailCagar = (props) => {
                     <div className="col-lg-6 col-md-6 col-sm-12">
                         <p className="text-end text-muted">{detailData.createdAt}</p>
                     </div>
+                    <Gap height={20}/>
+                        <Action />
+                    <Gap height={20}/>
                 </div>
 
                 <div className="mt-3 mb-5 shadow">

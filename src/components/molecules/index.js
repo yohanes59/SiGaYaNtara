@@ -1,5 +1,4 @@
 import Header from "./Header";
-import HeaderProfile from "./HeaderProfile";
 import Footer from "./Footer";
 import EksplorItem from "./EksplorItem";
 import Pagination from "./Pagination";
@@ -15,8 +14,7 @@ export {
     About,
     Teams,
     TeamItem, 
-    Header,
-    HeaderProfile, 
+    Header, 
     Footer,
     EksplorItem,
     Pagination,

@@ -44,7 +44,7 @@ const createCulturalHeritage = (cultureHeritage) => {
                     button: "Ok",
                 })
                     .then((result) => {
-                        window.location.href = `/profile`;
+                        window.location.href = `/cagar`;
                     });
             }
         })
@@ -116,6 +116,46 @@ const updateCulturalHeritage = (cultureHeritage, id) => {
         })
 };
 
+const deleteCulturalHeritage = (cultureHeritage) =>{
+    swal({
+        title: "Hapus Data Cagar Budaya?",
+        text: "Data cagar budaya akan dihapus permanen",
+        icon: "warning",
+        buttons: ["Batal", "Ok"],
+        dangerMode: true,
+    })
+    .then((deleteData) => {
+        if (deleteData){
+            axios.delete(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${cultureHeritage._id}`, {
+                withCredentials: true,
+                headers: {
+                    'content-type': 'multipart/form-data',
+                },
+        })
+            .then(res => {
+                if (res.status === 200) {
+                    swal({
+                        title: "Selamat!",
+                        text: `Data cagar budaya berhasil dihapus`,
+                        icon: "success",
+                    })
+                        .then((res) => {
+                            window.location.href = `/cagar`;
+                        });
+                }
+            })
+            .catch(err => {
+                swal({
+                    title: "Gagal!",
+                    text: `${err.response.data}`,
+                    icon: "error",
+                    button: "Ok",
+                });
+            })
+        }
+    })
+}
+
 const getListOfJenisOfCulturalHeritage = async () => {
     const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/jenis/getList`, {
         withCredentials: true,
@@ -128,6 +168,7 @@ export {
     createCulturalHeritage,
     getAllCultureHeritage,
     updateCulturalHeritage,
+    deleteCulturalHeritage,
     getDetailCultureHeritage,
     getListOfJenisOfCulturalHeritage
 };

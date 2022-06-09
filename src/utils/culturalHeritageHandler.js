@@ -59,23 +59,75 @@ const createCulturalHeritage = (cultureHeritage) => {
 }
 
 const getAllCultureHeritage = async (counter) => {
-    const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage?page=${counter}&perPage=9`);
+    const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage?page=${counter}&perPage=9`, {
+        withCredentials: true,
+    });
     return response.data;
 }
 
-// const getDetailCultureHeritage = async (id, setCultureHeritage) => {
-//     const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`);
-//     return response.data.data;
-// }
+const getDetailCultureHeritage = async (id) => {
+    const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`, {
+        withCredentials: true,
+    });
+    return response.data.data;
+}
 
-// const getAllCultureHeritageByJenis = async (jenis, setDataJenis) => {
-//     const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/jenis/${jenis}`);
-//     return response.data.data;
-// }
+const updateCulturalHeritage = (cultureHeritage, id) => {
+    const { nama, jenis, provinsi, kabupaten, sejarah, description, image } = cultureHeritage;
+    const formData = new FormData();
+    formData.append('nama', nama);
+    formData.append('jenis', jenis);
+    formData.append('provinsi', provinsi);
+    formData.append('kabupaten', kabupaten);
+    formData.append('sejarah', sejarah);
+    formData.append('description', description);
+    if (image) {
+        formData.append('image', image);
+    }
+
+    _checkInput(cultureHeritage);
+
+    axios.patch(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`, formData, {
+        withCredentials: true,
+        headers: {
+            'content-type': 'multipart/form-data',
+        },
+    })
+        .then(res => {
+            if (res.status === 200) {
+                swal({
+                    title: "Berhasil!",
+                    text: `${res.data.message}`,
+                    icon: "success",
+                    button: "Ok",
+                })
+                    .then(result => {
+                        window.location.href = `/cagar`;
+                    })
+            }
+        })
+        .catch(error => {
+            swal({
+                title: "Gagal!",
+                text: "Semua kolom wajib diisi.",
+                icon: "error",
+                button: "Ok",
+            });
+        })
+};
+
+const getListOfJenisOfCulturalHeritage = async () => {
+    const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/jenis/getList`, {
+        withCredentials: true,
+    }, []);
+    return response.data;
+}
+
 
 export {
     createCulturalHeritage,
     getAllCultureHeritage,
-    // getDetailCultureHeritage,
-    // getAllCultureHeritageByJenis
+    updateCulturalHeritage,
+    getDetailCultureHeritage,
+    getListOfJenisOfCulturalHeritage
 };

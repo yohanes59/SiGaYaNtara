@@ -1,27 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { Gap,  EksplorItem, Pagination, HeroElement, Menu, About, Teams } from "../../components";
+import { Gap, HeroElement, Menu, About, Teams } from "../../components";
 import { HomepageImage, BendaMenu, BangunanMenu, StrukturMenu, SitusMenu, KawasanMenu } from "../../assets";
 import "./home.css";
+import { getListOfJenisOfCulturalHeritage } from "../../utils/culturalHeritageHandler";
+import { createPagination } from "../../utils/templates/CultureHeritageListHelper";
 
 const Home = () => {
-    const [province, setProvince] = useState([]);
     const [jenis, setJenis] = useState([]);
+    const [pageInformation, setPageInformation] = useState({});
+  const [counter, setCounter] = useState(0);
 
     useEffect(() => {
-        fetch('https://sigayantara-api.herokuapp.com/v1/cultural-heritage/provinsi/getList', {
-            withCredentials: true,
-        })
-            .then((data) => data.json())
-            .then((data) => setProvince(data.data))
+        getListOfJenisOfCulturalHeritage()
+            .then(res => {
+                setJenis(res.data);
+            })
+            .catch(err => {
+                console.log('error : ', err);
+            })
     }, [])
 
-    useEffect(() => {
-        fetch('https://sigayantara-api.herokuapp.com/v1/cultural-heritage/jenis/getList', {
-            withCredentials: true,
-        })
-            .then((data) => data.json())
-            .then((data) => setJenis(data.data))
-    }, [])
+  const pagination = createPagination(pageInformation, counter, setCounter);
 
 
     return (
@@ -65,14 +64,13 @@ const Home = () => {
                         </div>
                         <Gap height={50} />
 
-                        {province.map(item => {
-                            return (
-                                <EksplorItem key={item} provincename={item} />
-                            )
-                        })}
+                        {/* ................... */}
+
+
                     </div>
                     <Gap height={50} />
-                    <Pagination />
+                    {pagination}
+
                     <Gap height={50} />
                 </div>
             </section>

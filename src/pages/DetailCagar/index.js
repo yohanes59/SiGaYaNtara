@@ -3,16 +3,16 @@ import { Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap';
 import { Gap, Action } from '../../components/atoms';
 import './detailCagar.css'
 import { withRouter } from 'react-router-dom'
-import axios from 'axios';
+import { getDetailCultureHeritage } from '../../utils/culturalHeritageHandler';
 
 const DetailCagar = (props) => {
     const [detailData, setDetailData] = useState({});
 
     useEffect(() => {
         const id = props.match.params.id;
-        axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`)
-            .then(res => {
-                setDetailData(res.data.data)
+        getDetailCultureHeritage(id)
+            .then(result => {
+                setDetailData(result);
             })
             .catch(err => {
                 console.log('error : ', err);
@@ -29,7 +29,6 @@ const DetailCagar = (props) => {
         return (
             <div className="container">
                 <div className="cat-img">
-                    {/* gambar hanya sebagai data dummy */}
                     <img className="cagar-img" src={`https://sigayantara-api.herokuapp.com/v1/${detailData.image}`} alt="img" />
                     <p className="shadow-cat-card border-top-0"></p>
                     <p className="category-card text-center text-uppercase fw-bold pt-2">{detailData.jenis}</p>
@@ -40,15 +39,16 @@ const DetailCagar = (props) => {
                 <div className="row">
                     <div className="col-lg-6 col-md-6 col-sm-12">
                         <p>Diunggah oleh <span className="fst-italic">{detailData.author.user_fullName}</span></p>
-                        {/* {detailData.provinsi} */}
                     </div>
 
                     <div className="col-lg-6 col-md-6 col-sm-12">
+                        {/* jika sudah pernah di edit tampilkan tulisan updatedAt */}
+                        {/* {detailData.updatedAt} */}
                         <p className="text-end text-muted">{detailData.createdAt}</p>
                     </div>
-                    <Gap height={20}/>
-                        <Action />
-                    <Gap height={20}/>
+                    <Gap height={20} />
+                    <Action _id={detailData._id} />
+                    <Gap height={20} />
                 </div>
 
                 <div className="mt-3 mb-5 shadow">

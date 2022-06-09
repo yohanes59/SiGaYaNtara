@@ -16,7 +16,7 @@ const MainApp = (props) => {
                 <Route path="/upload">
                     <Unggah user={props.user} />
                 </Route>
-                <Route path="/edit">
+                <Route path="/edit/:id">
                     <Ubah user={props.user} />
                 </Route>
                 <Route path="/detail/:id" > 

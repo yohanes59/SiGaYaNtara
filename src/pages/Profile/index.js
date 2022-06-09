@@ -4,11 +4,6 @@ import { Button, Gap, HeroElement, Pagination, CardUpload } from '../../componen
 import './profile.css'
 
 const Profile = (props) => {
-    // jika belum login maka tidak bisa akses halaman ini
-    // bug
-    // if (!props.user) {
-    //     return window.location.href = '/';
-    // }
 
     return (
         <div className="container">

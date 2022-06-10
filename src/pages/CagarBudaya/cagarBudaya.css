@@ -1,6 +1,85 @@
-.text-capitalize{
+.list-text p {
     color: #000000;
     margin-top: 80px;
-    font-size: 48px;
+    margin-bottom: 100px;
+    font-size: 50px;
+    font-weight: 500;
     text-shadow: 0px 5px 5px #876546;
+}
+
+@media (min-width: 721px) and (max-width: 1200px) {
+    .list-text p {
+        font-size: 45px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .list-text p {
+        margin-top: 60px;
+    }
+}
+
+@media (min-width: 721px) and (max-width: 799px) {
+    .list-text p {
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 720px) {
+    .list-text p {
+        margin-top: 70px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 720px) {
+    .list-text p {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 499px) {
+    .list-text p {
+        margin-bottom: 70px;
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 290px) and (max-width: 399px) {
+    .list-text p {
+        margin-top: 60px;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 399px) {
+    .list-text p {
+        margin-bottom: 60px;
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 290px) and (max-width: 349px) {
+    .list-text p {
+        margin-bottom: 70px;
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 199px) and (max-width: 289px) {
+    .list-text p {
+        margin-top: 30px;
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 240px) and (max-width: 289px) {
+    .list-text p {
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width: 199px) and (max-width: 239px) {
+    .list-text p {
+        margin-bottom: 30px;
+    }
 }

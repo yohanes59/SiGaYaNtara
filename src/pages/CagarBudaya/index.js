@@ -24,9 +24,8 @@ const CagarBudaya = (props) => {
   return (
     <>
       <div className="container">
-        <div className="heading-title text-left">
-          <h2 className="text-capitalize">Daftar Cagar Budaya</h2>
-          <Gap height={100} />
+        <div className="list-text text-center">
+          <p tabIndex="0">Daftar Cagar Budaya</p>
           <Button name="Unggah Cagar Budaya" />
         </div>
         <HeroElement src={CagarBudayaImage} alt="Candi Prambanan" />

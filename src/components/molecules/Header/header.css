@@ -2,8 +2,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 80px;
+    height: 85px;
     margin-bottom: 20px;
+}
+
+.logo {
+    margin-left: 20px;
+    height: 60px;
 }
 
 .nav-menus {
@@ -59,6 +64,7 @@
 
 .nav-link:focus,
 .button-a:hover,
+.button-a:focus,
 .dropdown .dropdown-menus p:focus {
     background-color: #EEC374;
 }
@@ -110,10 +116,6 @@
     text-align: center;
 }
 
-.button-a:focus {
-    background-color: #4c84ee;
-}
-
 .mobile-menu {
     background: none;
     display: none;
@@ -127,7 +129,7 @@
 }
 
 .profile-icon {
-    margin: 0;
+    margin: 0 5px 0 0;
     width: 44px;
     height: 44px;
 }
@@ -186,6 +188,14 @@
 @media screen and (max-width: 720px) {
     .navbar {
         background: linear-gradient(#EEC374, #ffffff);
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        height: 70px;
+    }
+
+    .logo {
+        margin-left: 10px;
+        padding: 5px 10px;
     }
 
     .nav-menus,
@@ -201,7 +211,7 @@
 
     .nav-menus-mobile {
         position: absolute;
-        top: 80px;
+        top: 70px;
         padding: 0;
         width: 100%;
         list-style: none;
@@ -256,7 +266,7 @@
 
     .mobile-menu {
         position: absolute;
-        top: 15px;
+        top: 10px;
         right: 25px;
     }
 
@@ -272,5 +282,38 @@
     
     .nav-logout:hover {
         background-color: #e94a4a !important;
+    }
+}
+
+@media (min-width: 199px) and (max-width: 499px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .logo {
+        height: 50px;
+        margin-left: 5px;
+    }
+
+    .nav-link,
+    .button-a,
+    .dropdown p,
+    .dropdown p .dropdown-title,
+    .nav-logout {
+        font-size: 16px;
+    }
+
+    .nav-menus-mobile {
+        top: 60px;
+    }
+
+    .mobile-menu {
+        top: 5px;
+        right: 15px;
+        padding: 5px 10px;
+    }
+
+    .mobile-menu > img {
+        height: 30px;
     }
 }

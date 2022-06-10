@@ -23,12 +23,12 @@ const Register = (props) => {
     <div className="container">
       <HomeButton />
       <div className="row">
-        <div className="col-lg-6 col-md-6 col-sm-12 mt-3 d-flex flex-column justify-content-center">
-          <img className="w-100 h-100" src={ RegisterBg } alt="img" />
+        <div className="col-lg-6 col-md-6 col-sm-12 mt-3 d-flex flex-column justify-content-center" tabIndex="0">
+          <img className="w-100 h-100" src={ RegisterBg } alt="register" />
         </div>
 
         <div className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center">
-          <div className="register mt-5 mb-2">
+          <div className="register mt-5 mb-2" tabIndex="0">
             <h1>Daftar Akun SiGayantara</h1>
           </div>
 
@@ -43,7 +43,7 @@ const Register = (props) => {
               <button className="btn-submit" onClick={onSubmit}>Daftar</button>
             </div>
 
-            <div className="text-center mt-5">
+            <div className="text-center mt-5" tabIndex="0">
               <p>Sudah punya akun? <a href="/login" className="py-3 fw-bold text-decoration-none text-primary">Masuk</a></p>
             </div>
           </div>

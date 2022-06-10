@@ -31,10 +31,7 @@ const Header = (props) => {
     
     return (
         <nav className="navbar">
-            <a className="justify-content-center mx-3" href="/">
-                <img src={LogoHomepage} alt="Logo SiGayantara" />
-            </a>
-
+            <img src={LogoHomepage} alt="Logo SiGayantara" className="logo" tabIndex="0"/>
             <ul className={isMobile ? "nav-menus-mobile": "nav-menus"}
             onClick={() => setIsMobile(false)}>
                 <li><a className="nav-link" href="/">Beranda</a></li>

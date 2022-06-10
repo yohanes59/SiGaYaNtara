@@ -1,40 +1,53 @@
-.jumbotron{
-    height: 80vh;
-    background-size: cover;
-    background-position: center; 
- }
- .jumbotron img{
-     height: 80%;
-     width: 100%;
-     border-bottom-left-radius: 60px;
-     border-bottom-right-radius: 60px;
-     position: absolute;
-     left: 0;
-     top: 0;
-     z-index: -1;
- }
-
- @media (min-width: 375px) { 
-    .jumbotron{
-        width: auto;
-        height: 100%;
-    }
-
-}
- /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-    .jumbotron{
-        width: auto;
-
-    }
-
+.jumbotron img {
+    height: 500px;
+    width: 100%;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    .jumbotron{
-        width: auto;
+@media (min-width: 800px) and (max-width: 1200px) {
+    .jumbotron img {
+        height: 450px;
     }
- }
+}
 
- 
+@media (min-width: 500px) and (max-width: 799px) {
+    .jumbotron img {
+        height: 350px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 499px) {
+    .jumbotron img {
+        height: 300px;
+    }
+}
+
+@media (min-width: 290px) and (max-width: 399px) {
+    .jumbotron img {
+        height: 250px;
+    }
+}
+
+@media (min-width: 199px) and (max-width: 289px) {
+    .jumbotron img {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .jumbotron img {
+        top: 50px;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .jumbotron img {
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+}

@@ -1,27 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { Gap, HeroElement, Menu, About, Teams } from "../../components";
-import { HomepageImage, BendaMenu, BangunanMenu, StrukturMenu, SitusMenu, KawasanMenu } from "../../assets";
+import React from "react";
+import { Gap, HeroElement, About, Teams } from "../../components";
+import { HomepageImage } from "../../assets";
 import "./home.css";
-import { getListOfJenisOfCulturalHeritage } from "../../utils/culturalHeritageHandler";
-import { createPagination } from "../../utils/templates/CultureHeritageListHelper";
 
 const Home = () => {
-    const [jenis, setJenis] = useState([]);
-    const [pageInformation, setPageInformation] = useState({});
-  const [counter, setCounter] = useState(0);
-
-    useEffect(() => {
-        getListOfJenisOfCulturalHeritage()
-            .then(res => {
-                setJenis(res.data);
-            })
-            .catch(err => {
-                console.log('error : ', err);
-            })
-    }, [])
-
-  const pagination = createPagination(pageInformation, counter, setCounter);
-
 
     return (
         <div>
@@ -36,20 +18,6 @@ const Home = () => {
             <div className="container">
                 <div className="row menus">
                     <Gap height={20} />
-
-                    {jenis.map(jenis => {
-                        if (jenis === 'Bangunan') {
-                            return <Menu key={jenis} title={jenis} alt={jenis} src={BangunanMenu} href={`/cagar/${jenis}`} />
-                        } else if (jenis === 'Benda') {
-                            return <Menu key={jenis} title={jenis} alt={jenis} src={BendaMenu} href={`/cagar/${jenis}`} />
-                        } else if (jenis === 'Kawasan') {
-                            return <Menu key={jenis} title={jenis} alt={jenis} src={KawasanMenu} href={`/cagar/${jenis}`} />
-                        } else if (jenis === 'Situs') {
-                            return <Menu key={jenis} title={jenis} alt={jenis} src={SitusMenu} href={`/cagar/${jenis}`} />
-                        } else {
-                            return <Menu key={jenis} title={jenis} alt={jenis} src={StrukturMenu} href={`/cagar/${jenis}`} />
-                        }
-                    })}
 
                 </div>
             </div>
@@ -68,9 +36,6 @@ const Home = () => {
 
 
                     </div>
-                    <Gap height={50} />
-                    {pagination}
-
                     <Gap height={50} />
                 </div>
             </section>

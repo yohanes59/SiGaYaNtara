@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { withRouter } from 'react-router-dom';
 import { Form, FormGroup, Label, Input, Col, Row, FormText } from 'reactstrap';
-import { Gap } from '../../components'
+import { Gap, Loading } from '../../components'
 import { getDetailCultureHeritage, updateCulturalHeritage } from '../../utils/culturalHeritageHandler';
 import './ubah.css'
 
@@ -14,6 +14,7 @@ const Ubah = (props) => {
     const [kabupaten, setKabupaten] = useState('');
     const [sejarah, setSejarah] = useState('');
     const [description, setDescription] = useState('');
+    let [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const id = props.match.params.id;
@@ -56,16 +57,15 @@ const Ubah = (props) => {
             user_id: props.user,
             user_fullName: props.user,
         }
+        setLoading(true);
         const id = props.match.params.id;
         updateCulturalHeritage(cultureHeritage, id);
     }
-
-    // jika belum login maka tidak bisa akses halaman ini
-    // bug
-    // if (!props.user) {
-    //     return window.location.href = '/';
-    // }
-
+    if (loading === true) {
+        return (
+            <Loading />
+        )
+    }
     return (
         <>
             <div className="container">

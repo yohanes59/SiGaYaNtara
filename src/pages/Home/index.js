@@ -1,84 +1,44 @@
-import React, { useEffect, useState } from "react";
-import { Gap, HeroElement, Menu, About, Teams } from "../../components";
-import { HomepageImage, BendaMenu, BangunanMenu, StrukturMenu, SitusMenu, KawasanMenu } from "../../assets";
+import React, { useState, useEffect} from "react";
+import { Gap, HeroElement, About, Teams, AboutCagar, Category } from "../../components";
+import { HomepageImage } from "../../assets";
 import "./home.css";
-import { getListOfJenisOfCulturalHeritage } from "../../utils/culturalHeritageHandler";
-import { createPagination } from "../../utils/templates/CultureHeritageListHelper";
 
 const Home = () => {
-    const [jenis, setJenis] = useState([]);
-    const [pageInformation, setPageInformation] = useState({});
-  const [counter, setCounter] = useState(0);
-
-    useEffect(() => {
-        getListOfJenisOfCulturalHeritage()
-            .then(res => {
-                setJenis(res.data);
-            })
-            .catch(err => {
-                console.log('error : ', err);
-            })
-    }, [])
-
-  const pagination = createPagination(pageInformation, counter, setCounter);
-
-
     return (
         <div>
             {/* hero element */}
             <div className="jumbotron">
                 <HeroElement src={HomepageImage} alt="Candi Borobudur" />
+                <div className="home-content">
+                    <h1 className="home-title">SiGayantara</h1>
+                    <p className="home-desc">Tempat untuk mencari berbagai informasi seputar Cagar Budaya yang ada di Indonesia</p>
+                    <div className="scroll-button">
+                        <a href="#about-cagar" className="anchor-cagar">
+                            <div className="scroll-down"></div>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <Gap height={300} />
 
             {/* menu*/}
             <div className="container">
-                <div className="row menus">
-                    <Gap height={20} />
-
-                    {jenis.map(jenis => {
-                        if (jenis === 'Bangunan') {
-                            return <Menu key={jenis} title={jenis} alt={jenis} src={BangunanMenu} href={`/cagar/${jenis}`} />
-                        } else if (jenis === 'Benda') {
-                            return <Menu key={jenis} title={jenis} alt={jenis} src={BendaMenu} href={`/cagar/${jenis}`} />
-                        } else if (jenis === 'Kawasan') {
-                            return <Menu key={jenis} title={jenis} alt={jenis} src={KawasanMenu} href={`/cagar/${jenis}`} />
-                        } else if (jenis === 'Situs') {
-                            return <Menu key={jenis} title={jenis} alt={jenis} src={SitusMenu} href={`/cagar/${jenis}`} />
-                        } else {
-                            return <Menu key={jenis} title={jenis} alt={jenis} src={StrukturMenu} href={`/cagar/${jenis}`} />
-                        }
-                    })}
-
-                </div>
+                <AboutCagar/>
             </div>
-            <Gap height={70} />
 
-            {/* eksplor cagar budaya */}
-            <section id="explor-cagar">
-                <div className="container">
-                    <div className="row">
-                        <div className="heading-title text-center">
-                            <h3 className="text-uppercase">Eksplor Cagar Budaya</h3>
-                        </div>
-                        <Gap height={50} />
+            <Gap height={100} />
 
-                        {/* ................... */}
+            {/* jenis cagar budaya */}
+            <Category />
 
-
-                    </div>
-                    <Gap height={50} />
-                    {pagination}
-
-                    <Gap height={50} />
-                </div>
-            </section>
-
-            {/* TENTANG */}
+            {/* tentang */}
             <About />
+
             {/* tim */}
             <Teams />
+            
+            <Gap height={80}/>
         </div>
     )
 }

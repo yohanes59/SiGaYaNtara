@@ -11,7 +11,7 @@ const Teams = () => {
             <h2 className="teams-title">Tim Kami</h2>
         </div>
         <div className="wrapper">
-            < TeamItem nama="Shandra Elvyra S.P." section="Front-End" src={Foto} alt="Foto Shandra" />
+            <TeamItem nama="Shandra Elvyra S.P." section="Front-End" src={Foto} alt="Foto Shandra" />
             <TeamItem nama="Nilam Setyoningrum" section="Front-End" src={Foto} alt="Foto Nilam" />
             <TeamItem nama="Yohanes Cahyadi" section="Back-End" src={Foto} alt="Foto Yohanes" />
             <TeamItem nama="Darian Gunawan" section="Back-End" src={Foto} alt="Foto Darian" />

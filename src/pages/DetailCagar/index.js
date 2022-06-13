@@ -77,7 +77,6 @@ const DetailCagar = (props) => {
                             <p className="text-end text-muted">{detailData.createdAt}</p>
                         </div>
                         <Gap height={5} />
-                        {/* <Action _id={detailData._id} /> */}
 
                         <div className="card-action">
                             <ul className="action-menu">

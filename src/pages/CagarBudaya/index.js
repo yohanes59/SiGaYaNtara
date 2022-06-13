@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Gap, HeroElement, Button, Loading } from '../../components';
+import { Gap, HeroElement, Loading } from '../../components';
 import { CagarBudayaImage } from '../../assets';
 import "./cagarBudaya.css";
 import { getAllCultureHeritage } from '../../utils/culturalHeritageHandler';
@@ -22,6 +22,19 @@ const CagarBudaya = (props) => {
 
   const cultureHeritageList = createCultureHeritageList(pageInformation, dataCagar)
   const pagination = createPagination(pageInformation, counter, setCounter);
+  const isLoginHandler = props.user;
+
+  const isLogin = (
+    <div className="button-bar">
+      <a className="button" href="/upload" type="button">Unggah Cagar Budaya</a>
+    </div>
+  )
+
+  const isNotLogin = (
+    <div className="button-bar">
+      <a className="button" href="/login" type="button">Unggah Cagar Budaya</a>
+    </div>
+  )
 
   if (loading === true) {
     return (
@@ -29,7 +42,9 @@ const CagarBudaya = (props) => {
         <div className="container">
           <div className="list-text text-center">
             <p tabIndex="0">Daftar Cagar Budaya</p>
-            <Button name="Unggah Cagar Budaya" />
+
+            {isLoginHandler ? isLogin : isNotLogin}
+
           </div>
           <HeroElement src={CagarBudayaImage} alt="Candi Prambanan" />
         </div>

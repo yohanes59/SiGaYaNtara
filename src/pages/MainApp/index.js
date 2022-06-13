@@ -8,35 +8,35 @@ import Unggah from '../Unggah'
 import Ubah from '../Ubah'
 
 const MainApp = (props) => {
-  return (
-    <div>
-        <Header user={props.user} />
-        <Router>
-            <Switch>
-                <Route path="/upload">
-                    <Unggah user={props.user} />
-                </Route>
-                <Route path="/edit/:id">
-                    <Ubah user={props.user} />
-                </Route>
-                <Route path="/detail/:id" > 
-                    <DetailCagar />
-                </Route>
-                <Route path="/cagar">
-                    <CagarBudaya />
-                </Route>
-                <Route path="/" exact>
-                    <Home />
-                </Route>
-                <Route path="/about" exact>
-                    <About />
-                    <Teams />
-                </Route>
-            </Switch>
-        </Router>
-        <Footer />
-    </div>
-  )
+    return (
+        <div>
+            <Header user={props.user} />
+            <Router>
+                <Switch>
+                    <Route path="/upload">
+                        <Unggah user={props.user} />
+                    </Route>
+                    <Route path="/edit/:id">
+                        <Ubah user={props.user} />
+                    </Route>
+                    <Route path="/detail/:id" >
+                        <DetailCagar />
+                    </Route>
+                    <Route path="/cagar">
+                        <CagarBudaya user={props.user} />
+                    </Route>
+                    <Route path="/" exact>
+                        <Home />
+                    </Route>
+                    <Route path="/about" exact>
+                        <About />
+                        <Teams />
+                    </Route>
+                </Switch>
+            </Router>
+            <Footer />
+        </div>
+    )
 }
 
 export default MainApp

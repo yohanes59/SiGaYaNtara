@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React from "react";
 import { Gap, HeroElement, About, Teams, AboutCagar, Category } from "../../components";
 import { HomepageImage } from "../../assets";
 import "./home.css";

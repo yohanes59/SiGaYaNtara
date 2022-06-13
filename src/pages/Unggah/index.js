@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Form, FormGroup, Label, Input, Col, Row, FormText } from 'reactstrap';
-import { Gap } from "../../components";
+import { Gap, Loading } from "../../components";
 import { withRouter } from 'react-router-dom';
 import { createCulturalHeritage } from '../../utils/culturalHeritageHandler';
 import './unggah.css'
@@ -14,6 +14,7 @@ const Unggah = (props) => {
     const [kabupaten, setKabupaten] = useState('');
     const [sejarah, setSejarah] = useState('');
     const [description, setDescription] = useState('');
+    let [loading, setLoading] = useState(false);
 
     const onImageUpload = (ev) => {
         const file = ev.target.files[0];
@@ -37,15 +38,15 @@ const Unggah = (props) => {
             user_id: props.user._id,
             user_fullName: props.user.fullName,
         }
+        setLoading(true);
         createCulturalHeritage(cultureHeritage);
     }
 
-    // jika belum login maka tidak bisa akses halaman ini
-    // bug
-    // if (!props.user) {
-    //     return window.location.href = '/';
-    // }
-
+    if (loading === true) {
+        return (
+            <Loading />
+        )
+    }
     return (
         <>
             <div className="container">

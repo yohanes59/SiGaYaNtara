@@ -9,9 +9,13 @@ import CardUpload from "./CardUpload";
 import Teams from "./Teams";
 import TeamItem from "./TeamItem";
 import About from "./About";
+import AboutCagar from "./AboutCagar";
+import CardJenis from "./CardJenis";
+import Category from "./Category";
 
 export {
     About,
+    AboutCagar,
     Teams,
     TeamItem, 
     Header, 
@@ -21,5 +25,7 @@ export {
     HeroElement,
     Menu,
     Card,
-    CardUpload
+    CardUpload,
+    CardJenis,
+    Category
 };

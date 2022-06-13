@@ -89,23 +89,13 @@ const DetailCagar = (props) => {
 
                         <div className="col-lg-6 col-md-6 col-sm-12">
 
-                            <p className="text-end text-muted">{detailData.createdAt}</p>
+                            <p className="text-end text-muted">Di Unggah Tanggal : {new Date(detailData.createdAt).toLocaleDateString("id-ID")}</p>
+                            <p className="text-end text-muted">Di Perbarui Tanggal : {new Date(detailData.updatedAt).toLocaleDateString("id-ID")}</p>
+
                         </div>
                         <Gap height={5} />
 
                         {isLoginHandler ? isLogin : undefined}
-
-                        {/* <div className="card-action">
-                            <ul className="action-menu">
-                                <li className="edit-card">
-                                    <a href={`/edit/${props.match.params.id}`} className="edit">Edit</a>
-                                </li>
-                                <li> | </li>
-                                <li className="delete-card">
-                                    <a onClick={isClickedHandler ? handleClick : undefined} className="delete">Hapus</a>
-                                </li>
-                            </ul>
-                        </div> */}
 
                         <Gap height={20} />
                     </div>

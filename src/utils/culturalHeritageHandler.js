@@ -116,8 +116,8 @@ const updateCulturalHeritage = (cultureHeritage, id) => {
         })
 };
 
-const deleteCulturalHeritage = (cultureHeritage) => {
-    axios.delete(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${cultureHeritage._id}`, {
+const deleteCulturalHeritage = (id) => {
+    axios.delete(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`, {
         withCredentials: true,
         headers: {
             'content-type': 'multipart/form-data',

@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap';
-import { Gap, Action, Loading } from '../../components/atoms';
+import { Gap, Loading } from '../../components/atoms';
 import './detailCagar.css'
 import { withRouter } from 'react-router-dom'
-import { getDetailCultureHeritage } from '../../utils/culturalHeritageHandler';
+import { deleteCulturalHeritage, getDetailCultureHeritage } from '../../utils/culturalHeritageHandler';
+import swal from 'sweetalert';
 
 const DetailCagar = (props) => {
     const [detailData, setDetailData] = useState({});
     let [loading, setLoading] = useState(false);
+    let [pageLoad, setPageLoad] = useState(false);
 
     useEffect(() => {
         const id = props.match.params.id;
         getDetailCultureHeritage(id)
             .then(result => {
-                setLoading(true);
+                setPageLoad(true);
                 setDetailData(result);
             })
             .catch(err => {
@@ -21,12 +23,39 @@ const DetailCagar = (props) => {
             })
     })
 
+    const isClickedHandler = true;
+
+    const handleClick = () => {
+        swal({
+            title: "Hapus Data Cagar Budaya?",
+            text: "Data cagar budaya akan dihapus permanen",
+            icon: "warning",
+            buttons: ["Batal", "Ok"],
+            dangerMode: true,
+        })
+            .then((deleteData) => {
+                if (deleteData) {
+                    const id = props.match.params.id;
+                    setLoading(true);
+                    deleteCulturalHeritage(id);
+                }
+            })
+    }
+
+
     const [currentActiveTab, setCurrentActiveTab] = useState('1');
 
     const toggleTab = tab => {
         if (currentActiveTab !== tab) setCurrentActiveTab(tab);
     }
+
     if (loading === true) {
+        return (
+            <Loading />
+        )
+    }
+
+    if (pageLoad === true) {
         if (detailData.author) {
             return (
                 <div className="container">
@@ -48,7 +77,19 @@ const DetailCagar = (props) => {
                             <p className="text-end text-muted">{detailData.createdAt}</p>
                         </div>
                         <Gap height={5} />
-                        <Action _id={detailData._id} />
+                        {/* <Action _id={detailData._id} /> */}
+
+                        <div className="card-action">
+                            <ul className="action-menu">
+                                <li className="edit-card">
+                                    <a href={`/edit/${props.match.params.id}`} className="edit">Edit</a>
+                                </li>
+                                <li> | </li>
+                                <li className="delete-card">
+                                    <a onClick={isClickedHandler ? handleClick : undefined} className="delete">Hapus</a>
+                                </li>
+                            </ul>
+                        </div>
                         <Gap height={20} />
                     </div>
 

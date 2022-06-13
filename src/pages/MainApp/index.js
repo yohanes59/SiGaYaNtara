@@ -20,7 +20,7 @@ const MainApp = (props) => {
                         <Ubah user={props.user} />
                     </Route>
                     <Route path="/detail/:id" >
-                        <DetailCagar />
+                        <DetailCagar user={props.user} />
                     </Route>
                     <Route path="/cagar">
                         <CagarBudaya user={props.user} />

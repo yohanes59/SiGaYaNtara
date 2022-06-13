@@ -41,6 +41,21 @@ const DetailCagar = (props) => {
                 }
             })
     }
+    const isLoginHandler = props.user;
+
+    const isLogin = (
+        <div className="card-action">
+            <ul className="action-menu">
+                <li className="edit-card">
+                    <a href={`/edit/${props.match.params.id}`} className="edit">Edit</a>
+                </li>
+                <li> | </li>
+                <li className="delete-card">
+                    <a onClick={isClickedHandler ? handleClick : undefined} className="delete">Hapus</a>
+                </li>
+            </ul>
+        </div>
+    )
 
 
     const [currentActiveTab, setCurrentActiveTab] = useState('1');
@@ -78,7 +93,9 @@ const DetailCagar = (props) => {
                         </div>
                         <Gap height={5} />
 
-                        <div className="card-action">
+                        {isLoginHandler ? isLogin : undefined}
+
+                        {/* <div className="card-action">
                             <ul className="action-menu">
                                 <li className="edit-card">
                                     <a href={`/edit/${props.match.params.id}`} className="edit">Edit</a>
@@ -88,7 +105,8 @@ const DetailCagar = (props) => {
                                     <a onClick={isClickedHandler ? handleClick : undefined} className="delete">Hapus</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
+
                         <Gap height={20} />
                     </div>
 

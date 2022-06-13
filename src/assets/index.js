@@ -19,6 +19,7 @@ import DeleteIcon from "./icons/delete-icon.png";
 import MenuIcon from "./icons/menu-icon.png";
 import CloseIcon from "./icons/close-icon.png";
 import HomeIcon from "./icons/home-icon.png";
+import MapIcon from "./icons/maps.png";
 
 export {
     HomepageImage,
@@ -37,5 +38,6 @@ export {
     DeleteIcon,
     MenuIcon,
     CloseIcon,
-    HomeIcon
+    HomeIcon,
+    MapIcon
 }

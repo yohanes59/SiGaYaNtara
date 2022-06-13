@@ -5,7 +5,6 @@ import Pagination from "./Pagination";
 import HeroElement from "./HeroElement";
 import Menu from "./Menu";
 import Card from "./Card";
-import CardUpload from "./CardUpload";
 import Teams from "./Teams";
 import TeamItem from "./TeamItem";
 import About from "./About";
@@ -25,7 +24,6 @@ export {
     HeroElement,
     Menu,
     Card,
-    CardUpload,
     CardJenis,
     Category
 };

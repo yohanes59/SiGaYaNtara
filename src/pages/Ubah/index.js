@@ -22,7 +22,7 @@ const Ubah = (props) => {
             getDetailCultureHeritage(id)
                 .then(result => {
                     setNama(result.nama);
-                    setImage(result.image);
+                    setImg(`https://sigayantara-api.herokuapp.com/v1/${result.image}`);
                     setJenis(result.jenis);
                     setProvinsi(result.provinsi);
                     setKabupaten(result.kabupaten);

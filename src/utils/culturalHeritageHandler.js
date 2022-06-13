@@ -3,8 +3,19 @@ import swal from "sweetalert";
 
 const _checkInput = (cultureHeritage) => {
     const { nama, image, jenis, provinsi, kabupaten, sejarah, description } = cultureHeritage;
-
     if (!nama || !image || !jenis || !provinsi || !kabupaten || !sejarah || !description) {
+        return swal({
+            title: "Gagal!",
+            text: "Mohon lengkapi semua data.",
+            icon: "error",
+            button: "Ok",
+        });
+    }
+}
+
+const _checkUbah = (cultureHeritage) => {
+    const { nama, jenis, provinsi, kabupaten, sejarah, description } = cultureHeritage;
+    if (!nama || !jenis || !provinsi || !kabupaten || !sejarah || !description) {
         return swal({
             title: "Gagal!",
             text: "Mohon lengkapi semua data.",
@@ -85,7 +96,7 @@ const updateCulturalHeritage = (cultureHeritage, id) => {
         formData.append('image', image);
     }
 
-    _checkInput(cultureHeritage);
+    _checkUbah(cultureHeritage);
 
     axios.patch(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`, formData, {
         withCredentials: true,

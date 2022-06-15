@@ -12,8 +12,6 @@ const Pagination = (props) => {
                 </a>
                 </li>
                 <li className="page-item"><p className="page-link">{current_page}   ||   {total_page}</p></li>
-                {/* <li className="page-item"><a className="page-link" href="#">2</a></li>
-                <li className="page-item"><a className="page-link" href="#">3</a></li> */}
                 <li className="page-item">
                 <a className="page-link" href="#" aria-label="Next" onClick={next}>
                     <span aria-hidden="true">&raquo;</span>

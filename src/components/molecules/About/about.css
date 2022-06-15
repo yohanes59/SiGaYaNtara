@@ -1,3 +1,7 @@
+.about-content {
+    margin-top: 70px;
+}
+
 .about {
     background-color: #EEC374;
     border-radius: 10px;
@@ -6,6 +10,7 @@
 
 .about p {
     margin: 0;
+    text-align: justify;
 }
 
 .about-title:hover {
@@ -14,6 +19,20 @@
 
 .sigayantara {
     font-weight: 500;
+    font-size: 18px;
     text-decoration: none;
     color: #000000 !important;
+}
+
+@media (min-width: 199px) and (max-width: 575px) {
+	.about {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}
+
+@media screen and (max-width: 289px) {
+    .about-title {
+        font-size: 20px;
+    }
 }

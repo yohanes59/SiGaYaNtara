@@ -1,34 +1,45 @@
-.home-content{
-    display: flex;
-    flex-direction: column;
+.home-content {
+    margin: 160px 20px 0 20px;
 }
-.home-title{
-    text-align: center;
-    color: #ffff;
+
+.home-title,
+.home-desc {
+    color: #ffffff;
+    text-shadow: 0px 5px 5px #EEC374;
+}
+
+.home-title {
     font-weight: 500;
     font-size: 52px;
-    margin-top: 120px;
-    text-shadow: 0px 5px 5px #876546;
+    margin-bottom: 50px;
 }
-.home-desc{
-    text-align: center;
-    color: #ffff;
+
+.home-desc {
     font-size: 20px;
-    text-shadow: 0px 5px 5px #876546;
 }
+
+.scroll-button {
+    height: 100px;
+    margin-top: 100px;
+}
+
 .scroll-down {
+    position: absolute;
+    justify-content: center;
+    margin-top: 100px;
+    left: 50%;
     height: 70px;
     width: 60px;
-    border: 1px solid #fff;
-    position: absolute;
-    left: 50%;
-    bottom: 50px;
+    border: 1px solid #ffffff;
     cursor: pointer;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-  }
-  .scroll-down::before,
-  .scroll-down::after {
+    background: none;
+    padding: 0;
+}
+
+.scroll-down::before,
+.scroll-down::after {
     content: "";
     position: absolute;
     top: 20%;
@@ -36,172 +47,256 @@
     height: 30px;
     width: 30px;
     transform: translate(-50%, -100%) rotate(45deg);
-    border: 2px solid #fff;
+    border: 2px solid #ffffff;
     border-top: transparent;
     border-left: transparent;
     animation: scroll-down 1s ease-in-out infinite;
-  }
-  .scroll-down::before {
+}
+
+.scroll-down::before {
     top: 35%;
     animation-delay: 0.3s;
-  }
-  
-  @keyframes scroll-down {
+}
+
+@keyframes scroll-down {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
     30% {
-      opacity: 1;
+        opacity: 1;
     }
     60% {
-      opacity: 1;
+        opacity: 1;
     }
     100% {
-      top: 90%;
-      opacity: 0;
+        top: 90%;
+        opacity: 0;
     }
-  }
+}
 
+@media (min-width: 900px) and (max-width: 1200px) {
+    .scroll-button {
+        margin-top: 50px;
+    }
+
+    .scroll-down {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 899px) {
+    .home-content {
+        margin: 150px 20px 0 20px;
+    }
+
+    .home-title {
+        font-size: 36px;
+    }
+
+    .home-desc {
+        font-size: 20px;
+    }
+
+    .scroll-button {
+        height: 120px;
+        margin-top: 50px;
+    }
+
+    .scroll-down {
+        width: 55px;
+        height: 45px;
+    }
+    
+    .scroll-down::before,
+    .scroll-down::after {
+        top: 30%;
+        height: 25px;
+        width: 25px;
+    }
+}
+
+@media (min-width: 810px) and (max-width: 899px) {
+    .scroll-down {
+        margin-top: 90px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 809px) {
+    .scroll-down {
+        margin-top: 60px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 730px) {
+    .scroll-down {
+        left: 48%
+    }
+}
+
+@media (min-width: 320px) and (max-width: 499px) {
+    .scroll-down {
+        left: 45%
+    }
+}
+
+@media (min-width: 199px) and (max-width: 319px) {
+    .scroll-down {
+        left: 43%
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .scroll-down {
+        width: 50px;
+        height: 45px;
+    }
+    
+    .scroll-down::before,
+    .scroll-down::after {
+        top: 30%;
+        height: 25px;
+        width: 25px;
+    }
+}
 
 @media (min-width: 500px) and (max-width: 799px) {
     .home-content {
-        margin: -15px 20px 0 30px;
-        justify-content: center;
+        margin: 100px 20px 0 20px;
     }
+
     .home-title {
         font-size: 42px;
     }
-    .home-desc{
-        font-size: 18px !important;
-    }
-    .scroll-down{
-        width: 40px;
-        height: 35px;
-        left: 50%;
-        border: 1px solid #000;
-        position: absolute;
-    }
-    .scroll-button{
-        margin-top: 100px;
-    }
-    .scroll-down::before,
-    .scroll-down::after {
-        top: 10%;
-        left: 50%;
-        height: 10px;
-        width: 10px;
-        position: absolute;
-        border: 1px solid #000;
-        border-top: transparent;
-        border-left: transparent;
-        transform: translate(-50%, -100%) rotate(45deg);
+
+    .home-desc {
+        font-size: 18px;
     }
 
+    .scroll-button {
+        height: 100px;
+    }
+}
+
+@media (min-width: 733px) and (max-width: 799px) {
+    .scroll-button {
+        margin-top: 50px;
+    }
+
+    .scroll-down {
+        margin-top: 35px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 732px) {
+    .scroll-button {
+        margin-top: 30px;
+    }
+
+    .scroll-down {
+        margin-top: 25px;
+    }
 }
 
 @media (min-width: 290px) and (max-width: 499px) {
     .home-content {
-        margin: -15px 20px 0 30px;
-        justify-content: center;
+        margin: 80px 20px 0 20px;
+    }
 
-    }
-    .home-title{
+    .home-title {
         font-size: 28px;
-        margin-top: 15px !important;
     }
-    .home-desc{
-        font-size: 18px;
+
+    .home-desc {
+        font-size: 16px;
     }
-    .scroll-down{
-        width: 30px;
-        height: 25px;
-        left: 50%;
-        border: 1px solid #000;
-        position: absolute;
+}
+
+@media (min-width: 400px) and (max-width: 499px) {
+    .home-title {
+        margin-bottom: 40px;
     }
-    .scroll-button{
-        margin-top: 100px;
+
+    .scroll-button {
+        margin-top: 40px;
     }
-    .scroll-down::before,
-    .scroll-down::after {
-        top: 10%;
-        left: 50%;
-        height: 10px;
-        width: 10px;
-        position: absolute;
-        border: 1px solid #000;
-        border-top: transparent;
-        border-left: transparent;
-        transform: translate(-50%, -100%) rotate(45deg);
+
+    .scroll-down {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 358px) and (max-width: 399px) {
+    .home-title {
+        margin-bottom: 20px;
+    }
+
+    .scroll-button {
+        margin-top: 10px;
+    }
+
+    .scroll-down {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 290px) and (max-width: 357px) {
+    .home-title {
+        margin-bottom: 20px;
+    }
+
+    .scroll-button {
+        margin-top: 5px;
+    }
+
+    .scroll-down {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 258px) and (max-width: 289px) {
+    .home-title {
+        margin-bottom: 20px;
+    }
+
+    .scroll-button {
+        margin-top: 10px;
+    }
+
+    .scroll-down {
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 199px) and (max-width: 257px) {
+    .home-title {
+        margin-bottom: 10px;
+    }
+
+    .scroll-button {
+        margin-top: 5px;
+    }
+
+    .scroll-down {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 199px) and (max-width: 357px) {
+    .scroll-button {
+        height: 40px;
     }
 }
 
 @media (min-width: 199px) and (max-width: 289px) {
     .home-content {
-        margin: -15px 20px 0 30px;
-        justify-content: center;
+        margin: 70px 10px 0 10px;
+    }
 
-    }
-    .home-title{
+    .home-title {
         font-size: 20px;
-        margin-top: 15px !important;
     }
-    .home-desc{
+
+    .home-desc {
         font-size: 12px;
-    }
-    .scroll-down{
-        width: 20px;
-        height: 25px;
-        left: 50%;
-        border: 1px solid #000;
-        margin-top: -200px !important;
-        position: absolute;
-    }
-    .scroll-button{
-        margin-top: 100px;
-    }
-    .scroll-down::before,
-    .scroll-down::after {
-        top: 30%;
-        left: 50%;
-        height: 10px;
-        width: 10px;
-        border: 1px solid #000;
-        border-top: transparent;
-        border-left: transparent;
-    }
-}
-@media (min-width: 800px) and (max-width: 899px){
-    .home-content {
-        margin: -15px 20px 0 30px;
-        justify-content: center;
-    }
-    .home-title{
-        font-size: 36px;
-        margin-top: 15px !important;
-    }
-    .home-desc{
-        font-size: 20px;
-    }
-    .scroll-down{
-        width: 40px;
-        height: 45px;
-        left: 50%;
-        border: 1px solid #000;
-        margin-top: -200px !important;
-        position: absolute;
-    }
-    .scroll-button{
-        margin-top: 110px;
-    }
-    .scroll-down::before,
-    .scroll-down::after {
-        top: 30%;
-        left: 50%;
-        height: 20px;
-        width: 20px;
-        border: 1px solid #000;
-        border-top: transparent;
-        border-left: transparent;
     }
 }

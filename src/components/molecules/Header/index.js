@@ -28,10 +28,21 @@ const Header = (props) => {
     }
 
     const [isMobile, setIsMobile] = useState(false);
+    const [colorChange, setColorChange] = useState(false);
     
+    const navbarColorChange = () => {
+        console.log(window.scrollY)
+        if(window.scrollY >= 50){
+            setColorChange(true);
+        } else {
+            setColorChange(false);
+        }
+    };
+    window.addEventListener("scroll", navbarColorChange);
+
     return (
-        <nav className="navbar">
-            <img src={LogoHomepage} alt="Logo SiGayantara" className="logo" tabIndex="0"/>
+        <nav className={colorChange ? "navbar-color-change fixed-top" : "navbar fixed-top"}>
+            <a href="/"><img src={LogoHomepage} alt="Logo SiGayantara" className="logo"/></a>
             <ul className={isMobile ? "nav-menus-mobile": "nav-menus"}
             onClick={() => setIsMobile(false)}>
                 <li><a className="nav-link" href="/">Beranda</a></li>

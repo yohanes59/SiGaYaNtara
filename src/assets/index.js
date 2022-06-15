@@ -13,7 +13,7 @@ import KawasanMenu from "./images/kawasanMenu-images.png";
 // dummy untuk foto TimItem
 import Foto from './images/foto.jpg';
 // asset lainnya
-import IconProfile from "./images/profile-icon.png";
+import IconProfile from "./icons/account-icon.png";
 import EditIcon from "./icons/edit-icon.png";
 import DeleteIcon from "./icons/delete-icon.png";
 import MenuIcon from "./icons/menu-icon.png";

@@ -1,49 +1,71 @@
-.card-jenis{
+.card-jenis {
     background-color: #fffbf4;
-    padding: 2rem;
+    padding: 20px;
     border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
-    .card-jenis:nth-child(1){
-        grid-area: one;
-    }
-    .card-jenis:nth-child(2){
-        grid-area: two;
-    }
-    .card-jenis:nth-child(3){
-        grid-area: three;
-    }
-    .card-jenis:nth-child(4){
-        grid-area: four;
-    }
-    .card-jenis:nth-child(5){
-        grid-area: five;
-    }
-    .card-jenis:hover{
-        background-color: #EEC374;
-        transition: 0.5s;
+
+.card-jenis:nth-child(1) {
+    grid-area: one;
+}
+
+.card-jenis:nth-child(2) {
+    grid-area: two;
+}
+
+.card-jenis:nth-child(3) {
+    grid-area: three;
+}
+
+.card-jenis:nth-child(4) {
+    grid-area: four;
+}
+
+.card-jenis:nth-child(5) {
+    grid-area: five;
+}
+
+.card-jenis:hover {
+    background-color: #EEC374;
+    transition: 0.5s;
+}
+
+.card-jenis_img {
+    width: 60px;
+    height: 60px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.foto {
+    width: 30px;
+}
+
+.card-jenis_title {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.card-jenis_text {
+    text-align: justify;
+    font-size: 16px;
+    padding-top: 20px;
+    margin: 0;
+}
+
+@media screen and (max-width: 527px) {
+    .card-jenis {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .card-jenis_img{
-        width: 60px;
-        height: 60px;
-        background-color: antiquewhite;
-        border-radius: 50%;
-        justify-content: center;
-        align-items: center;
-        padding: 15px;
+    .card-jenis_text,
+    .card-jenis_title {
+        padding-top: 10px;
     }
-        .foto{
-            width: 30px;
-        }
-    .card-jenis_title{
-        font-size: 20px;
-        text-align: center;
-        padding-top: 20px;
-    }
-    .card-jenis_text{
-        text-align: justify;
-        font-size: 14px;
-        padding-top: 20px;
-        margin: 5px;
-    }
+}

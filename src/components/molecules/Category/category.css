@@ -1,4 +1,8 @@
-.wrapper-card{
+.category-content {
+    margin-top: 70px;
+}
+
+.wrapper-card {
     display: grid;
     gap: 1.5rem;
     grid-auto-columns: repeat(4, 1fr);
@@ -8,13 +12,21 @@
     'three'
     'four'
     'five';
-    padding-block: 2rem;
+    padding-block: 1rem;
     width: min(85%, 70rem);
     margin-inline: auto;
 }
-.text:hover{
+
+.category-title:hover {
     color: #876546;
 }
+
+@media screen and (max-width: 289px) {
+    .category-title {
+        font-size: 20px;
+    }
+}
+
 @media screen and (min-width:33em) {
     .wrapper-card{
         grid-template-areas: 
@@ -24,24 +36,28 @@
         "four four";
     }
 }
+
 @media screen and (min-width:38em) {
-    .wrapper-card{
+    .wrapper-card{ 
         grid-template-areas: 
         "one one"
         "two five"
         "three five"
         "four four";
     }
-} @media screen and (min-width:54em) {
-    .wrapper-card{
+} 
+
+@media screen and (min-width:54em) {
+    .wrapper-card {
         grid-template-areas: 
         "one one two"
         "five five five"
         "three four four";
     }
 }
+
 @media screen and (min-width: 75em) {
-    .wrapper-card{
+    .wrapper-card {
         grid-template-areas: 
         "one one two five"
         "three four four five";

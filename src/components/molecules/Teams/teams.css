@@ -7,3 +7,9 @@
 .teams-title:hover {
     color: #876546;
 }
+
+@media screen and (max-width: 289px) {
+    .teams-title {
+        font-size: 20px;
+    }
+}

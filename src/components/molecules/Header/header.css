@@ -2,13 +2,25 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 85px;
+    height: 80px;
     margin-bottom: 20px;
+    padding: 0 !important;
+    background-color: transparent;
+    transition: .3s ease-in;
+}
+
+.navbar-color-change {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background: linear-gradient(#EEC374, #ffffff);
 }
 
 .logo {
     margin-left: 20px;
-    height: 60px;
+    padding: 0 10px;
+    height: 50px;
 }
 
 .nav-menus {
@@ -119,19 +131,19 @@
 .mobile-menu {
     background: none;
     display: none;
-    top: 15px;
+    padding: 5px 10px;
     right: 25px;
 }
 
 .mobile-menu > img {
     height: 35px;
-    margin: 5px 0;
 }
 
 .profile-icon {
     margin: 0 5px 0 0;
     width: 44px;
     height: 44px;
+    padding: 5px;
 }
 
 .dropdown-title {
@@ -161,7 +173,9 @@
     right: 5px;
     border-radius: 10px;
     background-color: #ffffff;
+    border: 1px solid #876546;
     visibility: hidden;
+    z-index: 1;
 }
 
 .dropdown .dropdown-menus p {
@@ -187,15 +201,12 @@
 
 @media screen and (max-width: 720px) {
     .navbar {
-        background: linear-gradient(#EEC374, #ffffff);
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
         height: 70px;
     }
-
+    
     .logo {
         margin-left: 10px;
-        padding: 5px 10px;
+        padding: 0 10px;
     }
 
     .nav-menus,
@@ -264,9 +275,13 @@
         outline: none;
     }
 
+    .dropdown .dropdown-menus {
+        border: none;
+    }
+
     .mobile-menu {
         position: absolute;
-        top: 10px;
+        top: 15px;
         right: 25px;
     }
 
@@ -286,12 +301,7 @@
 }
 
 @media (min-width: 199px) and (max-width: 499px) {
-    .navbar {
-        height: 60px;
-    }
-
     .logo {
-        height: 50px;
         margin-left: 5px;
     }
 
@@ -303,17 +313,54 @@
         font-size: 16px;
     }
 
+    .mobile-menu {
+        right: 15px;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 290px) and (max-width: 499px) {
+    .navbar,
+    .navbar-color-change {
+        height: 60px;
+    }
+
+    .logo {
+        padding: 5px 10px;
+    }
+
     .nav-menus-mobile {
         top: 60px;
     }
 
     .mobile-menu {
         top: 5px;
-        right: 15px;
-        padding: 5px 10px;
     }
 
     .mobile-menu > img {
         height: 30px;
+    }
+}
+
+@media (min-width: 199px) and (max-width: 289px) {
+    .navbar,
+    .navbar-color-change {
+        height: 50px;
+    }
+
+    .logo {
+        padding: 10px;
+    }
+
+    .nav-menus-mobile {
+        top: 50px;
+    }
+
+    .mobile-menu {
+        top: 0;
+    }
+
+    .mobile-menu > img {
+        height: 25px;
     }
 }

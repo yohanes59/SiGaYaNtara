@@ -7,10 +7,10 @@ const CardJenis = ({src, alt, title, text}) => {
       <div className="card-jenis_img">
         <img src={src} className="foto" alt={alt}/>
       </div>
-        <div class="cardbody">
-          <h5 class="card-jenis_title">{title}</h5>
-          <p class="card-jenis_text">{text}</p>
-        </div>
+      <div className="cardbody">
+        <h5 className="card-jenis_title">{title}</h5>
+        <p className="card-jenis_text">{text}</p>
+      </div>
     </article>
   )
 }

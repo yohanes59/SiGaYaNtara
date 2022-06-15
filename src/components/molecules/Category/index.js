@@ -9,7 +9,7 @@ const Category = () => {
 
     <div className="container">
         <div className="heading-title text-center" tabIndex="0">
-            <h3 className="text">Jenis Cagar Budaya</h3>
+            <h3 className="text" id="content">Jenis Cagar Budaya</h3>
         </div>
         
         <Gap height={50} />

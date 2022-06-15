@@ -6,10 +6,12 @@ import Home from '../Home'
 import CagarBudaya from '../CagarBudaya'
 import Unggah from '../Unggah'
 import Ubah from '../Ubah'
+import SkipLink from '../../components/atoms/SkipLink'
 
 const MainApp = (props) => {
     return (
         <div>
+            <SkipLink />
             <Header user={props.user} />
             <Router>
                 <Switch>

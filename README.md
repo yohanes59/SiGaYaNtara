@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+<p align="center">
+    <a href="https://sigayantara.netlify.app/">
+        <img src="public/sigayantara-logo.png" alt="Logo" width="90" height="90">
+    </a>
+    <h2 align="center">SiGayantara</h2>
+    <p align="center">
+        Sistem Informasi Cagar Budaya Nusantara
+    </p>
+    <p align="center">
+        Akses aplikasi <a href="https://sigayantara.netlify.app/">disini</a>
+    </p>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 📌 Table of Content
+* [About](#about)
+* [Demo](#demo)
+* [Features](#features)
+* [Installation](#installation)
+* [Credit](#credit)
+* [Creator](#creator)
 
-In the project directory, you can run:
+<!-- About SiGayantara -->
+## 📌 About SiGayantara
+SiGayantara merupakan situs informasi mengenai cagar budaya yang terdapat di Nusantara. Website ini memberikan kemudahan bagi generasi milenial dan masyarakat untuk memperoleh informasi seputar cagar budaya serta melestarikan warisan budaya di Nusantara.
 
-### `npm start`
+Project ini dibangun untuk memenuhi tugas akhir dari Program Studi Independen Bersertifikat Dicoding Indonesia Batch 2
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Proyek ini dibangun dengan:
+* [HTML](https://html.com/)
+* [Javascript](https://www.javascript.com/)
+* [Bootsrap](https://getbootstrap.com/)
+* [React](https://reactjs.org/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### APIs
+* [SiGayantara API](https://github.com/yohanes59/SiGayantara-API)
 
-### `npm test`
+<!-- Features -->
+## 📌 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 📌 Installation
+To run this project, follow the instructions below:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repository
+```sh
+git clone https://github.com/yohanes59/SiGaYaNtara
+```
+2. Install locally using NPM 
+```sh
+npm install
+```
+3. Run the project
+```sh
+npm run start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- Credit -->
+## 📌 Credit
+* [Eslint](https://eslint.org/)
+* [SweetAlert](https://sweetalert.js.org/guides/)
+* [Reacstrap](https://reactstrap.github.io/)
+* [Bootsrtap](https://getbootstrap.com)
+* [Axios](https://axios-http.com/)
+* [Youtube](https://www.youtube.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📌 Creator
+* [Yohanes Cahyadi](https://github.com/yohanes59)
+* [Nilam Setyoningrum](https://github.com/nilamsty)
+* [Shandra Elvyra](https://github.com/shandraelvyra)
+* [Darian Rendrahadi](https://github.com/dariangunawan)

@@ -1,0 +1,20 @@
+.upload-content {
+    margin-top: 70px;
+    padding: 15px;
+}
+
+.upload-title {
+	padding: 15px;
+}
+
+.preview {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+
+@media screen and (max-width: 399px) {
+    .upload-title {
+        font-size: 20px;
+    }
+}

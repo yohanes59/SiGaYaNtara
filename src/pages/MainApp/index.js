@@ -4,9 +4,9 @@ import { Header, Footer, About, Teams } from '../../components'
 import DetailCagar from '../DetailCagar'
 import Home from '../Home'
 import CagarBudaya from '../CagarBudaya'
-import Unggah from '../Unggah'
-import Ubah from '../Ubah'
 import SkipLink from '../../components/atoms/SkipLink'
+import Edit from '../Edit'
+import Upload from '../Upload'
 
 const MainApp = (props) => {
     return (
@@ -16,10 +16,10 @@ const MainApp = (props) => {
             <Router>
                 <Switch>
                     <Route path="/upload">
-                        <Unggah user={props.user} />
+                        <Upload user={props.user} />
                     </Route>
                     <Route path="/edit/:id">
-                        <Ubah user={props.user} />
+                        <Edit user={props.user} />
                     </Route>
                     <Route path="/detail/:id" >
                         <DetailCagar user={props.user} />

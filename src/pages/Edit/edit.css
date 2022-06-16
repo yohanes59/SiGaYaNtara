@@ -1,0 +1,32 @@
+.edit-content {
+    margin-top: 70px;
+    padding: 15px;
+}
+
+.edit-title {
+    padding: 10px;
+}
+
+.btn-submit {
+    width: 150px;
+    padding: 10px;
+    background-color: #876546;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 399px) {
+    .edit-title {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 199px) and (max-width: 575px) {
+	Form {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+    .btn-submit {
+        margin-left: 15px;
+    }
+}

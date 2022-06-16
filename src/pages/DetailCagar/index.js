@@ -5,6 +5,7 @@ import './detailCagar.css'
 import { withRouter } from 'react-router-dom'
 import { deleteCulturalHeritage, getDetailCultureHeritage } from '../../utils/culturalHeritageHandler';
 import swal from 'sweetalert';
+import { AuthorIcon } from '../../assets';
 
 const DetailCagar = (props) => {
     const [detailData, setDetailData] = useState({});
@@ -45,13 +46,13 @@ const DetailCagar = (props) => {
 
     const isLogin = (
         <div className="card-action">
-            <ul className="action-menu">
+            <ul className="d-flex flex-row justify-content-end">
                 <li className="edit-card">
-                    <a href={`/edit/${props.match.params.id}`} className="edit">Edit</a>
+                    <a href={`/edit/${props.match.params.id}`} className="d-inline-block text-decoration-none fs-6 text-primary fw-bold text-start">Edit</a>
                 </li>
                 <li> | </li>
                 <li className="delete-card">
-                    <a onClick={isClickedHandler ? handleClick : undefined} className="delete">Hapus</a>
+                    <button onClick={isClickedHandler ? handleClick : undefined} className="text-danger fw-bold border-0 bg-transparent">Hapus</button>
                 </li>
             </ul>
         </div>
@@ -73,34 +74,31 @@ const DetailCagar = (props) => {
     if (pageLoad === true) {
         if (detailData.author) {
             return (
-                <div className="container">
+                <div className="container detail-content">
                     <div className="cat-img">
-                        <img className="cagar-img" src={`https://sigayantara-api.herokuapp.com/v1/${detailData.image}`} alt="img" />
+                        <img className="cagar-img" src={`https://sigayantara-api.herokuapp.com/v1/${detailData.image}`} alt="gambar cagar budaya" tabIndex="0"/>
                         <p className="shadow-cat-card border-top-0"></p>
-                        <p className="category-card text-center text-uppercase fw-bold pt-2">{detailData.jenis}</p>
+                        <p className="category-card text-center text-uppercase fw-bold pt-2" tabIndex="0">{detailData.jenis}</p>
                     </div>
 
-                    <h3 className="text-uppercase mt-5">{detailData.nama}</h3>
+                    <div className="cagar-title">
+                        <p className="text-uppercase fw-bold mt-5 mb-3" tabIndex="0">{detailData.nama}</p>
+                    </div>
 
-                    <div className="row">
-                        <div className="col-lg-6 col-md-6 col-sm-12">
-                            <p>Diunggah oleh <span className="fst-italic">{detailData.author.user_fullName}</span></p>
+                    <div className="upload-info d-flex flex-row" tabIndex="0">
+                        <img className="author-icon" src={AuthorIcon} alt="penulis" />
+                        <div className="author-info d-flex flex-column">
+                            <p className="author fw-bold m-0">{detailData.author.user_fullName}</p>
+                            <p className="date m-0">{new Date(detailData.createdAt).toLocaleDateString("id-ID")}</p>
                         </div>
+                        <Gap height={15} />
+                    </div>
 
-                        <div className="col-lg-6 col-md-6 col-sm-12">
-
-                            <p className="text-end text-muted">Di Unggah Tanggal : {new Date(detailData.createdAt).toLocaleDateString("id-ID")}</p>
-                            <p className="text-end text-muted">Di Perbarui Tanggal : {new Date(detailData.updatedAt).toLocaleDateString("id-ID")}</p>
-
-                        </div>
-                        <Gap height={5} />
-
+                    <div className="action">
                         {isLoginHandler ? isLogin : undefined}
-
-                        <Gap height={20} />
                     </div>
 
-                    <div className="mt-3 mb-5 shadow">
+                    <div className="detail-info mt-3 mb-5">
                         <Nav tabs>
                             <NavItem>
                                 <NavLink className={currentActiveTab === '1' ? "tabs-active-tabs" : "tabs"} onClick={() => { toggleTab('1'); }}>
@@ -118,7 +116,7 @@ const DetailCagar = (props) => {
                                 </NavLink>
                             </NavItem>
                         </Nav>
-                        <TabContent activeTab={currentActiveTab}>
+                        <TabContent activeTab={currentActiveTab} className="shadow">
                             <TabPane tabId="1">
                                 <div className="row">
                                     <div className="col-sm-12">

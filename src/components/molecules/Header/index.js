@@ -31,7 +31,6 @@ const Header = (props) => {
     const [colorChange, setColorChange] = useState(false);
     
     const navbarColorChange = () => {
-        console.log(window.scrollY)
         if(window.scrollY >= 50){
             setColorChange(true);
         } else {

@@ -20,6 +20,7 @@ import MenuIcon from "./icons/menu-icon.png";
 import CloseIcon from "./icons/close-icon.png";
 import HomeIcon from "./icons/home-icon.png";
 import MapIcon from "./icons/maps.png";
+import AuthorIcon from "./icons/author-icon.png";
 
 export {
     HomepageImage,
@@ -39,5 +40,6 @@ export {
     MenuIcon,
     CloseIcon,
     HomeIcon,
-    MapIcon
+    MapIcon,
+    AuthorIcon
 }

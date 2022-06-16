@@ -1,6 +1,10 @@
 .cagar-img {
 	width: 100%;
-	height: 550px;
+	height: 500px;
+}
+
+.detail-content {
+	margin-top: 90px;
 }
 
 .cat-img {
@@ -26,8 +30,53 @@
 	right: 30px;
 }
 
-.container > h3:hover {
+.cagar-title > p {
+	font-size: 20px;
+}
+
+.cagar-title > p:hover {
 	color: #876546;
+}
+
+.author-icon {
+	width: 34px;
+	height: 34px;
+	padding: 7px 6px;
+	text-align: center;
+}
+
+.author {
+	font-size: 14px;
+}
+
+.date {
+	font-size: 12px;
+}
+
+.card-action ul li {
+	list-style: none;
+	margin-left: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-action ul li a {
+	transition: 0.5s;
+}
+
+.edit-card,
+.delete-card {
+	width: 70px;
+	height: 45px;
+}
+
+.edit-card:hover,
+.delete-card:hover {
+	background-color: #eec374;
+	border-radius: 15px;
+	transition: 0.5s;
 }
 
 .tabs {
@@ -48,112 +97,63 @@
 	border: 1px solid #876546 !important;
 }
 
-@media screen and (max-width: 299px) {
+@media (min-width: 199px) and (max-width: 349px) {
 	.cagar-img {
 		height: 150px;
 	}
 }
 
-@media screen and (max-width: 399px) {
+@media (min-width: 350px) and (max-width: 399px) {
 	.cagar-img {
 		height: 200px;
 	}
 }
 
-@media screen and (min-width: 400px) and (max-width: 549px) {
+@media (min-width: 400px) and (max-width: 549px) {
 	.cagar-img {
 		height: 250px;
 	}
 }
 
-@media screen and (min-width: 550px) and (max-width: 779px) {
+@media (min-width: 550px) and (max-width: 767px) {
 	.cagar-img {
-		height: 350px;
+		height: 300px;
 	}
 }
 
-@media screen and (min-width: 780px) and (max-width: 995px) {
+@media (min-width: 768px) and (max-width: 995px) {
 	.cagar-img {
 		height: 400px;
 	}
 }
 
-/* action */
-.card-action {
-	align-items: right !important;
-	justify-content: right !important;
-	border-radius: 5px;
-	position: relative;
-	width: 100%;
-}
-.card-action ul li {
-	list-style: none;
-	padding: 5px;
-	margin-left: 20px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-}
-.card-action ul li img {
-	min-width: 44px;
-	min-height: 44px;
-	opacity: 0.5;
-	transition: 0.5s;
-}
-.card-action ul li:hover img {
-	opacity: 1;
-}
-.card-action ul li a {
-	display: inline-block;
-	text-decoration: none;
-	font-weight: 500;
-	font-size: 16px;
-	transition: 0.5s;
-	text-align: left;
-	padding-left: -10px;
-}
-.card-action ul li:hover a {
-	color: #876546 !important;
+@media (min-width: 199px) and (max-width: 575px) {
+	.cat-img,
+	.cagar-title,
+	.upload-info,
+	.action,
+	.detail-info {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
 }
 
-.action-menu {
-	display: flex;
-	flex-direction: row;
-	justify-content: right;
-	text-align: center;
-	margin-top: -10px;
-}
-.edit-card {
-	width: 50px;
-	cursor: pointer;
-	text-align: center;
-}
-.edit {
-	color: blue;
-}
-.delete-card {
-	/* border: 1px solid #876546; */
-	border-radius: 5px;
-	height: 50px;
-	cursor: pointer;
-}
-.delete {
-	color: red;
-}
-.edit-card:hover {
-	background-color: #eec374;
-	border-radius: 15px;
-	transition: 0.5s;
-}
-.delete-card:hover {
-	background-color: #eec374;
-	border-radius: 15px;
-	transition: 0.5s;
-}
+@media screen and (max-width: 399px) {
+    .cagar-title > p {
+        font-size: 18px;
+    }
 
-.icon-card {
-	width: 20px;
-	height: 20px;
-	padding: 10px;
+	.category-card {
+		font-size: 14px;
+	}
+
+	.category-card {
+		width: 120px;
+		height: 40px;
+	}
+	
+	.shadow-cat-card {
+		width: 120px;
+		height: 30px;
+	}
 }

@@ -6,7 +6,6 @@
 
 .videoplay,
 .cagar-description {
-	justify-content: center;
 	margin-top: 70px;
 }
 
@@ -16,15 +15,11 @@
 }
 
 .cagar-description {
-	display: flex;
-	flex-direction: column;
 	margin-left: 30px;
 }
 
 .description {
-	padding: 15px;
 	text-align: justify;
-	font-size: 16px;
 }
 
 .desc-title:hover {

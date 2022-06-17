@@ -76,7 +76,7 @@ const DetailCagar = (props) => {
             return (
                 <div className="container detail-content">
                     <div className="cat-img">
-                        <img className="cagar-img" src={`https://sigayantara-api.herokuapp.com/v1/${detailData.image}`} alt="gambar cagar budaya" tabIndex="0"/>
+                        <img className="cagar-img" src={`https://sigayantara-api.herokuapp.com/v1/${detailData.image}`} alt="gambar cagar budaya" tabIndex="0" />
                         <p className="shadow-cat-card border-top-0"></p>
                         <p className="category-card text-center text-uppercase fw-bold pt-2" tabIndex="0">{detailData.jenis}</p>
                     </div>
@@ -101,17 +101,26 @@ const DetailCagar = (props) => {
                     <div className="detail-info mt-3 mb-5">
                         <Nav tabs>
                             <NavItem>
-                                <NavLink className={currentActiveTab === '1' ? "tabs-active-tabs" : "tabs"} onClick={() => { toggleTab('1'); }}>
+                                <NavLink className={currentActiveTab === '1' ? "tabs-active-tabs" : "tabs"} 
+                                tabIndex="0" 
+                                onKeyPress={() => { toggleTab('1'); }}
+                                onClick={() => { toggleTab('1'); }}>
                                     Keberadaan
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className={currentActiveTab === '2' ? "tabs-active-tabs" : "tabs"} onClick={() => { toggleTab('2'); }}>
+                                <NavLink className={currentActiveTab === '2' ? "tabs-active-tabs" : "tabs"} 
+                                tabIndex="0" 
+                                onKeyPress={() => { toggleTab('2'); }}
+                                onClick={() => { toggleTab('2'); }}>
                                     Sejarah
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className={currentActiveTab === '3' ? "tabs-active-tabs" : "tabs"} onClick={() => { toggleTab('3'); }}>
+                                <NavLink className={currentActiveTab === '3' ? "tabs-active-tabs" : "tabs"} 
+                                tabIndex="0" 
+                                onKeyPress={() => { toggleTab('3'); }}
+                                onClick={() => { toggleTab('3'); }}>
                                     Deskripsi
                                 </NavLink>
                             </NavItem>

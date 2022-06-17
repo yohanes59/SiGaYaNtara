@@ -11,6 +11,7 @@ import StrukturMenu from "./images/strukturMenu-images.png";
 import SitusMenu from "./images/situsMenu-images.png";
 import KawasanMenu from "./images/kawasanMenu-images.png";
 // dummy untuk foto TimItem
+import yohanes from './images/yohanes.jpg';
 import Foto from './images/foto.jpg';
 // asset lainnya
 import IconProfile from "./icons/account-icon.png";
@@ -41,5 +42,6 @@ export {
     CloseIcon,
     HomeIcon,
     MapIcon,
-    AuthorIcon
+    AuthorIcon,
+    yohanes
 }

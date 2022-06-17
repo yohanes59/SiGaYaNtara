@@ -1,6 +1,6 @@
 import React from 'react'
 import TeamItem from '../TeamItem'
-import { Foto } from '../../../assets'
+import { Foto, yohanes } from '../../../assets'
 
 import "./teams.css"
 
@@ -14,7 +14,7 @@ const Teams = () => {
         <TeamItem nama="Shandra Elvyra S. P." section="Front-End" src={Foto} alt="Foto Shandra" />
         <TeamItem nama="Nilam S." section="Front-End" src={Foto} alt="Foto Nilam" />
         <TeamItem nama="Darian Gunawan" section="Front-End" src={Foto} alt="Foto Darian" />
-        <TeamItem nama="Yohanes Cahyadi" section="Back-End" src={Foto} alt="Foto Yohanes" href="https://github.com/yohanes59" />
+        <TeamItem nama="Yohanes Cahyadi" section="Back-End" src={yohanes} alt="Foto Yohanes" href="https://github.com/yohanes59" />
       </div>
     </div>
   )

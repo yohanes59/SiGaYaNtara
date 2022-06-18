@@ -7,19 +7,19 @@ const Card = (props) => {
   const { src, alt, title, city, category } = props;
   return (
     <a className="card-anchor" href={`/detail/${props._id}`}>
-      <div className="col">
-        <div className="card">
+      <section className="col">
+        <article className="card">
           <img src={src} className="photo" alt={alt} />
-          <span className="card-category">{category}</span>
-          <div className="card-body">
+          <label className="card-category">{category}</label>
+          <section className="card-body">
             <h5 className="card-title">{title}</h5>
-              <div className="city-container">
+              <section className="city-container">
                 <img className="city-map" src={MapIcon} alt="Icon Map"></img>
                 <p className="card-city">{city}</p>
-              </div>
-          </div>
-        </div>
-      </div>
+              </section>
+          </section>
+        </article>
+      </section>
     </a>
   )
 }

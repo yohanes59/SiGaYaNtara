@@ -3,7 +3,7 @@ import React from 'react'
 const Pagination = (props) => {
     const {previous, next, current_page, total_page} = props;
   return (
-    <div>
+    <section>
         <nav aria-label="Page navigation example">
             <ul className="pagination justify-content-center">
                 <li className="page-item">
@@ -19,7 +19,7 @@ const Pagination = (props) => {
                 </li>
             </ul>
         </nav>
-    </div>
+    </section>
   )
 }
 

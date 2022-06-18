@@ -1,22 +1,22 @@
 import React from 'react'
 import TeamItem from '../TeamItem'
-import { Foto, yohanes } from '../../../assets'
+import { Foto, Darian, yohanes } from '../../../assets'
 
 import "./teams.css"
 
 const Teams = () => {
   return (
-    <div className="container">
-      <div className="text-center" tabIndex="0">
+    <section className="container">
+      <section className="text-center" tabIndex="0">
         <h2 className="teams-title">Tim Kami</h2>
-      </div>
-      <div className="wrapper mb-5">
+      </section>
+      <section className="wrapper mb-5">
         <TeamItem nama="Shandra Elvyra S. P." section="Front-End" src={Foto} alt="Foto Shandra" />
         <TeamItem nama="Nilam S." section="Front-End" src={Foto} alt="Foto Nilam" />
-        <TeamItem nama="Darian Gunawan" section="Front-End" src={Foto} alt="Foto Darian" />
+        <TeamItem nama="Darian Gunawan" section="Front-End" src={Darian} alt="Foto Darian" href="https://github.com/dariangunawan" />
         <TeamItem nama="Yohanes Cahyadi" section="Back-End" src={yohanes} alt="Foto Yohanes" href="https://github.com/yohanes59" />
-      </div>
-    </div>
+      </section>
+    </section>
   )
 }
 

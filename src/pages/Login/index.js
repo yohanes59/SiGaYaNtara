@@ -18,37 +18,36 @@ const Login = (props) => {
   }
 
   return (
-    <div className="container">
+    <main className="container">
       <HomeButton />
-      <div className="row">
-        <div className="col-lg-6 col-md-6 col-sm-12 mt-3 d-flex flex-column justify-content-center" tabIndex="0">
-          <img className="w-100 h-100" src={ LoginBg } alt="img" />
-        </div>
+      <article className="row">
+        <figure className="col-lg-6 col-md-6 col-sm-12 mt-3 d-flex flex-column justify-content-center" tabIndex="0">
+          <img className="w-100 h-100" src={LoginBg} alt="login background" />
+        </figure>
 
-        <div className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center">
-          <div className="login mt-5 mb-2" tabIndex="0">
+        <section className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center">
+          <header className="login mt-5 mb-2" tabIndex="0">
             <h1>Selamat Datang!</h1>
-          </div>
-          <div className="px-3">
+          </header>
+
+          <section className="px-3" tabIndex="0">
             <Input label="Email" id="email" name="email" type="email" onChange={(ev) => setEmail(ev.target.value)} />
             <Gap height={18} />
             <Input label="Password" id="password" name="password" type="password" onChange={(e) => setPassword(e.target.value)} />
 
-            <div className="my-3 text-end">
+            <section className="my-3 text-end">
               <a className="py-3 text-decoration-none text-secondary" href="/#">Lupa Password?</a>
-            </div>
+            </section>
 
-            <div>
-              <button className="btn-submit" onClick={onSubmit}>Masuk</button>
-            </div>
+            <button className="btn-submit" onClick={onSubmit}>Masuk</button>
 
-            <div className="text-center mt-5" tabIndex="0">
+            <section className="text-center mt-5" tabIndex="0">
               <p>Belum punya akun? <a href="/register" className="py-3 fw-bold text-decoration-none text-danger">Daftar</a></p>
-            </div>
-          </div>
-        </div>
-      </div>  
-    </div>
+            </section>
+          </section>
+        </section>
+      </article>
+    </main>
   )
 }
 

@@ -3,7 +3,7 @@ import './teamItem.css'
 
 const TeamItem = ({ nama, section, src, alt, href }) => {
     return (
-        <div className="team-body" tabIndex="0">
+        <section className="team-body" tabIndex="0">
             <a className='link' target="_blank" rel="noopener noreferrer" href={href}>
                 <div className="team-img">
                     <img className="member-img" src={src} alt={alt} />
@@ -13,7 +13,7 @@ const TeamItem = ({ nama, section, src, alt, href }) => {
                     <span>{section}</span>
                 </div>
             </a>
-        </div>
+        </section>
     )
 }
 

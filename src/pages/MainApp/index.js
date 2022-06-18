@@ -10,7 +10,7 @@ import Upload from '../Upload'
 
 const MainApp = (props) => {
     return (
-        <div>
+        <main>
             <SkipLink />
             <Header user={props.user} />
             <Router>
@@ -37,7 +37,7 @@ const MainApp = (props) => {
                 </Switch>
             </Router>
             <Footer />
-        </div>
+        </main>
     )
 }
 

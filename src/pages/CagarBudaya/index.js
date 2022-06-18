@@ -25,21 +25,21 @@ const CagarBudaya = (props) => {
   const isLoginHandler = props.user;
 
   const isLogin = (
-    <div className="button-bar">
+    <section className="button-bar">
       <a className="button" href="/upload" type="button">Unggah Cagar Budaya</a>
-    </div>
+    </section>
   )
 
   const isNotLogin = (
-    <div className="button-bar">
+    <section className="button-bar">
       <a className="button" href="/login" type="button">Unggah Cagar Budaya</a>
-    </div>
+    </section>
   )
 
   if (loading === true) {
     return (
       <>
-        <div className="container">
+        <header className="container">
           <div className="list-text text-center">
             <p tabIndex="0">Daftar Cagar Budaya</p>
 
@@ -47,13 +47,13 @@ const CagarBudaya = (props) => {
 
           </div>
           <HeroElement src={CagarBudayaImage} alt="Candi Prambanan" />
-        </div>
+        </header>
         <Gap height={300} />
-        <div className="container">
-          <div className="row row-cols-1 row-cols-md-3 g-4">
+        <article className="container" id="content">
+          <section className="row row-cols-1 row-cols-md-3 g-4">
             {cultureHeritageList}
-          </div>
-        </div>
+          </section>
+        </article>
         <Gap height={60} />
         {pagination}
         <Gap height={40} />

@@ -5,12 +5,12 @@ import './category.css'
 
 const Category = () => {
     return (
-        <div className="container category-content">
-            <div className="text-center" tabIndex="0">
+        <article className="container category-content">
+            <section className="text-center" tabIndex="0">
                 <h2 className="category-title">Jenis Cagar Budaya</h2>
-            </div>
+            </section>
 
-            <div className="wrapper-card">
+            <section className="wrapper-card">
                 <CardJenis src={BendaMenu} alt="Icon Vas" title="Benda" 
                     text="Benda alami atau buatan manusia, baik bergerak atau tidak, yang punya hubungan erat dengan kekayaan dan sejarah perkembangan manusia"/>
                 <CardJenis src={BangunanMenu} alt="Icon Rumah" title="Bangunan" 
@@ -21,8 +21,8 @@ const Category = () => {
                     text="Lokasi yang berada di darat dan atau di air yang mengandung Benda Cagar Budaya, Bangunan Cagar Budaya, dan atau Struktur Cagar Budaya sebagai hasil kegiatan manusia atau bukti kejadian pada masa lalu"/>
                 <CardJenis src={StrukturMenu} alt="Icon Jembatan" title="Struktur" 
                     text="Suatu susunan binaan yang terbuat dari benda alam dan atau benda buatan manusia untuk memenuhi kebutuhan ruang kegiatan yang menyatu dengan alam, sarana dan prasarana untuk menampung kebutuhan manusia"/>
-            </div>
-        </div>
+            </section>
+        </article>
     )
 }
 

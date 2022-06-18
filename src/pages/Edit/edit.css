@@ -1,11 +1,16 @@
+h2 {
+    text-align: center;
+    padding: 10px;
+}
+
 .edit-content {
     margin-top: 70px;
     padding: 15px;
 }
 
-.edit-title {
+/* .edit-title {
     padding: 10px;
-}
+} */
 
 .btn-submit {
     width: 150px;

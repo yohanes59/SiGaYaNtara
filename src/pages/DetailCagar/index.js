@@ -45,7 +45,7 @@ const DetailCagar = (props) => {
     const isLoginHandler = props.user;
 
     const isLogin = (
-        <div className="card-action">
+        <section className="card-action">
             <ul className="d-flex flex-row justify-content-end">
                 <li className="edit-card">
                     <a href={`/edit/${props.match.params.id}`} className="d-inline-block text-decoration-none fs-6 text-primary fw-bold text-start">Edit</a>
@@ -55,7 +55,7 @@ const DetailCagar = (props) => {
                     <button onClick={isClickedHandler ? handleClick : undefined} className="text-danger fw-bold border-0 bg-transparent">Hapus</button>
                 </li>
             </ul>
-        </div>
+        </section>
     )
 
 
@@ -74,31 +74,31 @@ const DetailCagar = (props) => {
     if (pageLoad === true) {
         if (detailData.author) {
             return (
-                <div className="container detail-content">
-                    <div className="cat-img">
+                <article className="container detail-content" id="content">
+                    <section className="cat-img">
                         <img className="cagar-img" src={`https://sigayantara-api.herokuapp.com/v1/${detailData.image}`} alt="gambar cagar budaya" tabIndex="0" />
                         <p className="shadow-cat-card border-top-0"></p>
                         <p className="category-card text-center text-uppercase fw-bold pt-2" tabIndex="0">{detailData.jenis}</p>
-                    </div>
+                    </section>
 
-                    <div className="cagar-title">
-                        <p className="text-uppercase fw-bold mt-5 mb-3" tabIndex="0">{detailData.nama}</p>
-                    </div>
+                    <section className="cagar-title">
+                        <h3 className="text-uppercase fw-bold mt-5 mb-3" tabIndex="0">{detailData.nama}</h3>
+                    </section>
 
-                    <div className="upload-info d-flex flex-row" tabIndex="0">
+                    <section className="upload-info d-flex flex-row" tabIndex="0">
                         <img className="author-icon" src={AuthorIcon} alt="penulis" />
-                        <div className="author-info d-flex flex-column">
+                        <section className="author-info d-flex flex-column">
                             <p className="author fw-bold m-0">{detailData.author.user_fullName}</p>
                             <p className="date m-0">{new Date(detailData.createdAt).toLocaleDateString("id-ID")}</p>
-                        </div>
+                        </section>
                         <Gap height={15} />
-                    </div>
+                    </section>
 
-                    <div className="action">
+                    <section className="action">
                         {isLoginHandler ? isLogin : undefined}
-                    </div>
+                    </section>
 
-                    <div className="detail-info mt-3 mb-5">
+                    <section className="detail-info mt-3 mb-5">
                         <Nav tabs>
                             <NavItem>
                                 <NavLink className={currentActiveTab === '1' ? "tabs-active-tabs" : "tabs"} 
@@ -127,30 +127,30 @@ const DetailCagar = (props) => {
                         </Nav>
                         <TabContent activeTab={currentActiveTab} className="shadow">
                             <TabPane tabId="1">
-                                <div className="row">
-                                    <div className="col-sm-12">
+                                <section className="row">
+                                    <article className="col-sm-12" tabIndex="0">
                                         <p className="px-1 pt-2">Provinsi: <span>{detailData.provinsi}</span></p>
-                                        <p className="px-1">Kabupaten/ Kota: <span>{detailData.kabupaten}</span></p>
-                                    </div>
-                                </div>
+                                        <p className="px-1">Kabupaten/Kota: <span>{detailData.kabupaten}</span></p>
+                                    </article>
+                                </section>
                             </TabPane>
                             <TabPane tabId="2">
-                                <div className="row">
-                                    <div className="col-sm-12">
+                                <section className="row">
+                                    <article className="col-sm-12" tabIndex="0">
                                         <p className="px-1 pt-2 text-break">{detailData.sejarah}</p>
-                                    </div>
-                                </div>
+                                    </article>
+                                </section>
                             </TabPane>
                             <TabPane tabId="3">
-                                <div className="row">
-                                    <div className="col-sm-12">
+                                <section className="row">
+                                    <article className="col-sm-12" tabIndex="0">
                                         <p className="px-1 pt-2 text-break">{detailData.description}</p>
-                                    </div>
-                                </div>
+                                    </article>
+                                </section>
                             </TabPane>
                         </TabContent>
-                    </div>
-                </div>
+                    </section>
+                </article>
             )
         }
     }

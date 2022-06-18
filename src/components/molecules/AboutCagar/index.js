@@ -3,12 +3,12 @@ import "./aboutCagar.css"
 
 const AboutCagar = () => {
   return (
-    <div className="container cagar-content" id="about-cagar">
+    <article className="container cagar-content" id="about-cagar">
       <section className="videoplay justify-content-center">
-        <div className="embed-responsive embed-responsive-16by9 videoIframe">
+        <article className="embed-responsive embed-responsive-16by9 videoIframe">
           <iframe className="embed-responsive-item video" src="https://www.youtube-nocookie.com/embed/G7ePJRF2W38" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; 
           encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-        </div>
+        </article>
       </section>
 
       <section className="cagar-description d-flex flex-column justify-content-center"> 
@@ -17,7 +17,7 @@ const AboutCagar = () => {
           "Cagar Budaya adalah warisan budaya bersifat kebendaan berupa Benda Cagar Budaya, Bangunan Cagar Budaya, Struktur Cagar Budaya, Situs Cagar Budaya, dan Kawasan Cagar Budaya di darat dan/atau di air yang perlu dilestarikan keberadaannya karena memiliki nilai penting bagi sejarah, ilmu pengetahuan, pendidikan, agama, dan/atau kebudayaan melalui proses penetapan." <b>(UU RI No.11 Tahun 2010)</b>
         </p>
       </section>
-    </div>
+    </article>
   )
 }
 

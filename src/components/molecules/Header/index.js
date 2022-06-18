@@ -15,15 +15,15 @@ const Header = (props) => {
         );
     } else {
         navStatus = (
-            <div className="dropdown">
+            <nav className="dropdown">
                 <button className="dropdown-title" type="button" aria-expanded="false" aria-controls="profile-dropdown">
                     <img src={IconProfile} alt="Icon Profile" className="profile-icon" />
                 </button>
-                <div className="dropdown-menus" id="profile-dropdown">
+                <section className="dropdown-menus" id="profile-dropdown">
                     <p tabIndex="0">Hai, {props.user.fullName}</p>
                     <button className="nav-logout" type="button" onClick={userLogout}>Keluar</button>
-                </div>
-            </div>
+                </section>
+            </nav>
         );
     }
 

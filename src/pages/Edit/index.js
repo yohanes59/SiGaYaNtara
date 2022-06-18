@@ -67,10 +67,8 @@ const Edit = (props) => {
         )
     }
     return (
-        <div className="container edit-content mb-5">
-            <div className="text-center mb-3">
-                <h2 className="edit-title" tabIndex="0">Edit Data Cagar Budaya</h2>
-            </div>
+        <section className="container edit-content mb-5">
+            <h2 tabIndex="0">Edit Data Cagar Budaya</h2>
             <Form>
                 <FormGroup>
                     <Label for="name" tabIndex="0">Nama Cagar Budaya</Label>
@@ -116,10 +114,8 @@ const Edit = (props) => {
                     <FormText tabIndex="0">Unggah gambar maksimal 1 gambar.</FormText>
                 </FormGroup>
             </Form>
-            <div>
-                <button className="btn-submit mt-3 fs-7 border-0 text-white rounded-pill shadow cursor-pointer" type="submit" onClick={onSubmit}>Simpan</button>
-            </div>
-        </div>
+            <button className="btn-submit mt-3 fs-7 border-0 text-white rounded-pill shadow cursor-pointer" type="submit" onClick={onSubmit}>Simpan</button>
+        </section>
     )
 }
 

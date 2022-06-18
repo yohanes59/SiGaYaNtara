@@ -20,36 +20,34 @@ const Register = (props) => {
   }
 
   return (
-    <div className="container">
+    <main className="container">
       <HomeButton />
-      <div className="row">
-        <div className="col-lg-6 col-md-6 col-sm-12 mt-3 d-flex flex-column justify-content-center" tabIndex="0">
-          <img className="w-100 h-100" src={ RegisterBg } alt="register" />
-        </div>
+      <section className="row">
+        <section className="col-lg-6 col-md-6 col-sm-12 mt-3 d-flex flex-column justify-content-center" tabIndex="0">
+          <img className="w-100 h-100" src={RegisterBg} alt="register background" />
+        </section>
 
-        <div className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center">
-          <div className="register mt-5 mb-2" tabIndex="0">
+        <aside className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center">
+          <header className="register mt-5 mb-2" tabIndex="0">
             <h1>Daftar Akun SiGayantara</h1>
-          </div>
+          </header>
 
-          <div className="px-3">
+          <section className="px-3">
             <Input label="Nama Lengkap" id="name" name="name" type="text" onChange={(ev) => setFullName(ev.target.value)} />
             <Gap height={18} />
             <Input label="Email" id="email" name="email" type="email" onChange={(ev) => setEmail(ev.target.value)} />
             <Gap height={18} />
             <Input label="Password" id="password" name="password" type="password" onChange={(ev) => setPassword(ev.target.value)} />
 
-            <div className="my-5">
-              <button className="btn-submit" onClick={onSubmit}>Daftar</button>
-            </div>
+            <button className="btn-submit my-5" onClick={onSubmit}>Daftar</button>
 
-            <div className="text-center mt-5" tabIndex="0">
+            <section className="text-center mt-5" tabIndex="0">
               <p>Sudah punya akun? <a href="/login" className="py-3 fw-bold text-decoration-none text-primary">Masuk</a></p>
-            </div>
-          </div>
-        </div>
-      </div>  
-    </div>
+            </section>
+          </section>
+        </aside>
+      </section>
+    </main>
   )
 }
 

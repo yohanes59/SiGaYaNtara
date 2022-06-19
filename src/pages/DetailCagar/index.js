@@ -45,7 +45,7 @@ const DetailCagar = (props) => {
     const isLoginHandler = props.user;
 
     const isLogin = (
-        <section className="card-action p-3">
+        <article className="card-action p-3">
             <ul className="d-flex flex-row justify-content-end mb-0">
                 <li className="edit-card d-flex flex-row align-items-center justify-content-center list-unstyled">
                     <a href={`/edit/${props.match.params.id}`} className="d-inline-block text-decoration-none fs-6 text-primary fw-bold text-start">Edit</a>
@@ -55,7 +55,7 @@ const DetailCagar = (props) => {
                     <button onClick={isClickedHandler ? handleClick : undefined} className="text-danger fw-bold border-0 bg-transparent">Hapus</button>
                 </li>
             </ul>
-        </section>
+        </article>
     )
 
 
@@ -81,7 +81,9 @@ const DetailCagar = (props) => {
                         <p className="category-card text-center text-uppercase fw-bold pt-2" tabIndex="0">{detailData.jenis}</p>
                     </article>
 
+                    <article>
                     <p className="cagar-title px-3 text-uppercase fw-bold mt-5 mb-3" tabIndex="0">{detailData.nama}</p>
+                    </article>
 
                     <article className="d-flex flex-row px-3" tabIndex="0">
                         <img className="author-icon text-center" src={AuthorIcon} alt="penulis" />

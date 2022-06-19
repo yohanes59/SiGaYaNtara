@@ -11,6 +11,7 @@ import KawasanMenu from "./images/kawasanMenu-images.png";
 import Darian from './images/Darian.jpg';
 import yohanes from './images/yohanes.jpg';
 import Nilam from './images/Nilam-Setyoningrum.jpg';
+import Shandra from './images/shandraelvyra.png';
 import Foto from './images/foto.jpg';
 import IconProfile from "./icons/account-icon.png";
 import EditIcon from "./icons/edit-icon.png";
@@ -43,5 +44,6 @@ export {
     AuthorIcon,
     Darian,
     yohanes,
-    Nilam
+    Nilam,
+    Shandra
 }

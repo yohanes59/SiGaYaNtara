@@ -12,7 +12,7 @@
 </p>
 
 
-## 📌 Table of Content
+## 📌Table of Content
 * [About](#about)
 * [Demo](#demo)
 * [Features](#features)
@@ -21,7 +21,7 @@
 * [Creator](#creator)
 
 <!-- About SiGayantara -->
-## 📌 About SiGayantara
+## 📌About SiGayantara
 SiGayantara merupakan situs informasi mengenai cagar budaya yang terdapat di Nusantara. Website ini memberikan kemudahan bagi generasi milenial dan masyarakat untuk memperoleh informasi seputar cagar budaya serta melestarikan warisan budaya di Nusantara.
 
 Project ini dibangun untuk memenuhi tugas akhir dari Program Studi Independen Bersertifikat Dicoding Indonesia Batch 2

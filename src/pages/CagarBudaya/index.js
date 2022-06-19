@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Gap, HeroElement, Loading } from '../../components';
 import { CagarBudayaImage } from '../../assets';
-import "./cagarBudaya.css";
 import { getAllCultureHeritage } from '../../utils/culturalHeritageHandler';
 import { createCultureHeritageList, createPagination } from '../../utils/templates/CultureHeritageListHelper';
+import "./cagarBudaya.css";
 
 const CagarBudaya = (props) => {
   const [dataCagar, setDataCagar] = useState([]);
@@ -25,38 +25,35 @@ const CagarBudaya = (props) => {
   const isLoginHandler = props.user;
 
   const isLogin = (
-    <section className="button-bar">
-      <a className="button" href="/upload" type="button">Unggah Cagar Budaya</a>
+    <section>
+      <a className="btn-upload text-decoration-none bg-transparent rounded-pill mb-5" href="/upload" type="button">Unggah Cagar Budaya</a>
     </section>
   )
 
   const isNotLogin = (
-    <section className="button-bar">
-      <a className="button" href="/login" type="button">Unggah Cagar Budaya</a>
+    <section>
+      <a className="btn-upload text-decoration-none bg-transparent rounded-pill mb-5" href="/login" type="button">Unggah Cagar Budaya</a>
     </section>
   )
 
   if (loading === true) {
     return (
       <>
-        <header className="container">
-          <div className="list-text text-center">
+        <main className="container">
+          <article className="list-text text-center">
             <p tabIndex="0">Daftar Cagar Budaya</p>
-
             {isLoginHandler ? isLogin : isNotLogin}
-
-          </div>
+          </article>
           <HeroElement src={CagarBudayaImage} alt="Candi Prambanan" />
-        </header>
-        <Gap height={300} />
-        <article className="container" id="content">
-          <section className="row row-cols-1 row-cols-md-3 g-4">
+
+          <article className="cards d-grid px-3" id="content">
             {cultureHeritageList}
-          </section>
-        </article>
-        <Gap height={60} />
-        {pagination}
-        <Gap height={40} />
+          </article>
+
+          <Gap height={100} />
+          {pagination}
+          <Gap height={48} />
+        </main>
       </>
     )
   }

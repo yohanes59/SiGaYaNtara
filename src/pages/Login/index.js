@@ -12,7 +12,6 @@ const Login = (props) => {
     const user = { email, password };
     userLogin(user);
   }
-  // jika sudah login tidak bisa ke halaman login lagi
   if (props.user) {
     return window.location.href = '/';
   }
@@ -20,33 +19,23 @@ const Login = (props) => {
   return (
     <main className="container">
       <HomeButton />
-      <article className="row">
-        <figure className="col-lg-6 col-md-6 col-sm-12 mt-3 d-flex flex-column justify-content-center" tabIndex="0">
-          <img className="w-100 h-100" src={LoginBg} alt="login background" />
-        </figure>
-
-        <section className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center">
-          <header className="login mt-5 mb-2" tabIndex="0">
-            <h1>Selamat Datang!</h1>
-          </header>
-
-          <section className="px-3" tabIndex="0">
-            <Input label="Email" id="email" name="email" type="email" onChange={(ev) => setEmail(ev.target.value)} />
-            <Gap height={18} />
-            <Input label="Password" id="password" name="password" type="password" onChange={(e) => setPassword(e.target.value)} />
-
-            <section className="my-3 text-end">
-              <a className="py-3 text-decoration-none text-secondary" href="/#">Lupa Password?</a>
-            </section>
-
-            <button className="btn-submit" onClick={onSubmit}>Masuk</button>
-
-            <section className="text-center mt-5" tabIndex="0">
-              <p>Belum punya akun? <a href="/register" className="py-3 fw-bold text-decoration-none text-danger">Daftar</a></p>
-            </section>
-          </section>
+      <article className="row px-3">
+        <section className="col-lg-6 col-md-6 col-sm-12 mt-3 d-flex flex-column justify-content-center" tabIndex="0">
+          <img className="w-100 h-100" src={ LoginBg } alt="img" />
         </section>
-      </article>
+
+        <section className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center px-3" id="content">
+          <h2 className="login mt-5 mb-4" tabIndex="0">Selamat Datang!</h2>
+
+          <Input label="Email" id="email" name="email" type="email" onChange={(ev) => setEmail(ev.target.value)} />
+          <Gap height={18} />
+          <Input label="Password" id="password" name="password" type="password" onChange={(e) => setPassword(e.target.value)} />
+
+          <button className="btn-submit my-5 mx-0 fs-7 border-0 text-white rounded-pill shadow cursor-pointer" onClick={onSubmit}>Masuk</button>
+
+          <p className="text-center mt-5" tabIndex="0">Belum punya akun? <a href="/register" className="py-3 fw-bold text-decoration-none text-danger">Daftar</a></p>
+        </section>
+      </article>  
     </main>
   )
 }

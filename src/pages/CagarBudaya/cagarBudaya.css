@@ -1,10 +1,29 @@
 .list-text p {
 	color: #000000;
-	margin-top: 80px;
-	margin-bottom: 100px;
+	margin-top: 150px;
+	margin-bottom: 150px;
 	font-size: 50px;
 	font-weight: 500;
 	text-shadow: 0px 5px 5px #876546;
+}
+
+.btn-upload {
+	border: 1px solid #eec374;
+	color: #eec374;
+	padding: 10px;
+	font-size: 16px;
+}
+
+.btn-upload:hover {
+	background-color: #eec374 !important;
+	color: #000000;
+	font-weight: 500;
+}
+
+.cards {
+	place-content: center;
+	grid-gap: 1.5rem;
+	margin-top: 150px;
 }
 
 @media (min-width: 721px) and (max-width: 1200px) {
@@ -15,20 +34,15 @@
 
 @media (min-width: 800px) and (max-width: 1200px) {
 	.list-text p {
-		margin-top: 60px;
+		margin-top: 120px;
+		margin-bottom: 120px;
 	}
 }
 
-@media (min-width: 721px) and (max-width: 799px) {
+@media (min-width: 500px) and (max-width: 799px) {
 	.list-text p {
-		margin-top: 50px;
-		margin-bottom: 60px;
-	}
-}
-
-@media (min-width: 400px) and (max-width: 720px) {
-	.list-text p {
-		margin-top: 70px;
+		margin-top: 100px;
+		margin-bottom: 80px;
 	}
 }
 
@@ -40,6 +54,7 @@
 
 @media (min-width: 400px) and (max-width: 499px) {
 	.list-text p {
+		margin-top: 80px;
 		margin-bottom: 70px;
 		font-size: 35px;
 	}
@@ -47,7 +62,7 @@
 
 @media (min-width: 290px) and (max-width: 399px) {
 	.list-text p {
-		margin-top: 60px;
+		margin-top: 70px;
 	}
 }
 
@@ -67,14 +82,14 @@
 
 @media (min-width: 199px) and (max-width: 289px) {
 	.list-text p {
-		margin-top: 30px;
-		font-size: 23px;
+		margin-top: 60px;
+		font-size: 20px;
 	}
 }
 
 @media (min-width: 240px) and (max-width: 289px) {
 	.list-text p {
-		margin-bottom: 60px;
+		margin-bottom: 40px;
 	}
 }
 
@@ -84,21 +99,11 @@
 	}
 }
 
-/* button */
-.button {
-	border: 1px solid #eec374;
-	background-color: transparent;
-	color: #eec374;
-	border-radius: 30px;
-	padding: 10px;
-	font-size: 16px;
-	text-decoration: none;
-}
-
-.button:hover {
-	background-color: #eec374;
-	color: #000000;
-	font-weight: 500;
+@media (min-width: 199px) and (max-width: 289px) {
+	.button {
+		font-size: 12px;
+		padding: 12px;
+	}
 }
 
 @media (min-width: 290px) and (max-width: 499px) {
@@ -108,9 +113,34 @@
 	}
 }
 
-@media (min-width: 199px) and (max-width: 289px) {
-	.button {
-		font-size: 12px;
-		padding: 12px;
+@media (min-width: 768px) {
+	.cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 999px) {
+	.cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 289px) {
+	.cards {
+		margin-top: 30px;
+	}
+}
+
+@media (min-width: 290px) and (max-width: 399px) {
+	.cards {
+		margin-top: 50px;
+	}
+}
+
+@media (min-width: 400px) and (max-width: 499px) {
+	.cards {
+		margin-top: 80px;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 799px) {
+	.cards {
+		margin-top: 100px;
 	}
 }

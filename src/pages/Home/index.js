@@ -5,24 +5,24 @@ import "./home.css";
 
 const Home = () => {
     return (
-        <article>
-            <header className="jumbotron">
+        <>
+            <article className="jumbotron">
                 <HeroElement src={HomepageImage} alt="Candi Borobudur" />
-                <div className="home-content d-flex flex-column justify-content-center">
+                <section className="home-content d-flex flex-column justify-content-center">
                     <h1 className="home-title text-center" tabIndex="0">SiGayantara</h1>
                     <p className="home-desc text-center" tabIndex="0">Tempat untuk mencari berbagai informasi seputar Cagar Budaya yang ada di Indonesia.</p>
-                    <div className="scroll-button" id="content">
+                    <section className="scroll-button">
                         <a href="#about-cagar" className="anchor-cagar">
-                            <button className="scroll-down"></button>
+                            <button className="scroll-down bg-transparent justify-content-center cursor-pointer p-0" tabIndex="-1"></button>
                         </a>
-                    </div>
-                </div>
-            </header>
+                    </section>
+                </section>
+            </article>
             <AboutCagar/>
             <Category />
             <About />
             <Teams />
-        </article>
+        </>
     )
 }
 

@@ -7,10 +7,10 @@ const Category = () => {
     return (
         <article className="container category-content">
             <section className="text-center" tabIndex="0">
-                <h2 className="category-title">Jenis Cagar Budaya</h2>
+                <h2 className="category-title px-3">Jenis Cagar Budaya</h2>
             </section>
 
-            <section className="wrapper-card">
+            <section className="wrapper-card p-3">
                 <CardJenis src={BendaMenu} alt="Icon Vas" title="Benda" 
                     text="Benda alami atau buatan manusia, baik bergerak atau tidak, yang punya hubungan erat dengan kekayaan dan sejarah perkembangan manusia"/>
                 <CardJenis src={BangunanMenu} alt="Icon Rumah" title="Bangunan" 

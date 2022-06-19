@@ -67,9 +67,10 @@ const Edit = (props) => {
         )
     }
     return (
-        <section className="container edit-content mb-5">
-            <h2 tabIndex="0">Edit Data Cagar Budaya</h2>
-            <Form>
+        <main className="container edit-content mb-5" id="content">
+            <h2 className="edit-title text-center mb-3 px-3" tabIndex="0">Edit Data Cagar Budaya</h2>
+            
+            <Form className="px-3">
                 <FormGroup>
                     <Label for="name" tabIndex="0">Nama Cagar Budaya</Label>
                     <Input id="cagarName" name="nama" type="text" value={nama} onChange={(ev) => setNama(ev.target.value)} required />
@@ -101,11 +102,11 @@ const Edit = (props) => {
                 </Row>
                 <FormGroup>
                     <Label for="sejarah" tabIndex="0">Sejarah</Label>
-                    <Input id="sejarah" name="sejarah" placeholder="Sejarah singkat cagar budaya..." type="textarea" value={sejarah} onChange={(ev) => setSejarah(ev.target.value)} />
+                    <Input id="sejarah" name="sejarah" placeholder="Sejarah singkat cagar budaya..." type="textarea" rows="7" value={sejarah} onChange={(ev) => setSejarah(ev.target.value)} />
                 </FormGroup>
                 <FormGroup>
                     <Label for="description" tabIndex="0">Deskripsi</Label>
-                    <Input id="description" name="description" placeholder="Deskripsi singkat cagar budaya..." type="textarea" value={description} onChange={(ev) => setDescription(ev.target.value)} required />
+                    <Input id="description" name="description" placeholder="Deskripsi singkat cagar budaya..." type="textarea" rows="7" value={description} onChange={(ev) => setDescription(ev.target.value)} required />
                 </FormGroup>
                 <FormGroup>
                     <Label for="uploadImages" tabIndex="0">Upload Gambar</Label>
@@ -113,9 +114,10 @@ const Edit = (props) => {
                     <Input id="uploadImages" name="uploadImages" type="file" onChange={(ev) => onImageUpload(ev)} />
                     <FormText tabIndex="0">Unggah gambar maksimal 1 gambar.</FormText>
                 </FormGroup>
+
+                <button className="btn-submit mt-3 fs-7 border-0 text-white rounded-pill shadow cursor-pointer" type="submit" onClick={onSubmit}>Simpan</button>
             </Form>
-            <button className="btn-submit mt-3 fs-7 border-0 text-white rounded-pill shadow cursor-pointer" type="submit" onClick={onSubmit}>Simpan</button>
-        </section>
+        </main>
     )
 }
 

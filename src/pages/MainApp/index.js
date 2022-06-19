@@ -1,16 +1,16 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Header, Footer, About, Teams } from '../../components'
-import DetailCagar from '../DetailCagar'
+import SkipLink from '../../components/atoms/SkipLink'
 import Home from '../Home'
 import CagarBudaya from '../CagarBudaya'
-import SkipLink from '../../components/atoms/SkipLink'
-import Edit from '../Edit'
+import DetailCagar from '../DetailCagar'
 import Upload from '../Upload'
+import Edit from '../Edit'
 
 const MainApp = (props) => {
     return (
-        <main>
+        <div>
             <SkipLink />
             <Header user={props.user} />
             <Router>
@@ -37,7 +37,7 @@ const MainApp = (props) => {
                 </Switch>
             </Router>
             <Footer />
-        </main>
+        </div>
     )
 }
 

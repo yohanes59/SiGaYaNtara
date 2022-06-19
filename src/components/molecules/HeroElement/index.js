@@ -4,9 +4,9 @@ import "./heroElement.css";
 
 const HeroElement = ({src, alt}) => {
   return (
-    <figure className="jumbotron">
+    <article className="jumbotron">
       <img src={src} alt={alt} />
-    </figure>
+    </article>
   )
 }
 

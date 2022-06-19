@@ -1,29 +1,15 @@
-.homeNav{
-    justify-content: right;
-    margin-top: 20px;
+.home-icon {
+    width: 52px;
+    height: 52px;
 }
 
-.homeNav .home-menu li{
-    list-style: none;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-}
-.homeNav .home-menu li img{
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    transition: 0.5s;
-    cursor: pointer;
-}
-.homeNav .home-menu li a{
-    display: inline-block;
+.back-to-home {
+    color: #000000;
     text-decoration: none;
-    color: #000;
-    font-weight: 500;
-    transition: 0.5s;
+    font-size: 14px;
 }
-.homeNav .home-menu li a:hover{
-    color: #876546 !important;
+
+.back-to-home:hover {
+    color: #876546;
     text-decoration: underline;
 }

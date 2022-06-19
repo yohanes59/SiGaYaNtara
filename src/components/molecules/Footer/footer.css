@@ -1,15 +1,36 @@
 footer {
     background-color: #876546;
-    height: 160px;
-    font-size: 16px;
-    width: 100%;
+    flex-direction: row;
 }
 
 .footer-text {
+    margin-left: 16px;
     text-shadow: 0px 1px 2px #EEC374;
 }
 
 .logo-sigayantara {
-    margin-right: 20px;
-    height: 60px;
+    height: 50px;
+}
+
+@media screen and (max-width: 365px) {
+    .sigayantara-footer {
+        flex-direction: column;
+    }
+
+    .logo-sigayantara {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .footer-text {
+        margin-left: 0;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
 }

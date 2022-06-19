@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import swal from 'sweetalert';
 import { Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap';
 import { Gap, Loading } from '../../components/atoms';
-import './detailCagar.css'
 import { withRouter } from 'react-router-dom'
 import { deleteCulturalHeritage, getDetailCultureHeritage } from '../../utils/culturalHeritageHandler';
-import swal from 'sweetalert';
 import { AuthorIcon } from '../../assets';
+import './detailCagar.css'
 
 const DetailCagar = (props) => {
     const [detailData, setDetailData] = useState({});
@@ -45,13 +45,13 @@ const DetailCagar = (props) => {
     const isLoginHandler = props.user;
 
     const isLogin = (
-        <section className="card-action">
-            <ul className="d-flex flex-row justify-content-end">
-                <li className="edit-card">
+        <section className="card-action p-3">
+            <ul className="d-flex flex-row justify-content-end mb-0">
+                <li className="edit-card d-flex flex-row align-items-center justify-content-center list-unstyled">
                     <a href={`/edit/${props.match.params.id}`} className="d-inline-block text-decoration-none fs-6 text-primary fw-bold text-start">Edit</a>
                 </li>
-                <li> | </li>
-                <li className="delete-card">
+                <li className="strip d-flex flex-row align-items-center justify-content-center list-unstyled"> | </li>
+                <li className="delete-card d-flex flex-row align-items-center justify-content-center list-unstyled">
                     <button onClick={isClickedHandler ? handleClick : undefined} className="text-danger fw-bold border-0 bg-transparent">Hapus</button>
                 </li>
             </ul>
@@ -74,31 +74,27 @@ const DetailCagar = (props) => {
     if (pageLoad === true) {
         if (detailData.author) {
             return (
-                <article className="container detail-content" id="content">
-                    <section className="cat-img">
-                        <img className="cagar-img" src={`https://sigayantara-api.herokuapp.com/v1/${detailData.image}`} alt="gambar cagar budaya" tabIndex="0" />
+                <main className="container detail-content" id="content">
+                    <article className="cat-img position-relative px-3">
+                        <img className="cagar-img w-100 shadow-sm" src={`https://sigayantara-api.herokuapp.com/v1/${detailData.image}`} alt="gambar cagar budaya" tabIndex="0"/>
                         <p className="shadow-cat-card border-top-0"></p>
                         <p className="category-card text-center text-uppercase fw-bold pt-2" tabIndex="0">{detailData.jenis}</p>
-                    </section>
+                    </article>
 
-                    <section className="cagar-title">
-                        <h3 className="text-uppercase fw-bold mt-5 mb-3" tabIndex="0">{detailData.nama}</h3>
-                    </section>
+                    <p className="cagar-title px-3 text-uppercase fw-bold mt-5 mb-3" tabIndex="0">{detailData.nama}</p>
 
-                    <section className="upload-info d-flex flex-row" tabIndex="0">
-                        <img className="author-icon" src={AuthorIcon} alt="penulis" />
+                    <article className="d-flex flex-row px-3" tabIndex="0">
+                        <img className="author-icon text-center" src={AuthorIcon} alt="penulis" />
                         <section className="author-info d-flex flex-column">
                             <p className="author fw-bold m-0">{detailData.author.user_fullName}</p>
                             <p className="date m-0">{new Date(detailData.createdAt).toLocaleDateString("id-ID")}</p>
                         </section>
                         <Gap height={15} />
-                    </section>
+                    </article>
+                    
+                    {isLoginHandler ? isLogin : undefined}
 
-                    <section className="action">
-                        {isLoginHandler ? isLogin : undefined}
-                    </section>
-
-                    <section className="detail-info mt-3 mb-5">
+                    <article className="mb-5 px-3">
                         <Nav tabs>
                             <NavItem>
                                 <NavLink className={currentActiveTab === '1' ? "tabs-active-tabs" : "tabs"} 
@@ -127,30 +123,30 @@ const DetailCagar = (props) => {
                         </Nav>
                         <TabContent activeTab={currentActiveTab} className="shadow">
                             <TabPane tabId="1">
-                                <section className="row">
-                                    <article className="col-sm-12" tabIndex="0">
+                                <article className="row">
+                                    <section className="col-sm-12">
                                         <p className="px-1 pt-2">Provinsi: <span>{detailData.provinsi}</span></p>
-                                        <p className="px-1">Kabupaten/Kota: <span>{detailData.kabupaten}</span></p>
-                                    </article>
-                                </section>
+                                        <p className="px-1">Kabupaten/ Kota: <span>{detailData.kabupaten}</span></p>
+                                    </section>
+                                </article>
                             </TabPane>
                             <TabPane tabId="2">
-                                <section className="row">
-                                    <article className="col-sm-12" tabIndex="0">
+                                <article className="row">
+                                    <section className="col-sm-12">
                                         <p className="px-1 pt-2 text-break">{detailData.sejarah}</p>
-                                    </article>
-                                </section>
+                                    </section>
+                                </article>
                             </TabPane>
                             <TabPane tabId="3">
-                                <section className="row">
-                                    <article className="col-sm-12" tabIndex="0">
+                                <article className="row">
+                                    <section className="col-sm-12">
                                         <p className="px-1 pt-2 text-break">{detailData.description}</p>
-                                    </article>
-                                </section>
+                                    </section>
+                                </article>
                             </TabPane>
                         </TabContent>
-                    </section>
-                </article>
+                    </article>
+                </main>
             )
         }
     }

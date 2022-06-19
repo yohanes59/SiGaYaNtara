@@ -4,8 +4,8 @@ import './about.css';
 const About = () => {
   return (
     <article className="container about-content" id="content">
-      <h2 className="about-title text-center" tabIndex="0">Tentang</h2>
-      <section className="about my-4" tabIndex="0">
+      <h2 className="about-title text-center px-3" tabIndex="0">Tentang</h2>
+      <section className="about mx-3 my-4" tabIndex="0">
         <p className="sigayantara text-center text-decoration-none">SiGayantara</p>
         <p>SiGayantara (Sistem Informasi Cagar Budaya Nusantara) merupakan situs informasi mengenai cagar budaya yang terdapat di Nusantara.
           Website ini memberikan kemudahan bagi generasi milenial dan masyarakat untuk memperoleh informasi seputar cagar budaya serta melestarikan warisan budaya di Nusantara.</p>  

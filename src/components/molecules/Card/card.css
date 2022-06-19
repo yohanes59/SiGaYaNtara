@@ -1,63 +1,67 @@
-.card{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    width: 100%;
-    height: 60%;
-}
-    .card:hover{
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+.card:hover {
     transform: translateY(5px);
 }
-.card-body{
+
+.card-body {
     background-color: #EEC374;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.photo{
+
+.photo {
     height: 250px;
-    width: 100%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
-.card-anchor{
-    text-decoration: none !important;
+
+.card-title:hover {
+    color: #ffffff;
 }
-.card-title{
-    text-decoration: none !important;
+
+.card-title {
     font-weight: 500;
-    color: #000;
-    text-transform: uppercase;
-    text-shadow: 0px 1px 1px #876546;
+    color: #000000;
+    text-shadow: 0px 2px 2px #876546;
 }
-    .card-title:hover{
-        color: #876546;
-    }
-.city-container{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 100%;
-        padding-left: 5px;
+
+.card-city{
+    font-weight: 550;
+    color: #000000;
 }
-    .card-city{
-        font-weight: 550;
-        text-transform: capitalize;
-        margin-left: 5px;
-        color: #000;
+
+.card-category {
+    background-color:#EEC374;
+    padding: 10px;
+    color: #000000;
+    top: 10px;
+    right: 10px;
+}
+
+.card-category:hover {
+    border: 1px solid #876546;
+    background-color: #ffffff;
+    color: #876546;
+}
+
+.city-map {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 299px) {
+    .photo {
+        height: 170px;
     }
-    .card-category{
-        position: absolute;
-        background-color:#EEC374;
-        margin: 20px;
-        border-radius: 5px;
-        padding: 10px;
-        color: #000;
-        font-weight: 400;
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+	.photo {
+        height: 200px;
     }
-    .card-category:hover{
-        background-color: #876546;
-        color: #EEC374;
+}
+
+@media (min-width: 769px) and (max-width: 999px) {
+	.photo {
+        height: 230px;
     }
-    .city-map{
-        width: 20px;
-        height: 20px;
-    }
+}

@@ -9,12 +9,17 @@
 
 .preview {
 	width: 200px;
-	height: 200px;
+	height: 150px;
 	object-fit: cover;
 }
 
 @media screen and (max-width: 399px) {
     .upload-title {
         font-size: 20px;
+    }
+
+    .preview {
+        width: 160px;
+        height: 110px;
     }
 }

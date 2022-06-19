@@ -1,25 +1,22 @@
-/* eslint-disable no-template-curly-in-string */
 import React from 'react';
-import "./card.css";
 import { MapIcon } from '../../../assets';
+import "./card.css";
 
 const Card = (props) => {
-  const { src, alt, title, city, category } = props;
+const { src, alt, title, city, category } = props;
   return (
-    <a className="card-anchor" href={`/detail/${props._id}`}>
-      <section className="col">
-        <article className="card">
-          <img src={src} className="photo" alt={alt} />
-          <label className="card-category">{category}</label>
-          <section className="card-body">
-            <h5 className="card-title">{title}</h5>
-              <section className="city-container">
-                <img className="city-map" src={MapIcon} alt="Icon Map"></img>
-                <p className="card-city">{city}</p>
-              </section>
+    <a className="card-anchor text-decoration-none" href={`/detail/${props._id}`}>
+    <section className="card shadow h-100">
+      <img src={src} className="photo w-100" alt={alt} />
+      <span className="card-category position-absolute rounded fw-bold">{category}</span>
+      <section className="card-body d-flex flex-column">
+        <h5 className="card-title text-uppercase">{title}</h5>
+          <section className="city-container d-flex flex-row w-100 mt-auto">
+            <img className="city-map" src={MapIcon} alt="Icon Map"></img>
+            <p className="card-city text-capitalize ml-1 mb-0">{city}</p>
           </section>
-        </article>
       </section>
+    </section>
     </a>
   )
 }

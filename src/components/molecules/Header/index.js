@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CloseIcon, IconProfile, LogoHomepage, MenuIcon } from '../../../assets';
-import "./header.css";
 import { userLogout } from '../../../utils/UserHandler';
+import "./header.css";
 
 const Header = (props) => {
     let navStatus;

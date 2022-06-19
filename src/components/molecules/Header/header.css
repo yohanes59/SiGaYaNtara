@@ -178,10 +178,6 @@
     z-index: 1;
 }
 
-.dropdown .dropdown-menus p {
-    display: block;
-}
-
 .dropdown .dropdown-menus p:focus {
     border-radius: 10px 10px 0 0 ;
 }

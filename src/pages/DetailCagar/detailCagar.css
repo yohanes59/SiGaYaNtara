@@ -1,5 +1,4 @@
 .cagar-img {
-	width: 100%;
 	height: 500px;
 }
 
@@ -30,19 +29,18 @@
 	right: 30px;
 }
 
-.cagar-title > p {
+.cagar-title {
 	font-size: 20px;
 }
 
-.cagar-title > p:hover {
+.cagar-title:hover {
 	color: #876546;
 }
 
 .author-icon {
 	width: 34px;
 	height: 34px;
-	padding: 7px 6px;
-	text-align: center;
+	padding: 7px 6px 6px 6px;
 }
 
 .author {
@@ -54,12 +52,7 @@
 }
 
 .card-action ul li {
-	list-style: none;
 	margin-left: 20px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
 }
 
 .card-action ul li a {
@@ -84,12 +77,32 @@
 }
 
 .tabs-active-tabs {
-	background-color: #eec374 !important;
-	color: #000000 !important;
-	border: 1px solid #876546 !important;
-	border-bottom: 0 !important;
-	border-radius: 10px 10px 0 0;
 	font-weight: 500;
+	background-color: #eec374 !important;
+	border-top-left-radius: 10px !important;
+	border-top-right-radius: 10px !important;
+}
+
+.tabs-active-tabs:focus {
+	background-color: #eec374 !important;
+	border-radius:  10px 10px 0 0 !important;
+	color: #000000;
+}
+
+.nav-item {
+	border: 1px solid #876546 !important;
+	border-radius: 10px 10px 0 0;
+	border-bottom: 0 !important;
+	margin-right: 1px;
+}
+
+.nav-tabs .nav-link {
+	border: none !important;
+}
+
+.tabs .nav-link {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
 .tab-content {
@@ -127,19 +140,8 @@
 	}
 }
 
-@media (min-width: 199px) and (max-width: 575px) {
-	.cat-img,
-	.cagar-title,
-	.upload-info,
-	.action,
-	.detail-info {
-		margin-left: 15px;
-		margin-right: 15px;
-	}
-}
-
 @media screen and (max-width: 399px) {
-    .cagar-title > p {
+    .cagar-title {
         font-size: 18px;
     }
 

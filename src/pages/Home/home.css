@@ -27,15 +27,12 @@
     position: absolute;
     justify-content: center;
     margin-top: 100px;
-    left: 50%;
+    left: 48%;
     height: 70px;
     width: 60px;
     border: 1px solid #ffffff;
-    cursor: pointer;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background: none;
-    padding: 0;
 }
 
 .scroll-down::before,
@@ -117,25 +114,25 @@
 
 @media (min-width: 810px) and (max-width: 899px) {
     .scroll-down {
-        margin-top: 90px;
+        margin-top: 80px;
     }
 }
 
 @media (min-width: 800px) and (max-width: 809px) {
     .scroll-down {
-        margin-top: 60px;
+        margin-top: 50px;
     }
 }
 
-@media (min-width: 500px) and (max-width: 730px) {
+@media (min-width: 500px) and (max-width: 700px) {
     .scroll-down {
-        left: 48%
+        left: 45%
     }
 }
 
 @media (min-width: 320px) and (max-width: 499px) {
     .scroll-down {
-        left: 45%
+        left: 43%
     }
 }
 

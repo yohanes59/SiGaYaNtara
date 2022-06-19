@@ -13,7 +13,7 @@
     'four'
     'five';
     padding-block: 1rem;
-    width: min(85%, 70rem);
+    width: min(100%, 70rem);
     margin-inline: auto;
 }
 

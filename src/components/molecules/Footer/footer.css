@@ -1,6 +1,6 @@
 footer {
     background-color: #876546;
-    flex-direction: row;
+    position: relative;
 }
 
 .footer-text {

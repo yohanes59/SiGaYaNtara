@@ -20,7 +20,6 @@
 
 .scroll-button {
     height: 100px;
-    margin-top: 50px;
 }
 
 .scroll-down {
@@ -28,8 +27,8 @@
     justify-content: center;
     margin-top: 100px;
     left: 48%;
-    height: 70px;
-    width: 60px;
+    height: 55px;
+    width: 50px;
     border: 1px solid #ffffff;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -39,10 +38,10 @@
 .scroll-down::after {
     content: "";
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     transform: translate(-50%, -100%) rotate(45deg);
     border: 2px solid #ffffff;
     border-top: transparent;
@@ -51,7 +50,7 @@
 }
 
 .scroll-down::before {
-    top: 35%;
+    top: 25%;
     animation-delay: 0.3s;
 }
 
@@ -71,16 +70,6 @@
     }
 }
 
-@media (min-width: 900px) and (max-width: 1200px) {
-    .scroll-button {
-        margin-top: 40px !important;
-    }
-
-    .scroll-down {
-        margin-top: 50px;
-    }
-}
-
 @media (min-width: 800px) and (max-width: 899px) {
     .home-content {
         margin: 150px 20px 0 20px;
@@ -92,84 +81,6 @@
 
     .home-desc {
         font-size: 20px;
-    }
-
-    .scroll-button {
-        margin-top: 50px;
-    }
-
-    .scroll-down {
-        width: 55px;
-        height: 45px;
-    }
-    
-    .scroll-down::before,
-    .scroll-down::after {
-        top: 30%;
-        height: 25px;
-        width: 25px;
-    }
-}
-
-@media (min-width: 810px) and (max-width: 899px) {
-    .scroll-down {
-        margin-top: 50px;
-    }
-    .scroll-button{
-        margin-top: 50px !important;
-    }
-}
-
-@media (min-width: 800px) and (max-width: 809px) {
-    .scroll-down {
-        margin-top: 50px;
-    }
-    .scroll-button{
-        margin-top: 50px !important;
-    }
-}
-
-@media (min-width: 500px) and (max-width: 700px) {
-    .scroll-down {
-        left: 45%;
-    }
-    .scroll-button{
-        margin-top: 50px !important;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 499px) {
-    .scroll-down {
-        left: 43%
-    }
-    .scroll-button{
-        margin-top: 30px !important;
-    }
-}
-
-@media (min-width: 199px) and (max-width: 319px) {
-    .scroll-down {
-        left: 43%
-    }
-    .scroll-button{
-        margin-top: 30px !important;
-    }
-}
-
-@media screen and (max-width: 799px) {
-    .scroll-down {
-        width: 50px;
-        height: 45px;
-    }
-    .scroll-button{
-        margin-top: 50px;
-    }
-    
-    .scroll-down::before,
-    .scroll-down::after {
-        top: 30%;
-        height: 25px;
-        width: 25px;
     }
 }
 
@@ -187,38 +98,7 @@
     }
 
     .scroll-button {
-        height: 100px;
-        margin-top: 30px !important;
-    }
-}
-
-@media (min-width: 733px) and (max-width: 799px) {
-    .scroll-button {
-        margin-top: 30px !important;
-    }
-
-    .scroll-down {
-        margin-top: 35px;
-    }
-}
-
-@media (min-width: 500px) and (max-width: 732px) {
-    .scroll-button {
-        margin-top: 10px !important;
-        margin-bottom: 20px;
-    }
-
-    .scroll-down {
-        margin-top: 25px;
-        width: 40px;
-        height: 45px;
-    }
-
-    .scroll-down::before,
-    .scroll-down::after {
-        top: 5%;
-        height: 20px;
-        width: 20px;
+        margin-top: 26px !important;
     }
 }
 
@@ -234,87 +114,6 @@
     .home-desc {
         font-size: 16px;
     }
-    .scroll-button{
-        margin-top: 15px !important;
-    }
-}
-
-@media (min-width: 400px) and (max-width: 499px) {
-    .home-title {
-        margin-bottom: 40px;
-    }
-
-    .scroll-button {
-       visibility: hidden;
-    }
-
-    .scroll-down {
-        margin-top: 20px;
-    }
-}
-
-@media (min-width: 358px) and (max-width: 399px) {
-    .home-title {
-        margin-bottom: 20px;
-    }
-
-    .scroll-button {
-        visibility: hidden;
-    }
-
-    .scroll-down {
-        margin-top: 20px;
-    }
-}
-
-@media (min-width: 290px) and (max-width: 357px) {
-    .home-title {
-        margin-bottom: 20px;
-    }
-
-    .scroll-button {
-        margin-top: 5px !important;
-    }
-
-    .scroll-down {
-        margin-top: 0;
-    }
-}
-
-@media (min-width: 258px) and (max-width: 289px) {
-    .home-title {
-        margin-bottom: 20px;
-    }
-
-    .scroll-button {
-        margin-top: 10px !important;
-    }
-
-    .scroll-down {
-        margin-top: 5px;
-    }
-}
-
-@media (min-width: 199px) and (max-width: 257px) {
-    .home-title {
-        margin-bottom: 10px;
-    }
-
-    .scroll-button {
-        margin-top: 5px !important;
-    }
-
-    .scroll-down {
-        margin-top: 0;
-    }
-}
-
-@media (min-width: 199px) and (max-width: 357px) {
-    .scroll-button {
-        height: 40px;
-        margin-top: 5px !important;
-        visibility: hidden;
-    }
 }
 
 @media (min-width: 199px) and (max-width: 289px) {
@@ -329,6 +128,126 @@
     .home-desc {
         font-size: 12px;
     }
+}
+
+@media (min-width: 400px) and (max-width: 499px) {
+    .home-title {
+        margin-bottom: 40px;
+    }
+
+    .scroll-button {
+        height: 50px;
+    }
+}
+
+@media (min-width: 258) and (max-width: 399px) {
+    .home-title {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 199px) and (max-width: 257px) {
+    .home-title {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .scroll-button {
+        height: 170px;
+        margin-top: 70px;
+    }
+
+    .scroll-down {
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+    .scroll-button {
+        margin-top: 40px;
+    }
+
+    .scroll-down {
+        margin-top: 35px;
+    }
+}
+
+@media (min-width: 810px) and (max-width: 899px) {
+    .scroll-down {
+        margin-top: 54px;
+    }
+    .scroll-button{
+        margin-top: 60px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 809px) {
+    .scroll-down {
+        margin-top: 45px;
+    }
+
+    .scroll-button {
+        height: 90px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 899px) {
+    .scroll-down {
+        width: 40px;
+        height: 45px;
+    }
+    
+    .scroll-down::before,
+    .scroll-down::after {
+        top: 30%;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .scroll-button {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 733px) and (max-width: 799px) {
+    .scroll-button {
+        height: 80px;
+    }
+
+    .scroll-down {
+        margin-top: 35px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 732px) {
+    .scroll-button {
+        margin-top: 8px !important;
+        height: 70px;
+    }
+
+    .scroll-down {
+        margin-top: 25px;
+    }
+}
+
+@media (min-width: 358px) and (max-width: 399px) {
+    .scroll-button {
+        height: 20px;
+    }
+}
+
+@media (min-width: 199px) and (max-width: 357px) {
+    .scroll-button {
+        height: 0;
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 199px) and (max-width: 499px) {
     .scroll-button{
         visibility: hidden;
     }

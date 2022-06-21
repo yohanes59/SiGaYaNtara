@@ -74,7 +74,7 @@ const DetailCagar = (props) => {
     if (pageLoad === true) {
         if (detailData.author) {
             return (
-                <main className="container detail-content" id="content">
+                <article className="container detail-content" id="content">
                     <article className="cat-img position-relative px-3">
                         <img className="cagar-img w-100 shadow-sm" src={`https://sigayantara-api.herokuapp.com/v1/${detailData.image}`} alt="gambar cagar budaya" tabIndex="0"/>
                         <p className="shadow-cat-card border-top-0"></p>
@@ -148,7 +148,7 @@ const DetailCagar = (props) => {
                             </TabPane>
                         </TabContent>
                     </article>
-                </main>
+                </article>
             )
         }
     }

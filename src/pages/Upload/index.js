@@ -48,7 +48,7 @@ const Upload = (props) => {
         )
     }
     return (
-        <main className="container upload-content mb-5" id="content">
+        <article className="container upload-content mb-5" id="content">
             <h2 className="upload-title text-center mb-3" tabIndex="0">Unggah Data Cagar Budaya</h2>
 
             <Form className="px-3">
@@ -98,7 +98,7 @@ const Upload = (props) => {
 
                 <button className="btn-submit mt-3 fs-7 border-0 text-white rounded-pill shadow cursor-pointer" type="submit" onClick={onSubmit}>Unggah</button>
             </Form>
-        </main>
+        </article>
     )
 }
 

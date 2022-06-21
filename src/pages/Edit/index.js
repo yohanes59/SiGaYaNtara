@@ -67,7 +67,7 @@ const Edit = (props) => {
         )
     }
     return (
-        <main className="container edit-content mb-5" id="content">
+        <article className="container edit-content mb-5" id="content">
             <h2 className="edit-title text-center mb-3 px-3" tabIndex="0">Edit Data Cagar Budaya</h2>
             
             <Form className="px-3">
@@ -117,7 +117,7 @@ const Edit = (props) => {
 
                 <button className="btn-submit mt-3 fs-7 border-0 text-white rounded-pill shadow cursor-pointer" type="submit" onClick={onSubmit}>Simpan</button>
             </Form>
-        </main>
+        </article>
     )
 }
 

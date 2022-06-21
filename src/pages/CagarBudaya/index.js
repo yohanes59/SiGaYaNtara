@@ -39,7 +39,7 @@ const CagarBudaya = (props) => {
   if (loading === true) {
     return (
       <>
-        <main className="container">
+        <article className="container">
           <article className="list-text text-center">
             <p tabIndex="0">Daftar Cagar Budaya</p>
             {isLoginHandler ? isLogin : isNotLogin}
@@ -53,7 +53,7 @@ const CagarBudaya = (props) => {
           <Gap height={100} />
           {pagination}
           <Gap height={48} />
-        </main>
+        </article>
       </>
     )
   }

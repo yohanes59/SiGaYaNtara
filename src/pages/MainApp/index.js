@@ -10,7 +10,7 @@ import Edit from '../Edit'
 
 const MainApp = (props) => {
     return (
-        <div>
+        <main>
             <SkipLink />
             <Header user={props.user} />
             <Router>
@@ -37,7 +37,7 @@ const MainApp = (props) => {
                 </Switch>
             </Router>
             <Footer />
-        </div>
+        </main>
     )
 }
 

@@ -3,7 +3,9 @@ import './loading.css';
 
 const Loading = () => {
     return (
-        <div className="loader">Loading...</div>
+        <article>
+            <section className="loader">Loading...</section>
+        </article>
     )
 }
 

@@ -9,10 +9,9 @@ import StrukturMenu from "./images/strukturMenu-images.png";
 import SitusMenu from "./images/situsMenu-images.png";
 import KawasanMenu from "./images/kawasanMenu-images.png";
 import Darian from './images/Darian.jpg';
-import yohanes from './images/yohanes.jpg';
-import Nilam from './images/Nilam-Setyoningrum.jpg';
-import Shandra from './images/shandraelvyra.png';
-import Foto from './images/foto.jpg';
+import yohanes from './images/Yohanes-C.jpg';
+import Nilam from './images/Nilam-S.jpg';
+import Shandra from './images/Shandra-E.png';
 import IconProfile from "./icons/account-icon.png";
 import EditIcon from "./icons/edit-icon.png";
 import DeleteIcon from "./icons/delete-icon.png";
@@ -33,7 +32,6 @@ export {
     KawasanMenu, 
     LoginBg, 
     RegisterBg,
-    Foto,
     IconProfile,
     EditIcon,
     DeleteIcon,

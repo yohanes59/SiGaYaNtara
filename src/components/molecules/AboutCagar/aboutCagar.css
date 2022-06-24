@@ -22,7 +22,8 @@
 	text-align: justify;
 }
 
-.desc-title:hover {
+.desc-title:hover,
+.desc-title:focus {
 	color: #876546;
 }
 

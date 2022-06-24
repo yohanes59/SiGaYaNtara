@@ -13,7 +13,7 @@ const Home = () => {
                     <p className="home-desc text-center" tabIndex="0">Tempat untuk mencari berbagai informasi seputar Cagar Budaya yang ada di Indonesia.</p>
                     <section className="scroll-button">
                         <a href="#about-cagar" className="anchor-cagar">
-                            <button className="scroll-down bg-transparent justify-content-center cursor-pointer p-0" tabIndex="-1"></button>
+                            <button className="scroll-down bg-transparent justify-content-center cursor-pointer p-0" aria-label="scroll" tabIndex="-1"></button>
                         </a>
                     </section>
                 </section>

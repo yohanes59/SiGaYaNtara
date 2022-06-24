@@ -81,11 +81,6 @@
     background-color: #EEC374;
 }
 
-.nav-link,
-.nav-logout:hover {
-    cursor: pointer;
-}
-
 .nav-logout {
     width: 100%;
     background: none;
@@ -193,6 +188,10 @@
 .dropdown:focus-within .dropdown-menus {
     opacity: 1;
     visibility: visible;
+}
+
+.divider {
+	border-bottom: 1px solid #cccccc;
 }
 
 @media screen and (max-width: 720px) {

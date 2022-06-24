@@ -9,7 +9,8 @@
     font-size: 14px;
 }
 
-.back-to-home:hover {
+.back-to-home:hover,
+.back-to-home:focus {
     color: #876546;
     text-decoration: underline;
 }

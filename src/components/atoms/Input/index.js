@@ -1,11 +1,11 @@
 import React from 'react'
 import './input.css'
 
-const   Input = ({ label, ...rest }) => {
+const Input = ({ label, ...rest }) => {
   return (
     <>
-      <label className="label">{ label }</label>
-      <input className="input" { ...rest } />
+      <label className="label" tabIndex="0">{ label }</label>
+      <input className="input" tabIndex="0" { ...rest } />
     </>
   )
 }

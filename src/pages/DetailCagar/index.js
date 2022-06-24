@@ -45,7 +45,7 @@ const DetailCagar = (props) => {
     const isLoginHandler = props.user;
 
     const isLogin = (
-        <article className="card-action p-3">
+        <article className="card-action px-3 my-3">
             <ul className="d-flex flex-row justify-content-end mb-0">
                 <li className="edit-card d-flex flex-row align-items-center justify-content-center list-unstyled">
                     <a href={`/edit/${props.match.params.id}`} className="d-inline-block text-decoration-none fs-6 text-primary fw-bold text-start">Edit</a>
@@ -57,7 +57,6 @@ const DetailCagar = (props) => {
             </ul>
         </article>
     )
-
 
     const [currentActiveTab, setCurrentActiveTab] = useState('1');
 

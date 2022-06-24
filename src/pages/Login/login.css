@@ -1,4 +1,5 @@
-.login:hover {
+.login:hover,
+.login:focus {
     color: #876546;
 }
 

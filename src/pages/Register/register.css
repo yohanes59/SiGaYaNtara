@@ -1,8 +1,17 @@
-.register:hover {
+.register:hover,
+.register:focus {
     color: #876546;
 }
 
-.btn-submit:hover {
+.btn-submit {
+    width: 150px;
+    padding: 10px;
+    background-color: #876546;
+    box-sizing: border-box;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
     background-color: #EEC374;
     color: #000000 !important;
 }

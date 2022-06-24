@@ -8,7 +8,7 @@ const CardJenis = ({src, alt, title, text}) => {
         <img src={src} className="foto" alt={alt}/>
       </section>
       <section className="cardbody">
-        <h5 className="card-jenis_title">{title}</h5>
+        <p className="card-jenis_title fs-5">{title}</p>
         <p className="card-jenis_text">{text}</p>
       </section>
     </article>

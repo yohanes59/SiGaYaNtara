@@ -9,7 +9,7 @@ const TeamItem = ({ nama, section, src, alt, href }) => {
                     <img className="member-img" src={src} alt={alt} />
                 </section>
                 <section className="member-info">
-                    <h5>{nama}</h5>
+                    <p>{nama}</p>
                     <span>{section}</span>
                 </section>
             </a>

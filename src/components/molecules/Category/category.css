@@ -17,7 +17,8 @@
     margin-inline: auto;
 }
 
-.category-title:hover {
+.category-title:hover,
+.category-title:focus {
     color: #876546;
 }
 

@@ -13,7 +13,8 @@
     text-align: justify;
 }
 
-.about-title:hover {
+.about-title:hover,
+.about-title:focus {
     color: #876546;
 }
 

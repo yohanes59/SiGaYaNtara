@@ -8,9 +8,9 @@ const Header = (props) => {
     if (!props.user) {
         navStatus = (
             <>
-                <div className="d-flex">
+                <li className="d-flex">
                     <a href="/login" className="button-a" role="button">Masuk</a>
-                </div>
+                </li>
             </>
         );
     } else {
@@ -42,22 +42,24 @@ const Header = (props) => {
     return (
         <nav className={colorChange ? "navbar-color-change fixed-top" : "navbar fixed-top"}>
             <a href="/"><img src={LogoHomepage} alt="Logo SiGayantara" className="logo"/></a>
-            <ul className={isMobile ? "nav-menus-mobile": "nav-menus"}
-            onClick={() => setIsMobile(false)}>
-                <li><a className="nav-link" href="/">Beranda</a></li>
-                <li><a className="nav-link" href="/cagar">Cagar Budaya</a></li>
-                <li><a className="nav-link" href="/about">Tentang</a></li>
-                <div className="dropdown-divider"></div>
-                {navStatus}
-            </ul>
+
             <button className="mobile-menu"
-            onClick={() => setIsMobile(!isMobile)} tabIndex="1">
+            onClick={() => setIsMobile(!isMobile)}>
                 {isMobile ? ( 
                     <img src={CloseIcon} alt="close icon" />
                 ) : (
                     <img src={MenuIcon} alt="menu icon" />
                 )}
             </button>
+            
+            <ul className={isMobile ? "nav-menus-mobile": "nav-menus"}
+            onClick={() => setIsMobile(false)}>
+                <li><a className="nav-link" href="/">Beranda</a></li>
+                <li><a className="nav-link" href="/cagar">Cagar Budaya</a></li>
+                <li><a className="nav-link" href="/about">Tentang</a></li>
+                <li className="divider my-2"></li>
+                {navStatus}
+            </ul>
         </nav>
     )
 }

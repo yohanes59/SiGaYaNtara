@@ -7,13 +7,6 @@
     padding: 10px;
 }
 
-.btn-submit {
-    width: 150px;
-    padding: 10px;
-    background-color: #876546;
-    box-sizing: border-box;
-}
-
 @media screen and (max-width: 399px) {
     .edit-title {
         font-size: 20px;

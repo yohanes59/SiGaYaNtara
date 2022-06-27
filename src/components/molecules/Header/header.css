@@ -21,6 +21,7 @@
     margin-left: 20px;
     padding: 0 10px;
     height: 50px;
+    width: 50px;
 }
 
 .nav-menus {
@@ -132,6 +133,7 @@
 
 .mobile-menu > img {
     height: 35px;
+    width: 35px;
 }
 
 .profile-icon {

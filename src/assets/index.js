@@ -1,17 +1,17 @@
 import LoginBg from "./images/signin-image.svg";
 import RegisterBg from "./images/signup-image.svg";
-import HomepageImage from "./images/hero_1.jpg";
-import CagarBudayaImage from "./images/hero_3.jpg";
-import LogoHomepage from "./images/logo-homepage.png";
-import BendaMenu from "./images/bendaMenu-images.png";
-import BangunanMenu from "./images/bangunanMenu-images.png";
-import StrukturMenu from "./images/strukturMenu-images.png";
-import SitusMenu from "./images/situsMenu-images.png";
-import KawasanMenu from "./images/kawasanMenu-images.png";
-import Darian from './images/Darian.jpg';
-import yohanes from './images/Yohanes-C.jpg';
-import Nilam from './images/Nilam-S.jpg';
-import Shandra from './images/Shandra-E.png';
+import HomepageImage from "./images/heros_homepage.webp";
+import CagarBudayaImage from "./images/hero_cagarBudaya.webp";
+import LogoHomepage from "./images/logo-SiGayantara_homepage.png";
+import BendaMenu from "./images/benda-menu_images.png";
+import BangunanMenu from "./images/bangunan-menu_images.png";
+import StrukturMenu from "./images/struktur-menu_images.png";
+import SitusMenu from "./images/situs-menu_images.png";
+import KawasanMenu from "./images/kawasan-menu_images.png";
+import DarianG from './images/Darian_G.webp';
+import YohanesC from './images/Yohanes_C.webp';
+import NilamS from './images/Nilam_S.webp';
+import ShandraE from './images/Shandra_E.webp';
 import IconProfile from "./icons/account-icon.png";
 import EditIcon from "./icons/edit-icon.png";
 import DeleteIcon from "./icons/delete-icon.png";
@@ -40,8 +40,8 @@ export {
     HomeIcon,
     MapIcon,
     AuthorIcon,
-    Darian,
-    yohanes,
-    Nilam,
-    Shandra
+    DarianG,
+    YohanesC,
+    NilamS,
+    ShandraE
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { withRouter } from 'react-router-dom';
-import { Form, FormGroup, Label, Input, Col, Row, FormText } from 'reactstrap';
+import { Form, FormGroup, Label, Input, Col, Row } from 'reactstrap';
 import { Loading } from '../../components'
 import { getDetailCultureHeritage, updateCulturalHeritage } from '../../utils/culturalHeritageHandler';
 import './edit.css'
@@ -8,21 +8,23 @@ import './edit.css'
 const Edit = (props) => {
     const [nama, setNama] = useState('');
     const [image, setImage] = useState();
-    const [img, setImg] = useState();
+    const [cloudinary_id, setCloudinary_id] = useState();
+    // const [img, setImg] = useState();
     const [jenis, setJenis] = useState('');
     const [provinsi, setProvinsi] = useState('');
     const [kabupaten, setKabupaten] = useState('');
     const [sejarah, setSejarah] = useState('');
     const [description, setDescription] = useState('');
     let [loading, setLoading] = useState(false);
-
+    
     useEffect(() => {
         const id = props.match.params.id;
         if (id) {
             getDetailCultureHeritage(id)
                 .then(result => {
                     setNama(result.nama);
-                    setImg(`https://sigayantara-api.herokuapp.com/v1/${result.image}`);
+                    setImage(result.image)
+                    setCloudinary_id(result.cloudinary_id);
                     setJenis(result.jenis);
                     setProvinsi(result.provinsi);
                     setKabupaten(result.kabupaten);
@@ -35,20 +37,21 @@ const Edit = (props) => {
         }
     }, [props.match.params.id])
 
-    const onImageUpload = (ev) => {
-        const file = ev.target.files[0];
-        setImage(file);
-        try {
-            setImg(URL.createObjectURL(file));
-        } catch (err) {
-            console.log(err);
-        }
-    }
+    // const onImageUpload = (ev) => {
+    //     const file = ev.target.files[0];
+    //     setImage(file);
+    //     try {
+    //         setImg(URL.createObjectURL(file));
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // }
 
-    const onSubmit = () => {
+    const onSubmit = (ev) => {
         const cultureHeritage = {
             nama,
             image,
+            cloudinary_id,
             jenis,
             provinsi,
             kabupaten,
@@ -61,6 +64,7 @@ const Edit = (props) => {
         const id = props.match.params.id;
         updateCulturalHeritage(cultureHeritage, id);
     }
+
     if (loading === true) {
         return (
             <Loading />
@@ -69,7 +73,7 @@ const Edit = (props) => {
     return (
         <article className="container edit-content mb-5" id="content">
             <h2 className="edit-title text-center mb-3 px-3" tabIndex="0">Edit Data Cagar Budaya</h2>
-            
+
             <Form className="px-3">
                 <FormGroup>
                     <Label for="name" tabIndex="0">Nama Cagar Budaya</Label>
@@ -108,12 +112,12 @@ const Edit = (props) => {
                     <Label for="description" tabIndex="0">Deskripsi</Label>
                     <Input id="description" name="description" placeholder="Deskripsi singkat cagar budaya..." type="textarea" rows="7" value={description} onChange={(ev) => setDescription(ev.target.value)} required />
                 </FormGroup>
-                <FormGroup>
+                {/* <FormGroup>
                     <Label for="uploadImages" tabIndex="0">Upload Gambar</Label>
                     {img && <img className="preview d-block mb-3" src={img} alt="preview" tabIndex="0" />}
                     <Input id="uploadImages" name="uploadImages" type="file" onChange={(ev) => onImageUpload(ev)} />
                     <FormText tabIndex="0">Unggah gambar maksimal 1 gambar.</FormText>
-                </FormGroup>
+                </FormGroup> */}
 
                 <button className="btn-submit mt-3 fs-7 border-0 text-white rounded-pill shadow cursor-pointer" type="submit" onClick={onSubmit}>Simpan</button>
             </Form>

@@ -17,6 +17,7 @@ const Upload = (props) => {
     let [loading, setLoading] = useState(false);
 
     const onImageUpload = (ev) => {
+        ev.preventDefault();
         const file = ev.target.files[0];
         setImage(file);
         try {

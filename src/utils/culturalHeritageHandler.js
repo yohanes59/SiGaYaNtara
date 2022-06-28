@@ -27,10 +27,11 @@ const _checkUbah = (cultureHeritage) => {
 
 const createCulturalHeritage = (cultureHeritage) => {
     _checkInput(cultureHeritage);
-    const { nama, image, jenis, provinsi, kabupaten, sejarah, description, user_id, user_fullName } = cultureHeritage;
+    const { nama, image, cloudinary_id, jenis, provinsi, kabupaten, sejarah, description, user_id, user_fullName } = cultureHeritage;
     const formData = new FormData();
     formData.append('nama', nama);
     formData.append('image', image);
+    formData.append('cloudinary_id', cloudinary_id);
     formData.append('jenis', jenis);
     formData.append('provinsi', provinsi);
     formData.append('kabupaten', kabupaten);
@@ -71,20 +72,22 @@ const createCulturalHeritage = (cultureHeritage) => {
 
 const getAllCultureHeritage = async (counter) => {
     const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage?page=${counter}&perPage=9`, {
+        // const response = await axios.get(`http://localhost:5000/v1/cultural-heritage?page=${counter}&perPage=9`, {
         withCredentials: true,
-    });
+    })
     return response.data;
 }
 
 const getDetailCultureHeritage = async (id) => {
     const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`, {
+        // const response = await axios.get(`http://localhost:5000/v1/cultural-heritage/${id}`, {
         withCredentials: true,
     });
     return response.data.data;
 }
 
 const updateCulturalHeritage = (cultureHeritage, id) => {
-    const { nama, jenis, provinsi, kabupaten, sejarah, description, image } = cultureHeritage;
+    const { nama, jenis, provinsi, kabupaten, sejarah, description } = cultureHeritage;
     const formData = new FormData();
     formData.append('nama', nama);
     formData.append('jenis', jenis);
@@ -92,9 +95,9 @@ const updateCulturalHeritage = (cultureHeritage, id) => {
     formData.append('kabupaten', kabupaten);
     formData.append('sejarah', sejarah);
     formData.append('description', description);
-    if (image) {
-        formData.append('image', image);
-    }
+    // if (image) {
+    //     formData.append('image', image);
+    // }
 
     _checkUbah(cultureHeritage);
 
@@ -129,6 +132,7 @@ const updateCulturalHeritage = (cultureHeritage, id) => {
 
 const deleteCulturalHeritage = (id) => {
     axios.delete(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`, {
+        // axios.delete(`http://localhost:5000/v1/cultural-heritage/${id}`, {
         withCredentials: true,
         headers: {
             'content-type': 'multipart/form-data',

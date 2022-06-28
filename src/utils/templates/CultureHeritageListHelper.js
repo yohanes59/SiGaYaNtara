@@ -5,7 +5,7 @@ const createCultureHeritageList = (pageInformation, dataCagar) => {
         return dataCagar.map((item) => {
             return (
                 <Card key={item._id}
-                    src={`https://sigayantara-api.herokuapp.com/v1/${item.image}`} alt={item.nama} title={item.nama} city={item.kabupaten} category={item.jenis} _id={item._id}/>
+                    src={`https://res.cloudinary.com/dqxruyist/image/upload/${item.cloudinary_id}`} alt={item.nama} title={item.nama} city={item.kabupaten} category={item.jenis} _id={item._id}/>
             );
         });
     } else {

@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <>
             <article className="jumbotron">
-                <HeroElement src={HomepageImage} alt="Candi Borobudur" />
+                <HeroElement srcset={HomepageImage} src={HomepageImage} alt="Candi Borobudur" />
                 <section className="home-content d-flex flex-column justify-content-center">
                     <h1 className="home-title text-center" tabIndex="0">SiGayantara</h1>
                     <p className="home-desc text-center" tabIndex="0">Tempat untuk mencari berbagai informasi seputar Cagar Budaya yang ada di Indonesia.</p>

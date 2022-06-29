@@ -2,10 +2,13 @@ import React from 'react';
 import "./heroElement.css";
 
 
-const HeroElement = ({src, alt}) => {
+const HeroElement = ({src, alt, srcset}) => {
   return (
     <article className="jumbotron">
-      <img src={src} alt={alt} />
+       <picture>
+        <source type="images/webp" srcset={srcset}/>
+        <img fetchpriority="high" src={src} alt={alt} />
+      </picture>
     </article>
   )
 }

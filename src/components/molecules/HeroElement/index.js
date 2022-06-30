@@ -6,7 +6,7 @@ const HeroElement = ({src, alt, srcset}) => {
   return (
     <article className="jumbotron">
        <picture>
-        <source type="images/webp" srcset={srcset}/>
+        <source type="images/webp" srcSet={srcset}/>
         <img fetchpriority="high" src={src} alt={alt} />
       </picture>
     </article>

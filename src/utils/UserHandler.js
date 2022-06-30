@@ -50,7 +50,7 @@ const userLogin = (user) => {
     .catch((error) => {
       swal({
         title: "Gagal Login!",
-        text: "Username atau Password Anda Salah.",
+        text: "Email atau Password Anda Salah.",
         icon: "error",
         button: "Ok",
       });

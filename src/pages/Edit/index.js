@@ -9,7 +9,6 @@ const Edit = (props) => {
     const [nama, setNama] = useState('');
     const [image, setImage] = useState();
     const [cloudinary_id, setCloudinary_id] = useState();
-    // const [img, setImg] = useState();
     const [jenis, setJenis] = useState('');
     const [provinsi, setProvinsi] = useState('');
     const [kabupaten, setKabupaten] = useState('');
@@ -36,16 +35,6 @@ const Edit = (props) => {
                 })
         }
     }, [props.match.params.id])
-
-    // const onImageUpload = (ev) => {
-    //     const file = ev.target.files[0];
-    //     setImage(file);
-    //     try {
-    //         setImg(URL.createObjectURL(file));
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // }
 
     const onSubmit = (ev) => {
         const cultureHeritage = {
@@ -112,12 +101,6 @@ const Edit = (props) => {
                     <Label for="description" tabIndex="0">Deskripsi</Label>
                     <Input id="description" name="description" placeholder="Deskripsi singkat cagar budaya..." type="textarea" rows="7" value={description} onChange={(ev) => setDescription(ev.target.value)} required />
                 </FormGroup>
-                {/* <FormGroup>
-                    <Label for="uploadImages" tabIndex="0">Upload Gambar</Label>
-                    {img && <img className="preview d-block mb-3" src={img} alt="preview" tabIndex="0" />}
-                    <Input id="uploadImages" name="uploadImages" type="file" onChange={(ev) => onImageUpload(ev)} />
-                    <FormText tabIndex="0">Unggah gambar maksimal 1 gambar.</FormText>
-                </FormGroup> */}
 
                 <button className="btn-submit mt-3 fs-7 border-0 text-white rounded-pill shadow cursor-pointer" type="submit" onClick={onSubmit}>Simpan</button>
             </Form>

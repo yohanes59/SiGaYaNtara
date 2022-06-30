@@ -1,3 +1,7 @@
+.login-content {
+    margin-bottom: 12rem;
+}
+
 .login:hover,
 .login:focus {
     color: #876546;

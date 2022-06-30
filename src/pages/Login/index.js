@@ -17,7 +17,7 @@ const Login = (props) => {
   }
 
   return (
-    <main className="container">
+    <main className="container login-content">
       <HomeButton />
       <article className="row px-3">
         <section className="col-lg-6 col-md-6 col-sm-12 mt-3 d-flex flex-column justify-content-center" tabIndex="0">

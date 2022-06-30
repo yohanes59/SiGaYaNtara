@@ -15,12 +15,13 @@
     border-top-right-radius: 4px;
 }
 
-.card-title:hover {
-    color: #ffffff;
+.card-cagar-title:hover {
+    color: #876546;
 }
 
-.card-title {
+.card-cagar-title {
     color: #000000;
+    line-height: 1.2rem;
 }
 
 .card-city{

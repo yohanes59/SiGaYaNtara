@@ -46,7 +46,7 @@ const CagarBudaya = (props) => {
           </article>
           <HeroElement src={CagarBudayaImage} alt="Candi Prambanan" />
 
-          <article class="cagar-content mt-3" id="content">
+          <article className="cagar-content mt-3" id="content">
             <article className="cards d-grid px-3">
               {cultureHeritageList}
             </article>

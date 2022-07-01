@@ -6,16 +6,11 @@
     <p align="center">
         Sistem Informasi Cagar Budaya Nusantara
     </p>
-    <p align="center">
-        Akses aplikasi <a href="https://sigayantara.netlify.app/">disini</a>
-    </p>
 </p>
 
 
 ## 📌Table of Content
 * [About](#about)
-* [Demo](#demo)
-* [Features](#features)
 * [Installation](#installation)
 * [Credit](#credit)
 * [Creator](#creator)
@@ -29,15 +24,11 @@ Project ini dibangun untuk memenuhi tugas akhir dari Program Studi Independen Be
 ### Proyek ini dibangun dengan:
 * [HTML](https://html.com/)
 * [Javascript](https://www.javascript.com/)
-* [Bootsrap](https://getbootstrap.com/)
+* [Bootstrap](https://getbootstrap.com/)
 * [React](https://reactjs.org/)
 
 ### APIs
 * [SiGayantara API](https://github.com/yohanes59/SiGayantara-API)
-
-<!-- Features -->
-## 📌 Features
-
 
 ## 📌 Installation
 To run this project, follow the instructions below:
@@ -57,10 +48,9 @@ npm run start
 
 <!-- Credit -->
 ## 📌 Credit
-* [Eslint](https://eslint.org/)
 * [SweetAlert](https://sweetalert.js.org/guides/)
 * [Reacstrap](https://reactstrap.github.io/)
-* [Bootsrtap](https://getbootstrap.com)
+* [Bootstrap](https://getbootstrap.com)
 * [Axios](https://axios-http.com/)
 * [Youtube](https://www.youtube.com/)
 

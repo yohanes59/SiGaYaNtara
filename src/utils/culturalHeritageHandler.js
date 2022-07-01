@@ -41,7 +41,6 @@ const createCulturalHeritage = (cultureHeritage) => {
     formData.append('user_fullName', user_fullName);
 
     axios.post(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage`, formData, {
-        // axios.post(`http://localhost:5000/v1/cultural-heritage`, formData, {
         withCredentials: true,
         headers: {
             'content-type': 'multipart/form-data',
@@ -72,7 +71,6 @@ const createCulturalHeritage = (cultureHeritage) => {
 
 const getAllCultureHeritage = async (counter) => {
     const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage?page=${counter}&perPage=9`, {
-        // const response = await axios.get(`http://localhost:5000/v1/cultural-heritage?page=${counter}&perPage=9`, {
         withCredentials: true,
     })
     return response.data;
@@ -80,7 +78,6 @@ const getAllCultureHeritage = async (counter) => {
 
 const getDetailCultureHeritage = async (id) => {
     const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`, {
-        // const response = await axios.get(`http://localhost:5000/v1/cultural-heritage/${id}`, {
         withCredentials: true,
     });
     return response.data.data;
@@ -95,9 +92,6 @@ const updateCulturalHeritage = (cultureHeritage, id) => {
     formData.append('kabupaten', kabupaten);
     formData.append('sejarah', sejarah);
     formData.append('description', description);
-    // if (image) {
-    //     formData.append('image', image);
-    // }
 
     _checkUbah(cultureHeritage);
 
@@ -132,7 +126,6 @@ const updateCulturalHeritage = (cultureHeritage, id) => {
 
 const deleteCulturalHeritage = (id) => {
     axios.delete(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`, {
-        // axios.delete(`http://localhost:5000/v1/cultural-heritage/${id}`, {
         withCredentials: true,
         headers: {
             'content-type': 'multipart/form-data',

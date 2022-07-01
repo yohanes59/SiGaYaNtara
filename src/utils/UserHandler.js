@@ -9,7 +9,6 @@ const userRegister = (user) => {
   formData.append('password', password);
 
   axios.post('https://sigayantara-api.herokuapp.com/v1/auth/register', formData)
-  // axios.post('http://localhost:5000/v1/auth/register', formData)
     .then((response) => {
       if (response.status === 201) {
         swal({
@@ -40,7 +39,6 @@ const userLogin = (user) => {
   formData.append('password', password);
 
   axios.post('https://sigayantara-api.herokuapp.com/v1/auth/login', formData, {
-  // axios.post('http://localhost:5000/v1/auth/login', formData, {
     withCredentials: true,
   })
     .then((response) => {
@@ -68,7 +66,6 @@ const userLogout = () => {
     .then((willLogout) => {
       if (willLogout) {
         axios.post('https://sigayantara-api.herokuapp.com/v1/auth/logout', '', {
-        // axios.post('http://localhost:5000/v1/auth/logout', '', {
           withCredentials: true,
         })
           .then((res) => {

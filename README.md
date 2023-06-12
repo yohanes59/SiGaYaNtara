@@ -14,6 +14,7 @@
 * [Installation](#installation)
 * [Credit](#credit)
 * [Creator](#creator)
+* [Demo](#demo)
 
 <!-- About SiGayantara -->
 ## 📌About SiGayantara
@@ -59,3 +60,6 @@ npm run start
 * [Nilam Setyoningrum](https://github.com/nilamsty)
 * [Shandra Elvyra](https://github.com/shandraelvyra)
 * [Darian Rendrahadi](https://github.com/dariangunawan)
+
+## 📌 Demo
+[![Alt Text](https://img.youtube.com/vi/sHT94tpvGNk/0.jpg)](https://www.youtube.com/watch?v=sHT94tpvGNk)

@@ -40,7 +40,7 @@ const createCulturalHeritage = (cultureHeritage) => {
     formData.append('user_id', user_id);
     formData.append('user_fullName', user_fullName);
 
-    axios.post(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage`, formData, {
+    axios.post(`https://si-gayantara-api.vercel.app/v1/cultural-heritage`, formData, {
         withCredentials: true,
         headers: {
             'content-type': 'multipart/form-data',
@@ -70,14 +70,14 @@ const createCulturalHeritage = (cultureHeritage) => {
 }
 
 const getAllCultureHeritage = async (counter) => {
-    const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage?page=${counter}&perPage=9`, {
+    const response = await axios.get(`https://si-gayantara-api.vercel.app/v1/cultural-heritage?page=${counter}&perPage=9`, {
         withCredentials: true,
     })
     return response.data;
 }
 
 const getDetailCultureHeritage = async (id) => {
-    const response = await axios.get(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`, {
+    const response = await axios.get(`https://si-gayantara-api.vercel.app/v1/cultural-heritage/${id}`, {
         withCredentials: true,
     });
     return response.data.data;
@@ -95,7 +95,7 @@ const updateCulturalHeritage = (cultureHeritage, id) => {
 
     _checkUbah(cultureHeritage);
 
-    axios.patch(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`, formData, {
+    axios.patch(`https://si-gayantara-api.vercel.app/v1/cultural-heritage/${id}`, formData, {
         withCredentials: true,
         headers: {
             'content-type': 'multipart/form-data',
@@ -125,7 +125,7 @@ const updateCulturalHeritage = (cultureHeritage, id) => {
 };
 
 const deleteCulturalHeritage = (id) => {
-    axios.delete(`https://sigayantara-api.herokuapp.com/v1/cultural-heritage/${id}`, {
+    axios.delete(`https://si-gayantara-api.vercel.app/v1/cultural-heritage/${id}`, {
         withCredentials: true,
         headers: {
             'content-type': 'multipart/form-data',
